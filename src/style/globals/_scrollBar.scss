@@ -1,12 +1,12 @@
 /* WebKit manipulate Scrollbar */
 
 * {
-  scrollbar-width: thin;
+  scrollbar-width: none !important;
   scrollbar-color: var(--secondary) transparent;
 }
 
 *::-webkit-scrollbar {
-  width: 8px;
+// width: 8px;
 }
 
 // *::-webkit-scrollbar-track {
@@ -39,4 +39,23 @@ html.lenis {
 
 .lenis.lenis-scrolling iframe {
   pointer-events: none;
+}
+
+/* Styling the scrollbar in Chrome and Safari */
+*::-webkit-scrollbar {
+  display: none !important;
+  width: 0 !important; 
+  height: 0 !important;
+}
+
+*::-webkit-scrollbar-thumb {
+  display: none !important;
+  width: 0 !important; 
+  height: 0 !important;
+}
+
+*::-webkit-scrollbar-track {
+  display: none !important;
+  width: 0 !important; 
+  height: 0 !important;
 }
