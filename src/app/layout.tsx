@@ -39,7 +39,7 @@ export const metadata: Metadata = {
     title: siteMetadata.title,
     images: [siteMetadata.socialBanner],
   },
-  themeColor: "#000000",
+  themeColor: siteMetadata.theme,
 };
 
 const RootLayout = ({ children }: { children: React.ReactNode }) => {

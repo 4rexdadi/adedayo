@@ -1,11 +1,10 @@
 // please update required information
 const siteMetadata = {
-  title: "",
-  author: "",
-  headerTitle: "",
-  description: "",
-  language: "en-us",
-  theme: "", // system, dark or light
+  title: "ADEDAYO ATURU",
+  description: "This is adedayo portfolio website",
+  headerTitle: "ADEDAYO ATURU",
+  author: "This is adedayo portfolio website",
+  theme: "dark", // system, dark or light
   siteUrl: "http://localhost:3000/",
   siteLogo: "",
   socialBanner: "",
@@ -16,6 +15,7 @@ const siteMetadata = {
   youtube: "",
   linkedin: "",
   dribbble: "",
+  language: "en-us",
   locale: "en-US",
 };
 
