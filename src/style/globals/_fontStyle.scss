@@ -64,14 +64,14 @@
   ); // 37.32px → 119.09px
 
   //fonts family
-  --ff-secondary: "Brandon-Grotesque";
-  --ff-primary: "Proxima-Nova-Regular";
-  --ff-primaryB: "Proxima-Nova-Bold";
+  --ff-header: "Brandon-Grotesque";
+  --ff-base: "Proxima-Nova-Regular";
+  --ff-base-bold: "Proxima-Nova-Bold";
 }
 
 body {
   line-height: 1.6;
-  font-family: var(--ff-primary);
+  font-family: var(--ff-base);
   font-size: var(--fs-200);
 }
 
@@ -82,5 +82,5 @@ h4,
 h5,
 h6 {
   line-height: 1.1;
-  font-family: var(--ff-secondary);
+  font-family: var(--ff-header);
 }
