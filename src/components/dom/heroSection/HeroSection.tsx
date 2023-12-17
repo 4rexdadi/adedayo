@@ -15,8 +15,8 @@ const HeroSection: FC<HeroSectionProps> = () => {
 
         <p className={style.heroAbout}>
           <span>
-            from Lagos, Nigeria focused on creating and occasionally designing
-            exceptional, bespoke,
+            a software developer from Lagos, Nigeria focused on creating and occasionally designing
+            exceptional, and engaging digital experiences.
           </span>
           <span>
             and engaging digital experiences for the web using modern
