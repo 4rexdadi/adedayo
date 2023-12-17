@@ -1,0 +1,19 @@
+.headerContainer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  background: transparent;
+  mix-blend-mode: difference;
+  width: 100%;
+  height: rem(96);
+
+  text-transform: uppercase;
+  transition: transform 1.5s ease;
+  font-family: var(--ff-secondary);
+}

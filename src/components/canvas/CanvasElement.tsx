@@ -1,0 +1,63 @@
+"use client";
+
+// import
+// import { Preload } from "@react-three/drei";
+import { Canvas, Props } from "@react-three/fiber";
+import dynamic from "next/dynamic";
+import { JSX, RefAttributes, Suspense, useEffect, useRef } from "react";
+import { useAppDispatch } from "../../hooks/storeHook";
+import { setCanvas } from "../../redux/features/refsSlice";
+
+const Lights = dynamic(() => import("./utils/Lights"));
+
+const CanvasElement = (
+  props: JSX.IntrinsicAttributes & Props & RefAttributes<HTMLCanvasElement>
+) => {
+  const { children } = props;
+  const ref = useRef<HTMLCanvasElement>(null);
+  const dispatch = useAppDispatch();
+
+  useEffect(() => {
+    if (ref.current) {
+      dispatch(setCanvas(ref.current));
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+  return (
+    <Canvas
+      {...props}
+      ref={ref}
+      style={{
+        backgroundColor: "transparent",
+        width: " 100vw",
+        height: "100vh",
+        outline: "none",
+        position: "absolute",
+        top: 0,
+        left: 0,
+        zIndex: 100,
+      }}
+      // camera={{
+      //   fov: 45,
+      //   near: 0.1,
+      //   far: 100,
+      //   position: [0, 0, 5],
+      //   rotation: [0, 0, 0],
+      // }}
+    >
+      <Suspense fallback={null}>
+        <Lights />
+
+        {children}
+      </Suspense>
+
+      {/* <OrbitControls makeDefault /> */}
+
+      {/* <Helper /> */}
+
+      {/* <Preload all /> */}
+    </Canvas>
+  );
+};
+
+export default CanvasElement;

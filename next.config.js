@@ -1,4 +1,25 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {}
 
-module.exports = nextConfig
+const path = require('path')
+
+const withPWA = require("next-pwa")({
+  dest: "public",
+  register: true,
+  skipWaiting: true,
+  disable: process.env.NODE_ENV === "development",
+});
+
+module.exports = withPWA({
+  // next.js config
+  reactStrictMode: true,
+  // add @import 'src/style/globals/_functions'; to all scss files.
+  sassOptions: {
+    includePaths: [path.join(__dirname, 'styles')],
+    prependData: `@import 'src/style/globals/_functions';`,
+  },
+  productionBrowserSourceMaps: true,
+  swcMinify: false,
+  compiler: {
+    removeConsole: process.env.NODE_ENV !== 'development',
+  },
+});
