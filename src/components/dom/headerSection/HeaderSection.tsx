@@ -36,9 +36,9 @@ const HeaderSection: FC<HeaderSectionProps> = () => {
     <nav ref={headerContainerRef} className={cx(style.headerContainer)}>
       <div className={cx(style.header, "mainContainer")}>
         <h2>
-          <span>Adedayo</span>
+          <span>Software</span>
           <br />
-          <span>aturu</span>
+          <span>Dev</span>
         </h2>
 
         <button type="button" className="btn">
