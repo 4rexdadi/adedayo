@@ -19,8 +19,7 @@ const HeroSection: FC<HeroSectionProps> = () => {
             exceptional, and engaging digital experiences.
           </span>
           <span>
-            and engaging digital experiences for the web using modern
-            technologies.
+            I don't identify myself with a technology; I use the best one for the job.
           </span>
           <span>
             <a href="google.com" target="_blank">
