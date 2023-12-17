@@ -9,8 +9,8 @@ const HeroSection: FC<HeroSectionProps> = () => {
     <section className={style.heroContainer}>
       <h1 className="heroHeader">
         <p className={style.heroRole}>
-          <span>Software</span>
-          <span>Developer</span>
+          <span>Adedayo</span>
+          <span>Aturu</span>
         </p>
 
         <p className={style.heroAbout}>
