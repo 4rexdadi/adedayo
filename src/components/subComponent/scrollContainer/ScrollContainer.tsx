@@ -9,7 +9,7 @@ interface ScrollContainerProps {
 
 const ScrollContainer: FC<ScrollContainerProps> = ({ children }) => {
   return (
-    <ReactLenis root options={{ lerp: 0.1, duration: 1.5, smoothTouch: true }}>
+    <ReactLenis root options={{ lerp: 0.1, duration: 1.5, smoothTouch: false }}>
       {children}
     </ReactLenis>
   );
