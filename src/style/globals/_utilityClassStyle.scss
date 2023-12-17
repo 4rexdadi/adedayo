@@ -1,17 +1,10 @@
 .mainContainer {
-  padding-inline: rem(8);
+  /* 12.00px → 48.00px left and right */
+  --wrapper-margin: clamp(1.5rem, calc(-1.3rem + 14.01vw), 6rem);
 
-  @media only screen and (min-width: em(375)) {
-    padding-inline: rem(16);
-  }
-
-  @media only screen and (min-width: em(744)) {
-    padding-inline: rem(40);
-  }
-
-  @media only screen and (min-width: em(1023)) {
-    padding-inline: rem(64);
-  }
+  width: min(100% - var(--wrapper-margin), 1327px);
+  margin-inline: auto;
+  position: relative;
 }
 
 .btn {

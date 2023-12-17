@@ -33,13 +33,18 @@ const HeaderSection: FC<HeaderSectionProps> = () => {
   }, []);
 
   return (
-    <nav
-      ref={headerContainerRef}
-      className={cx(style.headerContainer, "mainContainer")}
-    >
-      <h2>Adedayo</h2>
+    <nav ref={headerContainerRef} className={cx(style.headerContainer)}>
+      <div className={cx(style.header, "mainContainer")}>
+        <h2>
+          <span>Adedayo</span>
+          <br />
+          <span>aturu</span>
+        </h2>
 
-      <p>contact</p>
+        <button type="button" className="btn">
+          contact
+        </button>
+      </div>
     </nav>
   );
 };

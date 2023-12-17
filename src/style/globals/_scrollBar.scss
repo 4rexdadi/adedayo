@@ -1,8 +1,24 @@
 /* WebKit manipulate Scrollbar */
 
-html {
+* {
   scrollbar-width: thin;
   scrollbar-color: var(--secondary) transparent;
+}
+
+*::-webkit-scrollbar {
+  width: 8px;
+}
+
+// *::-webkit-scrollbar-track {
+//   background: var(--secondary);
+// }
+
+*::-webkit-scrollbar-thumb {
+  background: var(--secondary);
+}
+
+*::-webkit-scrollbar-thumb:active {
+  background: rgb(1, 126, 126);
 }
 
 html.lenis {

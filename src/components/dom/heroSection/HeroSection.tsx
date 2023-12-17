@@ -7,7 +7,36 @@ interface HeroSectionProps {}
 const HeroSection: FC<HeroSectionProps> = () => {
   return (
     <section className={style.heroContainer}>
-      <p>this is the hero page</p>
+      <h1 className="heroHeader">
+        <p className={style.heroRole}>
+          <span>Software</span>
+          <span>Developer</span>
+        </p>
+
+        <p className={style.heroAbout}>
+          <span>
+            from Lagos, Nigeria focused on creating and occasionally designing
+            exceptional, bespoke,
+          </span>
+          <span>
+            and engaging digital experiences for the web using modern
+            technologies.
+          </span>
+          <span>
+            <a href="google.com" target="_blank">
+              get my resume
+            </a>
+          </span>
+        </p>
+      </h1>
+
+      <div className={style.project}>
+        <div style={{ background: "red" }} />
+        <div style={{ background: "green" }} />
+        <div style={{ background: "pink" }} />
+        <div style={{ background: "blue" }} />
+        <div style={{ background: "orange" }} />
+      </div>
     </section>
   );
 };

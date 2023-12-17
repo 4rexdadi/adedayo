@@ -1,10 +1,11 @@
 import { MetadataRoute } from "next";
+import siteMetadata from "../data/siteMetaData";
 
 const manifest = (): MetadataRoute.Manifest => {
   return {
-    name: "Next.js App",
-    short_name: "Next.js App",
-    description: "Next.js App",
+    name: siteMetadata.title,
+    short_name: siteMetadata.author,
+    description: siteMetadata.description,
     start_url: "/",
     scope: "/",
     display: "standalone",
