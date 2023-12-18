@@ -12,7 +12,7 @@
     align-items: center;
     // justify-content: space-between;
     flex-wrap: wrap;
-    gap: 1rem;
+    gap: 1.7rem;
 
     @media (max-width: 580px) {
       gap: 0.6rem;
@@ -26,36 +26,84 @@
     justify-content: flex-start;
     // flex-direction: column;
     flex-wrap: wrap;
-    gap: 1rem;
+    gap: 1.2rem;
     display: flex;
     font-family: var(--ff-base);
+    line-height: 1.6;
 
     span {
-      width: 300px;
+      max-width: 331px;
+
+      span {
+        color: var(--secondary);
+      }
     }
 
     a {
-      text-decoration: underline;
+      position: relative;
       transition: color 250ms ease;
+    }
+
+    a::after {
+      position: absolute;
+      content: "";
+      height: 1px;
+      background-color: var(--white);
+      color: var(--white);
+      width: 100%;
+      left: 0;
+      bottom: -0.7px;
+      transition: background-color 250ms ease;
     }
 
     a:hover {
       color: var(--secondary);
     }
+
+    a:hover::after {
+      background-color: var(--secondary);
+    }
+  }
+
+  .projectTitle {
+    margin-top: 6rem;
+    margin-bottom: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    p {
+      font-family: var(--ff-header);
+      font-weight: 500;
+      font-size: var(--fs-400);
+      text-transform: uppercase;
+    }
+
+    span {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.4rem;
+    }
+
+    svg {
+      width: 25px;
+      height: 20px;
+      fill: var(--white);
+    }
   }
 
   .project {
-    margin-top: 6rem;
     display: grid;
     grid-template-columns: 250px 250px 250px 250px 250px;
-    overflow-y: auto;
+    overflow: hidden;
     gap: 1.5rem;
     scrollbar-width: none;
+  }
 
-    div {
-      // width: 250pc;
-      height: 400px;
-      border-radius: 1rem;
-    }
+  .projectC {
+    // width: 250pc;
+    height: 400px;
+    border-radius: 1rem;
   }
 }

@@ -6,7 +6,7 @@
 }
 
 *::-webkit-scrollbar {
-// width: 8px;
+  // width: 8px;
 }
 
 // *::-webkit-scrollbar-track {
@@ -44,18 +44,27 @@ html.lenis {
 /* Styling the scrollbar in Chrome and Safari */
 *::-webkit-scrollbar {
   display: none !important;
-  width: 0 !important; 
+  width: 0 !important;
   height: 0 !important;
 }
 
 *::-webkit-scrollbar-thumb {
   display: none !important;
-  width: 0 !important; 
+  width: 0 !important;
   height: 0 !important;
 }
 
 *::-webkit-scrollbar-track {
   display: none !important;
-  width: 0 !important; 
+  width: 0 !important;
   height: 0 !important;
+}
+
+.dragger.is-disabled {
+  opacity: 0.5;
+  cursor: default;
+}
+
+.dragger.is-disabled * {
+  cursor: default;
 }
