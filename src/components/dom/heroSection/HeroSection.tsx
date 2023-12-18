@@ -43,7 +43,7 @@ const HeroSection: FC<HeroSectionProps> = () => {
         </span>
       </div>
 
-      <Dragger className={cx("dragger")} friction={0.95}>
+      <Dragger className={cx(style.projectContainer, "dragger")} friction={0.95}>
         <div className={style.project}>
           <div className={style.projectC} style={{ background: "red" }} />
           <div className={style.projectC} style={{ background: "green" }} />
