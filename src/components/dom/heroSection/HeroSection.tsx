@@ -18,7 +18,7 @@ const HeroSection: FC<HeroSectionProps> = () => {
             a software developer from Lagos, Nigeria focused on creating and occasionally designing
             exceptional, and engaging digital experiences.
           </span>
-          <span>I dont identify myself with a technology, I use the best one for the job.</span>
+          <span>I dont identify myself with a technology, I use the best one for the job. JavaScript, TypeScript, Python, C#.</span>
           <span>
             <a href="google.com" target="_blank">
               get my resume
