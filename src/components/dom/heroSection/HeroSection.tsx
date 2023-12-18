@@ -14,10 +14,7 @@ const HeroSection: FC<HeroSectionProps> = () => {
         </p>
 
         <p className={style.heroAbout}>
-          <span>
-            a software developer from Lagos, Nigeria focused on creating and occasionally designing
-            exceptional, and engaging digital experiences. Check out my Résumé for my tech stack.
-          </span>
+          <span>a software developer from Lagos, Nigeria, focused on creating and occasionally designing exceptional and engaging digital experiences. Check out my résumé for relevant experience.</span>
           <span>I don&#39;t identify myself with a specific technology; I use the best one for the job. Whether it&#39;s JavaScript, TypeScript, Python, or C#, I adapt to the needs of the task at hand.</span>
         </p>
       </h1>
