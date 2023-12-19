@@ -93,20 +93,15 @@
     }
   }
 
-  .projectContainer {
-   overflow: hidden;
-  }
-
-  .project {
+  .projects {
     display: grid;
-    grid-template-columns: 250px 250px 250px 250px 250px;
-    overflow: hidden;
+    grid-template-columns: repeat(5, 250px);
     gap: 1.5rem;
-    width:100%;
+    width: 100%;
+    overflow: hidden;
   }
 
-  .projectC {
-    // width: 250pc;
+  .projectCard {
     height: 400px;
     border-radius: 1rem;
   }

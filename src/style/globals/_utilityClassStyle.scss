@@ -28,6 +28,19 @@
   }
 }
 
+.dragger {
+  overflow: hidden;
+}
+
+.dragger.is-disabled {
+  opacity: 0.5;
+  cursor: default;
+}
+
+.dragger.is-disabled * {
+  cursor: default;
+}
+
 .sr-only {
   position: absolute;
   width: rem(1);

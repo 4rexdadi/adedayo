@@ -1,7 +1,8 @@
+// "use client";
+
 // Imports
 import { FC } from "react";
 import { LeftArrow, RightArrow } from "../../../../public/assets/svg/Svg";
-import cx from "../../../utils";
 import Dragger from "../../subComponent/dragger/Dragger";
 import style from "./heroSectionStyle.module.scss";
 
@@ -43,14 +44,18 @@ const HeroSection: FC<HeroSectionProps> = () => {
         </span>
       </div>
 
-      <Dragger className={cx(style.projectContainer, "dragger")} friction={0.95}>
-        <div className={style.project}>
-          <div className={style.projectC} style={{ background: "red" }} />
-          <div className={style.projectC} style={{ background: "green" }} />
-          <div className={style.projectC} style={{ background: "pink" }} />
-          <div className={style.projectC} style={{ background: "blue" }} />
-          <div className={style.projectC} style={{ background: "orange" }} />
-        </div>
+      <Dragger
+        // onStaticClick={(e) => setClickedProject(e)}
+        className="dragger"
+        friction={0.95}
+      >
+        <ul className={style.projects}>
+          <li className={style.projectCard} style={{ background: "red" }} />
+          <li className={style.projectCard} style={{ background: "green" }} />
+          <li className={style.projectCard} style={{ background: "pink" }} />
+          <li className={style.projectCard} style={{ background: "blue" }} />
+          <li className={style.projectCard} style={{ background: "orange" }} />
+        </ul>
       </Dragger>
     </section>
   );
