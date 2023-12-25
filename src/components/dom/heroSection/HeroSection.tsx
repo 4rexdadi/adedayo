@@ -1,9 +1,5 @@
-// "use client";
-
 // Imports
 import { FC } from "react";
-import { LeftArrow, RightArrow } from "../../../../public/assets/svg/Svg";
-import Dragger from "../../subComponent/dragger/Dragger";
 import style from "./heroSectionStyle.module.scss";
 
 interface HeroSectionProps {}
@@ -12,7 +8,7 @@ const HeroSection: FC<HeroSectionProps> = () => {
   return (
     <section className={style.heroContainer}>
       <h1 className="heroHeader">
-        <p className={style.heroRole}>
+        <p className={style.heroTitle}>
           <span>Adedayo</span>
           <span>Aturu</span>
         </p>
@@ -26,6 +22,7 @@ const HeroSection: FC<HeroSectionProps> = () => {
             Check out my <a href="google.com">résumé</a> for relevant
             experience.
           </span>
+
           <span>
             I don&#39;t identify myself with a specific technology; <br /> I use
             the best one for the job. <br /> Whether it&#39;s JavaScript,
@@ -34,29 +31,6 @@ const HeroSection: FC<HeroSectionProps> = () => {
           </span>
         </p>
       </h1>
-
-      <div className={style.projectTitle}>
-        <p>Selected works</p>
-
-        <span>
-          <LeftArrow className="" />
-          <RightArrow className="" />
-        </span>
-      </div>
-
-      <Dragger
-        // onStaticClick={(e) => setClickedProject(e)}
-        className="dragger"
-        friction={0.95}
-      >
-        <ul className={style.projects}>
-          <li className={style.projectCard} style={{ background: "red" }} />
-          <li className={style.projectCard} style={{ background: "green" }} />
-          <li className={style.projectCard} style={{ background: "pink" }} />
-          <li className={style.projectCard} style={{ background: "blue" }} />
-          <li className={style.projectCard} style={{ background: "orange" }} />
-        </ul>
-      </Dragger>
     </section>
   );
 };

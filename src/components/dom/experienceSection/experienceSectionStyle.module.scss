@@ -1,0 +1,37 @@
+.experienceContainer {
+  margin-top: 6rem;
+  display: flex;
+  flex-direction: column;
+
+  .experienceHeader {
+    font-weight: 600;
+    font-size: var(--fs-400);
+    text-transform: uppercase;
+    margin-bottom: 1.5rem;
+  }
+
+  .experiences {
+    display: flex;
+  }
+
+  .experiencesTabs {
+    display: flex;
+    flex-direction: column;
+    width: max-content;
+    border-left: 1px solid red;
+    height: max-content;
+
+    button {
+      padding: 1.2rem 2rem;
+    }
+  }
+
+  .experiencesInfo {
+    font-size: var(--fs-300);
+    margin-bottom: 0.5rem;
+
+    .companyName {
+      color: var(--secondary);
+    }
+  }
+}

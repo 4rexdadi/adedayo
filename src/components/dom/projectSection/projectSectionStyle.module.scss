@@ -1,0 +1,42 @@
+.projectContainer {
+  margin-top: 6rem;
+
+  .projectHeader {
+    margin-bottom: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    p {
+      font-weight: 600;
+      font-size: var(--fs-400);
+      text-transform: uppercase;
+    }
+
+    span {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.4rem;
+    }
+
+    svg {
+      width: 25px;
+      height: 20px;
+      fill: var(--white);
+    }
+  }
+
+  .projects {
+    display: grid;
+    grid-template-columns: repeat(5, 250px);
+    gap: 1.5rem;
+    width: 100%;
+    overflow: hidden;
+  }
+
+  .projectCard {
+    height: 400px;
+    border-radius: 1rem;
+  }
+}

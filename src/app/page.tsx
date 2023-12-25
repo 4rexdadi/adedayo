@@ -1,7 +1,9 @@
 // import
 import { FC } from "react";
+import ExperienceSection from "../components/dom/experienceSection/ExperienceSection";
 import HeaderSection from "../components/dom/headerSection/HeaderSection";
 import HeroSection from "../components/dom/heroSection/HeroSection";
+import ProjectSection from "../components/dom/projectSection/ProjectSection";
 
 const Home: FC = (): JSX.Element => {
   return (
@@ -12,6 +14,10 @@ const Home: FC = (): JSX.Element => {
 
       <main id="main">
         <HeroSection />
+
+        <ProjectSection />
+
+        <ExperienceSection />
       </main>
     </div>
   );
