@@ -1,30 +1,100 @@
 @font-face {
-  font-family: "Brandon-Grotesque";
-  src: url("/assets/fonts/Brandon-Grotesque/brandon-grotesque-black.otf")
-    format("opentype");
-  font-weight: normal;
-  unicode-range: U+000-5FF; /* Latin glyphs */
+  font-family: "Calibre";
+  src:
+    url("/assets/fonts/Calibre/Calibre-Regular.woff2") format("woff2"),
+    url("/assets/fonts/Calibre/Calibre-Regular.woff") format("woff");
+  font-weight: 400;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: "Proxima-Nova-Regular";
-  src: url("/assets/fonts/Proxima-Nova/Proxima-Nova-Regular.otf")
-    format("opentype");
-  font-weight: normal;
-  unicode-range: U+000-5FF; /* Latin glyphs */
+  font-family: "Calibre";
+  src:
+    url("/assets/fonts/Calibre/Calibre-Medium.woff2") format("woff2"),
+    url("/assets/fonts/Calibre/Calibre-Medium.woff") format("woff");
+  font-weight: 500;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: "Proxima-Nova-Bold";
-  src: url("/assets/fonts/Proxima-Nova/Proxima-Nova-Bold.otf")
-    format("opentype");
-  font-weight: normal;
-  unicode-range: U+000-5FF; /* Latin glyphs */
+  font-family: "Calibre";
+  src:
+    url("/assets/fonts/Calibre/Calibre-Semibold.woff2") format("woff2"),
+    url("/assets/fonts/Calibre/Calibre-Semibold.woff") format("woff");
+  font-weight: 600;
   font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Calibre";
+  src:
+    url("/assets/fonts/Calibre/Calibre-RegularItalic.woff2") format("woff2"),
+    url("/assets/fonts/Calibre/Calibre-RegularItalic.woff") format("woff");
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Calibre";
+  src:
+    url("/assets/fonts/Calibre/Calibre-MediumItalic.woff2") format("woff2"),
+    url("/assets/fonts/Calibre/Calibre-MediumItalic.woff") format("woff");
+  font-weight: 500;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Calibre";
+  src:
+    url("/assets/fonts/Calibre/Calibre-SemiboldItalic.woff2") format("woff2"),
+    url("/assets/fonts/Calibre/Calibre-SemiboldItalic.woff") format("woff");
+  font-weight: 600;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "SF Mono";
+  src:
+    url("/assets/fonts/SFMono/SFMono-Regular.woff2") format("woff2"),
+    url("/assets/fonts/SFMono/SFMono-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "SF Mono";
+  src:
+    url("/assets/fonts/SFMono/SFMono-Semibold.woff2") format("woff2"),
+    url("/assets/fonts/SFMono/SFMono-Semibold.woff") format("woff");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "SF Mono";
+  src:
+    url("/assets/fonts/SFMono/SFMono-RegularItalic.woff2") format("woff2"),
+    url("/assets/fonts/SFMono/SFMono-RegularItalic.woff") format("woff");
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "SF Mono";
+  src:
+    url("/assets/fonts/SFMono/SFMono-SemiboldItalic.woff2") format("woff2"),
+    url("/assets/fonts/SFMono/SFMono-SemiboldItalic.woff") format("woff");
+  font-weight: 600;
+  font-style: italic;
   font-display: swap;
 }
 
@@ -64,9 +134,8 @@
   ); // 37.32px → 119.09px
 
   //fonts family
-  --ff-header: "Brandon-Grotesque";
-  --ff-base: "Proxima-Nova-Regular";
-  --ff-base-bold: "Proxima-Nova-Bold";
+  --ff-secondary: "SF Mono";
+  --ff-base: "Calibre";
 }
 
 body {
@@ -82,5 +151,6 @@ h4,
 h5,
 h6 {
   line-height: 1.1;
-  font-family: var(--ff-header);
+  font-family: var(--ff-base);
+  font-weight: 600;
 }
