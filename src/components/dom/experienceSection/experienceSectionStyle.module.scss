@@ -98,6 +98,10 @@
       // width: 100%;
       // overflow-y: auto;
 
+      button {
+        border-bottom: 1px solid transparent;
+      }
+
       button.active {
         border: none;
         border-bottom: 1px solid var(--secondary);
