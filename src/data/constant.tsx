@@ -33,33 +33,28 @@ export const projectData = [
 export const jobData: Work = [
   {
     id: 0,
-    company: "Upstatement",
-    companyWebsite: "google.com",
-    role: "Lead Engineer",
+    company: "AfroTada",
+    companyWebsite: "https://www.afrotada.com",
+    role: "Software Developer",
     date: {
-      start: "May 2018",
+      start: "Jun 2023",
       end: "Present",
     },
     accomplishments: [
       {
         id: 1,
         point:
-          "Deliver high-quality, robust production code for a diverse array of projects for clients including Harvard Business School, Everytown for Gun Safety, Pratt Institute, Koala Health, Vanderbilt University, The 19th News, and more",
+          "Spearheaded the development of AfroTada’s major features, including the dashboard system and rich text editor. Adhering to layout principles and utilising modern technologies such as JavaScript, React, and CSS/Tailwind to enhance functionality and aesthetics, I effectively managed frontend features and conducted code refactoring.",
       },
       {
         id: 2,
         point:
-          "Work alongside creative directors to lead the research, development, and architecture of technical solutions to fulfill business requirements",
+          "Played a pivotal role in optimising the web application, focusing on performance enhancements to achieve a superior user experience with swift loading times. I accomplished this by implementing code splitting, utilising React Lazy Loading, and employing Redux for effective state management, among other techniques.",
       },
       {
         id: 3,
         point:
-          "Collaborate with designers, project managers, and other engineers to transform creative concepts into production realities for clients and stakeholders",
-      },
-      {
-        id: 4,
-        point:
-          "Provide leadership within engineering department through close collaboration, knowledge shares, and mentorship",
+          "Collaborated seamlessly with a cross-functional team, including a backend engineer and designer, to achieve cohesive project outcomes.",
       },
     ],
   },
