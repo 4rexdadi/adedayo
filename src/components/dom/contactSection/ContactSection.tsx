@@ -1,8 +1,8 @@
 "use client";
 
 import { FC } from "react";
-import { useAppSelector } from "../../../hooks/storeHook";
-import { RefsSliceProps } from "../../../redux/features/refsSlice";
+// import { useAppSelector } from "../../../hooks/storeHook";
+// import { RefsSliceProps } from "../../../redux/features/refsSlice";
 import CanvasElement from "../../canvas/CanvasElement";
 import SpaceBoy from "../../canvas/experience/SpaceBoy";
 import style from "./contactSectionStyle.module.scss";
@@ -10,9 +10,9 @@ import style from "./contactSectionStyle.module.scss";
 interface ContactSectionProps {}
 
 const ContactSection: FC<ContactSectionProps> = (): JSX.Element => {
-  const { spaceBoy } = useAppSelector(
-    (state: { refsSlice: RefsSliceProps }) => state.refsSlice
-  );
+//  const { spaceBoy } = useAppSelector(
+//    (state: { refsSlice: RefsSliceProps }) => state.refsSlice
+//  );
 
   // const camera = useThree((state) => state.camera);
 
