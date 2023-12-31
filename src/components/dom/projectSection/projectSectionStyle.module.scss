@@ -38,5 +38,10 @@
   .projectCard {
     height: 400px;
     border-radius: 1rem;
+    transition: transform 250ms ease;
+  }
+
+  .projectCard:hover {
+    transform: translate3d(0px, -2.5%, 0px);
   }
 }

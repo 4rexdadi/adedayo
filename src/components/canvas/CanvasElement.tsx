@@ -2,6 +2,7 @@
 
 // import
 // import { Preload } from "@react-three/drei";
+import { OrbitControls } from "@react-three/drei";
 import { Canvas, Props } from "@react-three/fiber";
 import dynamic from "next/dynamic";
 import { JSX, RefAttributes, Suspense, useEffect, useRef } from "react";
@@ -51,7 +52,7 @@ const CanvasElement = (
         {children}
       </Suspense>
 
-      {/* <OrbitControls makeDefault /> */}
+      <OrbitControls makeDefault />
 
       {/* <Helper /> */}
 

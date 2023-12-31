@@ -54,10 +54,10 @@ const SpaceBoy = (props: JSX.IntrinsicElements["group"]) => {
   }, []);
 
   return (
-    <group ref={ref} {...props} dispose={null} visible={false}>
+    <group ref={ref} {...props} dispose={null}>
       <group
-        position={[-1.0700000000000016, -1.250999999999999, 0.9]}
-        rotation={[0, 3.4, 0]}
+      // position={[-1.0700000000000016, -1.250999999999999, 0.9]}
+      // rotation={[0, 3.4, 0]}
       >
         <group scale={0.01}>
           <group name="boy" rotation={[-Math.PI / 2, 0, 0]} scale={100}>
