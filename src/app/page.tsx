@@ -20,8 +20,6 @@ const Home: FC = (): JSX.Element => {
 
         <ExperienceSection />
 
-        {/* <ServiceSection /> */}
-
         <ContactSection />
       </main>
     </div>

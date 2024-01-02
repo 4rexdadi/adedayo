@@ -2,14 +2,11 @@
 
 // import
 // import { Preload } from "@react-three/drei";
-import { OrbitControls } from "@react-three/drei";
 import { Canvas, Props } from "@react-three/fiber";
-import dynamic from "next/dynamic";
 import { JSX, RefAttributes, Suspense, useEffect, useRef } from "react";
 import { useAppDispatch } from "../../hooks/storeHook";
 import { setCanvas } from "../../redux/features/refsSlice";
-
-const Lights = dynamic(() => import("./utils/Lights"));
+import Lights from "./utils/Lights";
 
 const CanvasElement = (
   props: JSX.IntrinsicAttributes & Props & RefAttributes<HTMLCanvasElement>
@@ -30,7 +27,7 @@ const CanvasElement = (
       ref={ref}
       style={{
         backgroundColor: "transparent",
-        width: " 100vw",
+        width: " 100%",
         height: "100vh",
         outline: "none",
         position: "absolute",
@@ -52,7 +49,7 @@ const CanvasElement = (
         {children}
       </Suspense>
 
-      <OrbitControls makeDefault />
+      {/* <OrbitControls makeDefault /> */}
 
       {/* <Helper /> */}
 

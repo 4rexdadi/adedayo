@@ -53,11 +53,40 @@ const SpaceBoy = (props: JSX.IntrinsicElements["group"]) => {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
+  // const asTroBoy = useControls({
+  //   position: {
+  //     value: {
+  //       x: 0,
+  //       y: 0,
+  //       z: 0,
+  //     },
+  //     step: 0.001,
+  //   },
+  //   rotation: {
+  //     value: {
+  //       x: 0,
+  //       y: 0,
+  //       z: 0,
+  //     },
+  //     step: 0.001,
+  //   },
+  // });
+
   return (
     <group ref={ref} {...props} dispose={null}>
       <group
-      // position={[-1.0700000000000016, -1.250999999999999, 0.9]}
-      // rotation={[0, 3.4, 0]}
+        // position={[
+        //   asTroBoy.position.x,
+        //   asTroBoy.position.y,
+        //   asTroBoy.position.z,
+        // ]}
+        // rotation={[
+        //   asTroBoy.rotation.x,
+        //   asTroBoy.rotation.y,
+        //   asTroBoy.rotation.z,
+        // ]}
+        position={[0.3910000000000002, -5.671999999999996, 7.6000000000000005]}
+        rotation={[0, 0.9270000000000007, 0]}
       >
         <group scale={0.01}>
           <group name="boy" rotation={[-Math.PI / 2, 0, 0]} scale={100}>

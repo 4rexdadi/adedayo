@@ -1,4 +1,49 @@
 .contactContainer {
-  min-height: 100vh;
   position: relative;
+  width: 100%;
+  height: 100%;
+
+  .textContainer {
+    overflow: hidden;
+    position: absolute;
+    z-index: 1000;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    display: grid;
+    place-items: center;
+
+    div {
+      font-size: var(--fs-800);
+      font-weight: 600;
+      overflow: hidden;
+      text-transform: uppercase;
+      height: auto;
+      width: 100%;
+      display: grid;
+      place-items: center;
+      border-radius: 10px;
+
+      p {
+        transform: translateY(100%);
+        mix-blend-mode: difference;
+      }
+    }
+
+    .whitePage {
+      background-color: var(--white);
+      height: 0px;
+    }
+
+    .fullWhitePage {
+      position: absolute;
+      left: 0;
+      width: 100%;
+      height: 0;
+      background-color: var(--white);
+      border-radius: 10px;
+      z-index: -1;
+    }
+  }
 }
