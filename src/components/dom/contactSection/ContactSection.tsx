@@ -50,13 +50,21 @@ const ContactSection: FC<ContactSectionProps> = (): JSX.Element => {
         .to(
           ".textContainer",
           {
-            transform: "translate3d(0px, 0px, 0px) scale(8)",
+            transform: "translate3d(0px, 0px, 0px) scale(30)",
             ease: "none",
           },
           "changeColor"
         )
         .to(
           ".whitePage",
+          {
+            backgroundColor: "black",
+            ease: "none",
+          },
+          "changeColor"
+        )
+        .to(
+          ".fullWhitePage",
           {
             backgroundColor: "black",
             ease: "none",
