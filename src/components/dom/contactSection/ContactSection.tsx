@@ -37,7 +37,7 @@ const ContactSection: FC<ContactSectionProps> = (): JSX.Element => {
           start: "top top",
           end: 5000,
           pinSpacing: true,
-          markers: true,
+          // markers: true,
           scrub: 1,
         },
       });
