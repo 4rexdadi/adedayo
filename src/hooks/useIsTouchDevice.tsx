@@ -17,7 +17,7 @@ const useIsTouchDevice = (): boolean => {
         'ontouchstart' in window ||
         navigator.maxTouchPoints > 0 ||
         // Use optional chaining to handle potential undefined value
-        (navigator as Navigator & { msMaxTouchPoints?: number })?.msMaxTouchPoints > 0;
+        (navigator as Navigator & { msMaxTouchPoints: number })?.msMaxTouchPoints > 0;
 
       setIsTouchDevice(alternativeCheck);
       if (!alternativeCheck) {
