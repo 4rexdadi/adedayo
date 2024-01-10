@@ -35,7 +35,7 @@ const ContactSection: FC<ContactSectionProps> = (): JSX.Element => {
           trigger: ".contactContainer",
           pin: true,
           start: "top top",
-          // end: 5000,
+          end: 5000,
           pinSpacing: true,
           // markers: true,
           scrub: 1,
