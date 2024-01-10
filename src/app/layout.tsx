@@ -1,6 +1,6 @@
 // Imports
 import type { Metadata } from "next";
-import useIsTouchDevice from '../hook/useIsTouchDevice';
+import useIsTouchDevice from '../hooks/useIsTouchDevice';
 import Cursor from "../components/subComponent/cursor/Cursor";
 import ScrollContainer from "../components/subComponent/scrollContainer/ScrollContainer";
 import siteMetadata from "../data/siteMetaData";
