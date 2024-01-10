@@ -13,9 +13,11 @@ const useIsTouchDevice = (): boolean => {
     };
 
     const checkTouchCapability = () => {
-      const alternativeCheck = ('ontouchstart' in window) ||
-        (navigator.maxTouchPoints > 0) ||
-        (navigator.msMaxTouchPoints > 0);
+      const alternativeCheck =
+        'ontouchstart' in window ||
+        navigator.maxTouchPoints > 0 ||
+        // Use type assertion for msMaxTouchPoints
+        (navigator as any).msMaxTouchPoints > 0;
 
       setIsTouchDevice(alternativeCheck);
       if (!alternativeCheck) {
