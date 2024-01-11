@@ -5,6 +5,7 @@ import ExperienceSection from "../components/dom/experienceSection/ExperienceSec
 import HeaderSection from "../components/dom/headerSection/HeaderSection";
 import HeroSection from "../components/dom/heroSection/HeroSection";
 import ProjectSection from "../components/dom/projectSection/ProjectSection";
+import ContactPopUp from "../components/subComponent/contactPopUp/ContactPopUp";
 
 const Home: FC = (): JSX.Element => {
   return (
@@ -21,6 +22,8 @@ const Home: FC = (): JSX.Element => {
         <ExperienceSection />
 
         <ContactSection />
+
+        <ContactPopUp />
       </main>
     </div>
   );

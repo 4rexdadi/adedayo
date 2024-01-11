@@ -2,6 +2,8 @@
 
 // imports
 import { FC, useEffect, useRef } from "react";
+import { useAppDispatch } from "../../../hooks/storeHook";
+import { setShowContactPopup } from "../../../redux/features/contactSlice";
 import cx from "../../../utils";
 import style from "./headerSectionStyle.module.scss";
 
@@ -9,6 +11,7 @@ interface HeaderSectionProps {}
 
 const HeaderSection: FC<HeaderSectionProps> = () => {
   const headerContainerRef = useRef<HTMLElement>(null);
+  const dispatch = useAppDispatch();
 
   useEffect(() => {
     let oldScrollY = window.scrollY;
@@ -41,7 +44,11 @@ const HeaderSection: FC<HeaderSectionProps> = () => {
           <span>Dev</span>
         </h2>
 
-        <button type="button" className="btn">
+        <button
+          type="button"
+          className="btn"
+          onClick={() => dispatch(setShowContactPopup(true))}
+        >
           contact
         </button>
       </div>

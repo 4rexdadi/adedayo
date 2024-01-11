@@ -3,6 +3,7 @@
 // Imports
 import gsap from "gsap";
 import { FC, useCallback, useEffect, useRef, useState } from "react";
+import useIsTouchDevice from "../../../hooks/useIsTouchDevice";
 import cx from "../../../utils";
 import style from "./cursorStyle.module.scss";
 
@@ -13,6 +14,7 @@ const Cursor: FC<CursorProps> = () => {
   const [isGrab, setIsGrab] = useState(false);
   const [isPointer, setIsPointer] = useState(false);
   const [hasMoved, setHasMoved] = useState(false);
+  const isTouchDevice = useIsTouchDevice();
 
   const onMouseMove = useCallback(
     ({ clientX, clientY }: { clientX: number; clientY: number }) => {
@@ -28,23 +30,26 @@ const Cursor: FC<CursorProps> = () => {
   );
 
   useEffect(() => {
+    if (isTouchDevice) return undefined;
     window.addEventListener("mousemove", onMouseMove, false);
 
     return () => {
       window.removeEventListener("mousemove", onMouseMove, false);
     };
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [hasMoved]);
+  }, [hasMoved, isTouchDevice]);
 
   useEffect(() => {
+    if (isTouchDevice) return undefined;
     document.documentElement.classList.add("has-custom-cursor");
 
     return () => {
       document.documentElement.classList.remove("has-custom-cursor");
     };
-  }, []);
+  }, [isTouchDevice]);
 
   useEffect(() => {
+    if (isTouchDevice) return undefined;
     const onMouseEnter = () => {
       setIsPointer(true);
     };
@@ -69,9 +74,10 @@ const Cursor: FC<CursorProps> = () => {
         element.removeEventListener("mouseleave", onMouseLeave, false);
       });
     };
-  }, []);
+  }, [isTouchDevice]);
 
   useEffect(() => {
+    if (isTouchDevice) return undefined;
     const onMouseEnter = () => {
       setIsGrab(true);
     };
@@ -96,23 +102,25 @@ const Cursor: FC<CursorProps> = () => {
         element.removeEventListener("mouseleave", onMouseLeave, false);
       });
     };
-  }, []);
+  }, [isTouchDevice]);
 
   return (
-    <div
-      style={{ opacity: hasMoved ? 1 : 0 }}
-      className={style.cursorContainer}
-    >
-      <div ref={cursor}>
-        <div
-          className={cx(
-            style.cursor,
-            isGrab ? style.grab : "",
-            isPointer ? style.pointer : ""
-          )}
-        />
+    !isTouchDevice && (
+      <div
+        style={{ opacity: hasMoved ? 1 : 0 }}
+        className={style.cursorContainer}
+      >
+        <div ref={cursor}>
+          <div
+            className={cx(
+              style.cursor,
+              isGrab ? style.grab : "",
+              isPointer ? style.pointer : ""
+            )}
+          />
+        </div>
       </div>
-    </div>
+    )
   );
 };
 

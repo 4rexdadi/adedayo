@@ -1,7 +1,7 @@
 "use client";
 
 // Imports
-import { useEffect, useState } from 'react';
+import { useEffect, useState } from "react";
 
 const useIsTouchDevice = (): boolean => {
   const [isTouchDevice, setIsTouchDevice] = useState<boolean>(false);
@@ -9,26 +9,26 @@ const useIsTouchDevice = (): boolean => {
   useEffect(() => {
     const handleTouchStart = () => {
       setIsTouchDevice(true);
-      window.removeEventListener('touchstart', handleTouchStart);
+      window.removeEventListener("touchstart", handleTouchStart);
     };
 
     const checkTouchCapability = () => {
       const alternativeCheck =
-        'ontouchstart' in window ||
+        "ontouchstart" in window ||
         navigator.maxTouchPoints > 0 ||
-        // Use optional chaining to handle potential undefined value
-        (navigator as Navigator & { msMaxTouchPoints: number })?.msMaxTouchPoints > 0;
+        (navigator as Navigator & { msMaxTouchPoints: number })
+          ?.msMaxTouchPoints > 0;
 
       setIsTouchDevice(alternativeCheck);
       if (!alternativeCheck) {
-        window.addEventListener('touchstart', handleTouchStart);
+        window.addEventListener("touchstart", handleTouchStart);
       }
     };
 
     checkTouchCapability();
 
     return () => {
-      window.removeEventListener('touchstart', handleTouchStart);
+      window.removeEventListener("touchstart", handleTouchStart);
     };
   }, []);
 

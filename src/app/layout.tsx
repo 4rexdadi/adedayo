@@ -1,6 +1,5 @@
 // Imports
 import type { Metadata } from "next";
-import useIsTouchDevice from '../hooks/useIsTouchDevice';
 import Cursor from "../components/subComponent/cursor/Cursor";
 import ScrollContainer from "../components/subComponent/scrollContainer/ScrollContainer";
 import siteMetadata from "../data/siteMetaData";
@@ -44,14 +43,12 @@ export const metadata: Metadata = {
 };
 
 const RootLayout = ({ children }: { children: React.ReactNode }) => {
-const isTouchDevice = useIsTouchDevice();
-
   return (
     <html lang="en">
       <Providers>
         <ScrollContainer>
           <body>
-            { !isTouchDevice && <Cursor /> }
+            <Cursor />
 
             {children}
           </body>
