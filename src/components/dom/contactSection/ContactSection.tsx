@@ -2,7 +2,7 @@
 
 import { gsap } from "gsap";
 import ScrollTrigger from "gsap/dist/ScrollTrigger";
-import { FC, useEffect } from "react";
+import { FC, useEffect, useState } from "react";
 import { useAppSelector } from "../../../hooks/storeHook";
 import { RefsSliceProps } from "../../../redux/features/refsSlice";
 import cx from "../../../utils";
@@ -14,6 +14,7 @@ import style from "./contactSectionStyle.module.scss";
 interface ContactSectionProps {}
 
 const ContactSection: FC<ContactSectionProps> = (): JSX.Element => {
+  const [currentTime, setCurrentTime] = useState(new Date());
   const { spaceBoy } = useAppSelector(
     (state: { refsSlice: RefsSliceProps }) => state.refsSlice
   );
@@ -135,11 +136,20 @@ const ContactSection: FC<ContactSectionProps> = (): JSX.Element => {
     return undefined;
   }, [spaceBoy]);
 
+  useEffect(() => {
+    const intervalId = setInterval(() => {
+      setCurrentTime(new Date());
+    }, 1000);
+
+    // Cleanup the interval on component unmount
+    return () => clearInterval(intervalId);
+   }, []);
+
   return (
     <section className={cx(style.contactContainer, "contactContainer")}>
       <div className={cx(style.textContainer, "textContainer")}>
         <div className={cx(style.blackPage, "blackPage")}>
-          <p className="">{Date.now()}</p>
+          <p className="moveText">{currentTime.toLocaleTimeString()}</p>
         </div>
         <div className={cx(style.whitePage, "whitePage")}>
           <p className="moveText moveText2">
@@ -148,7 +158,7 @@ const ContactSection: FC<ContactSectionProps> = (): JSX.Element => {
           </p>
         </div>
         <div className={cx(style.blackPage, "blackPage")}>
-          <p className="">Available for freelance software development</p>
+          <p className="moveText">Available for freelance software development</p>
         </div>
         <span className={cx(style.fullWhitePage, "fullWhitePage")} />
       </div>
