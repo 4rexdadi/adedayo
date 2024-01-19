@@ -63,7 +63,8 @@ const ContactSection: FC<ContactSectionProps> = (): JSX.Element => {
             height: "100%",
             ease: "none",
             // duration: 1000,
-          }
+          },
+          "moveText2"
         )
         .to(
           ".textContainer",
