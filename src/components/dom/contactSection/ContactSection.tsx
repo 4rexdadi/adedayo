@@ -130,7 +130,7 @@ const ContactSection: FC<ContactSectionProps> = (): JSX.Element => {
         .to(
           "contactMeContainer",
           {
-            display: "grid"
+            display: "grid",
             ease: "none",
           },
         );
