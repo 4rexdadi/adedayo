@@ -31,7 +31,7 @@ const ContactSection: FC<ContactSectionProps> = (): JSX.Element => {
           trigger: ".contactContainer",
           pin: true,
           start: "top top",
-          end: 6000,
+          end: 7000,
           pinSpacing: true,
           // markers: true,
           scrub: 1,
@@ -53,7 +53,7 @@ const ContactSection: FC<ContactSectionProps> = (): JSX.Element => {
           {
             x: -width + containerWidth,
             ease: "none",
-            duration: 2000,
+            duration: 3000,
           },
           "moveText2"
         )
