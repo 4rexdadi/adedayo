@@ -128,7 +128,7 @@ const ContactSection: FC<ContactSectionProps> = (): JSX.Element => {
           "spaceBoy"
         )
         .to(
-          "contactMeContainer",
+          ".contactMeContainer",
           {
             display: "grid",
             ease: "none",
