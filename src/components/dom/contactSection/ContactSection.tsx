@@ -161,7 +161,7 @@ const ContactSection: FC<ContactSectionProps> = (): JSX.Element => {
         <div className={cx(style.whitePage, "whitePage")}>
           <p className="moveText moveText2">
             Animation isn&apos;t just about looking cool - Good interaction
-            design grounds an interface with a sense of space and logic.
+            design grounds an interface with a sense of space and logic...
           </p>
         </div>
         <div className={cx(style.blackPage, "blackPage")}>
