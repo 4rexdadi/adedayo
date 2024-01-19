@@ -12,9 +12,11 @@ import {
 import cx from "../../../utils";
 import style from "./contactMeStyle.module.scss";
 
-interface ContactMeProps {}
+interface ContactMeProps {
+  className?: string;
+}
 
-const ContactMe: FC<ContactMeProps> = ({ className = "contactMeContainer" } : { className: string }): JSX.Element => {
+const ContactMe: FC<ContactMeProps> = ({ className = "contactMeContainer" }): JSX.Element => {
   const [fullName, setFullName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
