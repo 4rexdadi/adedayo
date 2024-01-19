@@ -51,6 +51,7 @@ const ContactSection: FC<ContactSectionProps> = (): JSX.Element => {
           {
             height: "100%",
             ease: "none",
+            duration: 700,
           },
           "moveText2"
         )
@@ -59,6 +60,7 @@ const ContactSection: FC<ContactSectionProps> = (): JSX.Element => {
           {
             x: -width + containerWidth,
             ease: "none",
+            duration: 700,
           },
           "moveText2"
         )
