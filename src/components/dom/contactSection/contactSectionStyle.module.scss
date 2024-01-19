@@ -35,6 +35,13 @@
     .whitePage {
       background-color: var(--white);
       height: 0px;
+      overflow: hidden;
+
+      p {
+        text-wrap: nowrap;
+        text-overflow: clip;
+        white-space: nowrap;
+      }
     }
 
     .fullWhitePage {

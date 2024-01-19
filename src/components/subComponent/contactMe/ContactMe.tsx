@@ -9,22 +9,17 @@ import {
   Linkedin,
   Twitter,
 } from "../../../../public/assets/svg/Svg";
-import { useAppSelector } from "../../../hooks/storeHook";
 import cx from "../../../utils";
-import style from "./contactPopUpStyle.module.scss";
+import style from "./contactMeStyle.module.scss";
 
-interface ContactPopUpProps {}
+interface ContactMeProps {}
 
-const ContactPopUp: FC<ContactPopUpProps> = (): JSX.Element | null => {
+const ContactMe: FC<ContactMeProps> = (): JSX.Element => {
   const [fullName, setFullName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
-  const showContactPopup = useAppSelector(
-    (state) => state.contactSlice.showContactPopup
-  );
 
   useEffect(() => {
-    if (!showContactPopup) return undefined;
     const inputControls: HTMLElement | null =
       document.querySelector(".inputControls");
 
@@ -38,13 +33,13 @@ const ContactPopUp: FC<ContactPopUpProps> = (): JSX.Element | null => {
     return () => {
       document.body.removeEventListener("pointermove", POINTER_SYNC);
     };
-  }, [showContactPopup]);
+  }, []);
 
   const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
   };
 
-  return showContactPopup ? (
+  return (
     <div className={cx(style.contactMeContainer, "contactMeContainer")}>
       <div className={cx(style.contactMe, "contactMe")}>
         <p className={style.contactTitle}>Lets hear about your project</p>
@@ -107,7 +102,7 @@ const ContactPopUp: FC<ContactPopUpProps> = (): JSX.Element | null => {
         </form>
       </div>
     </div>
-  ) : null;
+  );
 };
 
-export default ContactPopUp;
+export default ContactMe;

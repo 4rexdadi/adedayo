@@ -8,6 +8,7 @@ import { RefsSliceProps } from "../../../redux/features/refsSlice";
 import cx from "../../../utils";
 import CanvasElement from "../../canvas/CanvasElement";
 import SpaceBoy from "../../canvas/experience/SpaceBoy";
+import ContactMe from "../../subComponent/contactMe/ContactMe";
 import style from "./contactSectionStyle.module.scss";
 
 interface ContactSectionProps {}
@@ -21,8 +22,9 @@ const ContactSection: FC<ContactSectionProps> = (): JSX.Element => {
 
   useEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
+    const width = document.querySelector(".moveText2")?.clientWidth;
 
-    if (spaceBoy) {
+    if (spaceBoy && width) {
       const tl = gsap.timeline({
         scrollTrigger: {
           trigger: ".contactContainer",
@@ -43,10 +45,22 @@ const ContactSection: FC<ContactSectionProps> = (): JSX.Element => {
           transform: "translateY(0)",
           ease: "none",
         })
-        .to(".fullWhitePage", {
-          height: "100%",
-          ease: "none",
-        })
+        .to(
+          ".fullWhitePage",
+          {
+            height: "100%",
+            ease: "none",
+          },
+          "moveText2"
+        )
+        .to(
+          ".moveText2",
+          {
+            x: -width + window.innerWidth - 100,
+            ease: "none",
+          },
+          "moveText2"
+        )
         .to(
           ".textContainer",
           {
@@ -118,7 +132,10 @@ const ContactSection: FC<ContactSectionProps> = (): JSX.Element => {
           <p className="moveText">Available for</p>
         </div>
         <div className={cx(style.whitePage, "whitePage")}>
-          <p className="moveText">freelance</p>
+          <p className="moveText moveText2">
+            Animation isn&apos;t just about looking cool - Good interaction
+            design grounds an interface with a sense of space and logic.
+          </p>
         </div>
         <div className={cx(style.blackPage, "blackPage")}>
           <p className="moveText">work!</p>
@@ -137,6 +154,8 @@ const ContactSection: FC<ContactSectionProps> = (): JSX.Element => {
       >
         <SpaceBoy />
       </CanvasElement>
+
+      <ContactMe />
     </section>
   );
 };

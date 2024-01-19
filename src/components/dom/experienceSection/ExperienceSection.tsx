@@ -11,7 +11,7 @@ const ExperienceSection: FC<ExperienceSectionProps> = (): JSX.Element => {
 
   return (
     <section className={style.experienceContainer}>
-      <p className={style.experienceHeader}>Where I’ve Worked</p>
+      <p className={style.experienceHeader}>Where I&apos;ve Worked</p>
 
       <div className={style.experiences}>
         <div className={style.experiencesTabs}>
