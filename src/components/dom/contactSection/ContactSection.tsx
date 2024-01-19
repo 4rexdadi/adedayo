@@ -149,7 +149,7 @@ const ContactSection: FC<ContactSectionProps> = (): JSX.Element => {
     <section className={cx(style.contactContainer, "contactContainer")}>
       <div className={cx(style.textContainer, "textContainer")}>
         <div className={cx(style.blackPage, "blackPage")}>
-          <p className="moveText">{currentTime.toLocaleTimeString()}</p>
+          <p className="">{currentTime.toLocaleTimeString()}</p>
         </div>
         <div className={cx(style.whitePage, "whitePage")}>
           <p className="moveText moveText2">
@@ -158,7 +158,7 @@ const ContactSection: FC<ContactSectionProps> = (): JSX.Element => {
           </p>
         </div>
         <div className={cx(style.blackPage, "blackPage")}>
-          <p className="moveText">Available for freelance software development</p>
+          <p className="">Available for freelance software development</p>
         </div>
         <span className={cx(style.fullWhitePage, "fullWhitePage")} />
       </div>
