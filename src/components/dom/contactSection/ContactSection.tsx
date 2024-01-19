@@ -126,6 +126,13 @@ const ContactSection: FC<ContactSectionProps> = (): JSX.Element => {
             duration: 10,
           },
           "spaceBoy"
+        )
+        .to(
+          "contactMeContainer",
+          {
+            display: "grid"
+            ease: "none",
+          },
         );
 
       return () => {
@@ -175,7 +182,7 @@ const ContactSection: FC<ContactSectionProps> = (): JSX.Element => {
         <SpaceBoy />
       </CanvasElement>
 
-      <ContactMe />
+      <ContactMe className="contactMeContainer" />
     </section>
   );
 };
