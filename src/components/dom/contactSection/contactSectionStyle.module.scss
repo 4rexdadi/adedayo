@@ -39,7 +39,6 @@
     .whitePage {
       background-color: var(--white);
       height: 0px;
-      transform: translateY(100%);
 
       p {
         text-wrap: nowrap;
@@ -47,6 +46,7 @@
         white-space: nowrap;
         font-size: var(--fs-800);
         font-weight: 600;
+        transform: translateY(100%);
       }
     }
 
