@@ -68,13 +68,3 @@ const ServicesSection: FC<ServicesSectionProps> = (): JSX.Element => {
 };
 
 export default ServicesSection;
-
-// Animation isn’t just about looking cool - Good interaction design grounds an interface with a sense of space and logic.
-
-// Available for freelance software development
-
-// [Animations end here => Contact popUp]
-
-// With experience building complex interfaces means that I'm happy to deliver anything from single-page apps to scalable design systems.
-
-// If this sounds like something you're interested in,

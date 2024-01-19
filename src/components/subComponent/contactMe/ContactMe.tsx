@@ -3,7 +3,6 @@
 import Link from "next/link";
 import { FC, FormEvent, useEffect, useState } from "react";
 import {
-  Email,
   GitHub,
   Instagram,
   Linkedin,
@@ -16,7 +15,9 @@ interface ContactMeProps {
   className?: string;
 }
 
-const ContactMe: FC<ContactMeProps> = ({ className = "contactMeContainer" }): JSX.Element => {
+const ContactMe: FC<ContactMeProps> = ({
+  className = "contactMeContainer",
+}): JSX.Element => {
   const [fullName, setFullName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
@@ -44,8 +45,17 @@ const ContactMe: FC<ContactMeProps> = ({ className = "contactMeContainer" }): JS
   return (
     <div className={cx(style.contactMeContainer, className)}>
       <div className={cx(style.contactMe, "contactMe")}>
-        <p className={style.contactTitle}>Lets hear about your project</p>
-
+        <p className={style.contactTitle}>
+          With experience building complex interfaces means that I&apos;m happy
+          to deliver anything from single-page apps to scalable design systems.
+          <br />
+          <br />
+          If this sounds like something you&apos;re interested in, drop me a
+          mail <span className={style.email}>adedayoaturu@gmail.com</span>
+          <br />
+          <br />
+          <span>or</span>
+        </p>
         <form
           className={cx(style.inputControls, "inputControls")}
           onSubmit={handleSubmit}
@@ -83,10 +93,6 @@ const ContactMe: FC<ContactMeProps> = ({ className = "contactMeContainer" }): JS
               </Link>
 
               <Link href="goo">
-                <Email className={cx(style.email, "email")} />
-              </Link>
-
-              <Link href="goo">
                 <Twitter className={cx(style.twitter, "twitter")} />
               </Link>
 
@@ -108,3 +114,7 @@ const ContactMe: FC<ContactMeProps> = ({ className = "contactMeContainer" }): JS
 };
 
 export default ContactMe;
+
+// With experience building complex interfaces means that I'm happy to deliver anything from single-page apps to scalable design systems.
+
+// If this sounds like something you're interested in,

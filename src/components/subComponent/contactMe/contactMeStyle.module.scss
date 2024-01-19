@@ -7,12 +7,12 @@
   display: none;
   place-items: center;
   z-index: 1500;
-  background: black;
+  background: rgba(0, 0, 0, 0.781);
   font-size: 1rem;
 
   .contactMe {
     width: min(550px, 90%);
-    background: hsl(0 0% 0% / 0.65);
+    background: black;
     border: 2px solid hsl(0 0% 20%);
     box-shadow: 0 0.5px hsl(0 0% 100% / 0.75) inset;
     padding: 2rem 1rem;
@@ -41,6 +41,7 @@
         border-bottom: 1px solid hsl(0 0% 40%);
         resize: none;
         outline: 1px solid transparent;
+        font-size: 1rem;
       }
 
       textarea {
@@ -52,10 +53,16 @@
 
   .contactTitle {
     font-weight: 600;
-    font-size: var(--fs-400);
-    text-transform: uppercase;
     margin-bottom: 1.5rem;
     text-align: center;
+
+    .email {
+      color: var(--secondary);
+    }
+
+    .email:hover {
+      text-decoration: underline;
+    }
   }
 
   .action {

@@ -14,7 +14,8 @@ import style from "./contactSectionStyle.module.scss";
 interface ContactSectionProps {}
 
 const ContactSection: FC<ContactSectionProps> = (): JSX.Element => {
-  const [currentTime, setCurrentTime] = useState(new Date());
+  const [currentTime, setCurrentTime] = useState<Date>();
+  // const [formattedTime, setFormattedTime] = useState();
   const { spaceBoy } = useAppSelector(
     (state: { refsSlice: RefsSliceProps }) => state.refsSlice
   );
@@ -72,7 +73,7 @@ const ContactSection: FC<ContactSectionProps> = (): JSX.Element => {
           {
             transform: "translate3d(0px, 0px, 0px) scale(30)",
             ease: "none",
-           duration: 10,
+            duration: 10,
           },
           "changeColor"
         )
@@ -127,13 +128,10 @@ const ContactSection: FC<ContactSectionProps> = (): JSX.Element => {
           },
           "spaceBoy"
         )
-        .to(
-          ".contactMeContainer",
-          {
-            display: "grid",
-            ease: "none",
-          },
-        );
+        .to(".contactMeContainer", {
+          display: "grid",
+          ease: "none",
+        });
 
       return () => {
         tl.kill();
@@ -150,13 +148,13 @@ const ContactSection: FC<ContactSectionProps> = (): JSX.Element => {
 
     // Cleanup the interval on component unmount
     return () => clearInterval(intervalId);
-   }, []);
+  }, []);
 
   return (
     <section className={cx(style.contactContainer, "contactContainer")}>
       <div className={cx(style.textContainer, "textContainer")}>
         <div className={cx(style.blackPage, "blackPage")}>
-          <p className="">{currentTime.toLocaleTimeString()}</p>
+          <p className="">{currentTime?.toLocaleTimeString()}</p>
         </div>
         <div className={cx(style.whitePage, "whitePage")}>
           <p className="moveText moveText2">
@@ -164,7 +162,7 @@ const ContactSection: FC<ContactSectionProps> = (): JSX.Element => {
             design grounds an interface with a sense of space and logic...
           </p>
         </div>
-        <div className={cx(style.blackPage, "blackPage")}>
+        <div className={cx(style.blackPage, style.blackPage2, "blackPage")}>
           <p className="">Available for freelance software development</p>
         </div>
         <span className={cx(style.fullWhitePage, "fullWhitePage")} />

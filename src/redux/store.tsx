@@ -1,7 +1,6 @@
 // Import
 import { configureStore } from "@reduxjs/toolkit";
 
-import contactReducer from "./features/contactSlice";
 import cursorReducer from "./features/cursorSlice";
 import refsReducer from "./features/refsSlice";
 import themeReducer from "./features/themeSlice";
@@ -9,7 +8,6 @@ import themeReducer from "./features/themeSlice";
 const store = configureStore({
   reducer: {
     cursorSlice: cursorReducer,
-    contactSlice: contactReducer,
     themeSlice: themeReducer,
     refsSlice: refsReducer,
   },
