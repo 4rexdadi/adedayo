@@ -41,19 +41,19 @@ const ContactSection: FC<ContactSectionProps> = (): JSX.Element => {
       tl.to(".whitePage", {
         height: "auto",
         ease: "none",
-        // duration: 500,
+        duration: 3,
       })
         .to(".moveText", {
           transform: "translateY(0)",
           ease: "none",
-          // duration: 500,
+          duration: 3,
         })
         .to(
           ".moveText2",
           {
             x: -width + containerWidth,
             ease: "none",
-            duration: 10,
+            duration: 15,
           },
           "moveText2"
         )
@@ -62,7 +62,7 @@ const ContactSection: FC<ContactSectionProps> = (): JSX.Element => {
           {
             height: "100%",
             ease: "none",
-            duration: 10,
+            duration: 15,
           },
           "moveText2"
         )
@@ -71,7 +71,7 @@ const ContactSection: FC<ContactSectionProps> = (): JSX.Element => {
           {
             transform: "translate3d(0px, 0px, 0px) scale(30)",
             ease: "none",
-            // duration: 1000,
+           duration: 10,
           },
           "changeColor"
         )
@@ -82,7 +82,7 @@ const ContactSection: FC<ContactSectionProps> = (): JSX.Element => {
             color: "black",
             opacity: 0,
             ease: "none",
-            // duration: 1000,
+            duration: 10,
           },
           "changeColor"
         )
@@ -91,7 +91,7 @@ const ContactSection: FC<ContactSectionProps> = (): JSX.Element => {
           {
             backgroundColor: "black",
             ease: "none",
-            // duration: 1000,
+            duration: 10,
           },
           "changeColor"
         )
@@ -111,7 +111,7 @@ const ContactSection: FC<ContactSectionProps> = (): JSX.Element => {
             y: 2.021000000000006,
             z: -15,
             ease: "none",
-            // duration: 2000,
+            duration: 15,
           },
           "spaceBoy"
         )
@@ -122,7 +122,7 @@ const ContactSection: FC<ContactSectionProps> = (): JSX.Element => {
             y: -1,
             z: 0,
             ease: "none",
-            // duration: 2000,
+            duration: 15,
           },
           "spaceBoy"
         );
