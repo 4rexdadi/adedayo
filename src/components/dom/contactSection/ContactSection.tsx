@@ -22,7 +22,7 @@ const ContactSection: FC<ContactSectionProps> = (): JSX.Element => {
 
   useEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
-    const width = document.querySelector(".moveText2")?.clientWidth;
+    const width = document.querySelector(".moveText2")?.innerWidth;
 
     if (spaceBoy && width) {
       const tl = gsap.timeline({
@@ -56,7 +56,7 @@ const ContactSection: FC<ContactSectionProps> = (): JSX.Element => {
         .to(
           ".moveText2",
           {
-            x: -width + window.innerWidth - 100,
+            x: -width,
             ease: "none",
           },
           "moveText2"
