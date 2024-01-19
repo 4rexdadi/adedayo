@@ -22,8 +22,8 @@ const ContactSection: FC<ContactSectionProps> = (): JSX.Element => {
 
   useEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
-    const width: = document.querySelector(".moveText2")?.clientWidth;
-    const containerWidth: = document.querySelector(".whitePage")?.clientWidth;
+    const width = document.querySelector(".moveText2")?.clientWidth;
+    const containerWidth = document.querySelector(".whitePage")?.clientWidth;
 
     if (spaceBoy && width && containerWidth) {
       const tl = gsap.timeline({
