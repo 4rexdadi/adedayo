@@ -31,7 +31,7 @@ const ContactSection: FC<ContactSectionProps> = (): JSX.Element => {
           trigger: ".contactContainer",
           pin: true,
           start: "top top",
-          end: 5000,
+          end: 6000,
           pinSpacing: true,
           // markers: true,
           scrub: 1,
@@ -49,15 +49,6 @@ const ContactSection: FC<ContactSectionProps> = (): JSX.Element => {
           duration: 500,
         })
         .to(
-          ".fullWhitePage",
-          {
-            height: "100%",
-            ease: "none",
-            duration: 2000,
-          },
-          "moveText2"
-        )
-        .to(
           ".moveText2",
           {
             x: -width + containerWidth,
@@ -65,6 +56,14 @@ const ContactSection: FC<ContactSectionProps> = (): JSX.Element => {
             duration: 2000,
           },
           "moveText2"
+        )
+        .to(
+          ".fullWhitePage",
+          {
+            height: "100%",
+            ease: "none",
+            duration: 1000,
+          }
         )
         .to(
           ".textContainer",
