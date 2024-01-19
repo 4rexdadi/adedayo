@@ -22,7 +22,7 @@ const ContactSection: FC<ContactSectionProps> = (): JSX.Element => {
 
   useEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
-    const width = document.querySelector(".moveText2")?.innerWidth;
+    const width: HTMLElement | null = document.querySelector(".moveText2")?.innerWidth;
 
     if (spaceBoy && width) {
       const tl = gsap.timeline({
