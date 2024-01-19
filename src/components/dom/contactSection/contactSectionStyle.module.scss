@@ -39,6 +39,7 @@
     .whitePage {
       background-color: var(--white);
       height: 0px;
+      position: absolute;
 
       p {
         text-wrap: nowrap;
