@@ -14,7 +14,7 @@ import style from "./contactMeStyle.module.scss";
 
 interface ContactMeProps {}
 
-const ContactMe: FC<ContactMeProps> = (): JSX.Element => {
+const ContactMe: FC<ContactMeProps> = ({ className = "contactMeContainer" } : { className: string }): JSX.Element => {
   const [fullName, setFullName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
@@ -40,7 +40,7 @@ const ContactMe: FC<ContactMeProps> = (): JSX.Element => {
   };
 
   return (
-    <div className={cx(style.contactMeContainer, "contactMeContainer")}>
+    <div className={cx(style.contactMeContainer, className)}>
       <div className={cx(style.contactMe, "contactMe")}>
         <p className={style.contactTitle}>Lets hear about your project</p>
 
