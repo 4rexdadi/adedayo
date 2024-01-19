@@ -111,7 +111,7 @@ const ContactSection: FC<ContactSectionProps> = (): JSX.Element => {
             y: 2.021000000000006,
             z: -15,
             ease: "none",
-            duration: 15,
+            duration: 10,
           },
           "spaceBoy"
         )
@@ -122,7 +122,7 @@ const ContactSection: FC<ContactSectionProps> = (): JSX.Element => {
             y: -1,
             z: 0,
             ease: "none",
-            duration: 15,
+            duration: 10,
           },
           "spaceBoy"
         );
