@@ -10,6 +10,7 @@ interface HeaderSectionProps {}
 
 const HeaderSection: FC<HeaderSectionProps> = () => {
   const headerContainerRef = useRef<HTMLElement>(null);
+  const lenis = new Lenis()
 
   useEffect(() => {
     let oldScrollY = window.scrollY;
@@ -42,7 +43,7 @@ const HeaderSection: FC<HeaderSectionProps> = () => {
           <span>Dev</span>
         </h2>
 
-        <button type="button" className="btn" onClick={() => Lenis.scrollTo("contactMeContainer")}>
+        <button type="button" className="btn" onClick={() => lenis.scrollTo("contactMeContainer")}>
           contact
         </button>
       </div>
