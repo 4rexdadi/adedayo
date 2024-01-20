@@ -79,16 +79,27 @@
     gap: 1rem;
 
     svg {
-      width: 20px;
-      height: 20px;
-      fill: var(--secondary);
+      width: 50%;
+      fill: currentcolor;
     }
 
     a {
-      padding: 0.1rem;
+      appearance: none;  
+      border: 0;  
+      background: transparent;  
+      aspect-ratio: 1;  
+      width: 44px;  
+      display: grid;  
+      place-items: center;  
+      border-radius: 0.5rem;  
+      cursor: pointer;  
+      padding: 0;  
+      transition: background 0.2s, color 0.2s;
+      color: hsl(0 0% 40%);
 
       &:is(:hover, :focus-visible) {
-        background: rgba(255, 255, 255, 0.397);
+        color: hsl(0 0% 90%);
+        background: hsl(0 0% 25%);
       }
     }
   }
