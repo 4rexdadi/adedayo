@@ -11,7 +11,7 @@
   font-size: 1rem;
 
   .contactMe {
-    width: min(550px, 90%);
+    width: min(600px, 95%);
     background: black;
     border: 2px solid hsl(0 0% 20%);
     box-shadow: 0 0.5px hsl(0 0% 100% / 0.75) inset;
@@ -83,6 +83,7 @@
       fill: currentcolor;
     }
   }
+ 
   button,
   a {
     appearance: none;  
@@ -106,9 +107,11 @@
    
   button {
     width: fit-content;  
-    padding: 0 1rem;  
+    padding: 0.5 1.5rem;  
     height: auto;  
     aspect-ratio: auto;  
-    font-weight: 120;
+    font-size: var(--fs-400);
+    font-weight: 500;
+    text-transform: capitalize;
   }
 }
