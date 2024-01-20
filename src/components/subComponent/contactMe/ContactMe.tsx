@@ -99,19 +99,19 @@ const ContactMe: FC<ContactMeProps> = ({
           />
           <div className={cx(style.action)}>
             <div className={cx(style.socials)}>
-              <a target="_blank" href="https://www.instagram.com/4rexdadi">
+              <a target="_blank" rel="noreferrer" href="https://www.instagram.com/4rexdadi">
                 <Instagram className={cx(style.instagram, "instagram")} />
               </a>
 
-              <a target="_blank" href="https://twitter.com/Forexdadi">
+              <a target="_blank" rel="noreferrer" href="https://twitter.com/Forexdadi">
                 <Twitter className={cx(style.twitter, "twitter")} />
               </a>
 
-              <a target="_blank" href="https://www.linkedin.com/in/adedayoaturu">
+              <a target="_blank" rel="noreferrer" href="https://www.linkedin.com/in/adedayoaturu">
                 <Linkedin className={cx(style.linkedinSvg, "linkedin")} />
               </a>
 
-              <a target="_blank" href="https://github.com/4rexdadi">
+              <a target="_blank" rel="noreferrer" href="https://github.com/4rexdadi">
                 <GitHub className={cx(style.gitHub, "gitHub")} />
               </a>
             </div>
