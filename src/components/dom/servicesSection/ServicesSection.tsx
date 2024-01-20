@@ -9,7 +9,7 @@ interface ServicesSectionProps {}
 const ServicesSection: FC<ServicesSectionProps> = (): JSX.Element => {
   return (
     <section className={style.serviceContainer}>
-      <h3 className={style.serviceHeader}>Let&apos;s work together</h3>
+      <p className={style.serviceHeader}>Let&apos;s work together</p>
 
       <p className={style.serviceIntro}>
         Each project is unique, and my pragmatic approach ensures the delivery
