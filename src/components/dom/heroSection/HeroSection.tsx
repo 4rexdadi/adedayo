@@ -16,7 +16,7 @@ const HeroSection: FC<HeroSectionProps> = () => {
         <p className={style.heroAbout}>
           <span>
             A <span>software developer</span> from{" "}
-            <a href="google.com">Lagos, Nigeria</a>, focused on creating and
+            <a target="_black" href="https://g.co/kgs/QAiaiFz">Lagos, Nigeria</a>, focused on creating and
             occasionally designing exceptional and engaging digital experiences.
             <br />
             Check out my <a target="_black" href="/assets/resume.pdf">résumé</a> for relevant
