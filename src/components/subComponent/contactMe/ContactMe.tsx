@@ -88,21 +88,21 @@ const ContactMe: FC<ContactMeProps> = ({
           />
           <div className={cx(style.action)}>
             <div className={cx(style.socials)}>
-              <Link href="goo">
+              <a target="_blank" href="goo">
                 <Instagram className={cx(style.instagram, "instagram")} />
-              </Link>
+              </a>
 
-              <Link href="goo">
+              <a target="_blank" href="goo">
                 <Twitter className={cx(style.twitter, "twitter")} />
-              </Link>
+              </a>
 
-              <Link href="goo">
+              <a target="_blank" href="goo">
                 <Linkedin className={cx(style.linkedin, "linkedin")} />
-              </Link>
+              </a>
 
-              <Link href="goo">
+              <a target="_blank" href="goo">
                 <GitHub className={cx(style.gitHub, "gitHub")} />
-              </Link>
+              </a>
             </div>
 
             <button type="submit">Submit</button>
