@@ -166,8 +166,8 @@
   ); // 37.32px → 119.09px
 
   //fonts family
-  --ff-secondary: "SF Mono";
-  --ff-base: "Calibre";
+  --ff-secondary: "SF Mono", sans-serif;
+  --ff-base: sans-serif;
 }
 
 html {
