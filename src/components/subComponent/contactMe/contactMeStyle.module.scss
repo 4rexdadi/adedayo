@@ -82,25 +82,33 @@
       width: 50%;
       fill: currentcolor;
     }
+  }
+  button,
+  a {
+    appearance: none;  
+    border: 0;  
+    background: transparent;  
+    aspect-ratio: 1;  
+    width: 44px;  
+    display: grid;  
+    place-items: center;  
+    border-radius: 0.5rem;  
+    cursor: pointer;  
+    padding: 0;  
+    transition: background 0.2s, color 0.2s;
+    color: hsl(0 0% 40%);
 
-    a {
-      appearance: none;  
-      border: 0;  
-      background: transparent;  
-      aspect-ratio: 1;  
-      width: 44px;  
-      display: grid;  
-      place-items: center;  
-      border-radius: 0.5rem;  
-      cursor: pointer;  
-      padding: 0;  
-      transition: background 0.2s, color 0.2s;
-      color: hsl(0 0% 40%);
-
-      &:is(:hover, :focus-visible) {
-        color: hsl(0 0% 90%);
-        background: hsl(0 0% 25%);
-      }
+    &:is(:hover, :focus-visible) {
+      color: hsl(0 0% 90%);
+      background: hsl(0 0% 25%);
     }
+  }
+   
+  button {
+    width: fit-content;  
+    padding: 0 1rem;  
+    height: auto;  
+    aspect-ratio: auto;  
+    font-weight: 120;
   }
 }
