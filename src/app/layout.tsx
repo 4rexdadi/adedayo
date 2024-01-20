@@ -43,13 +43,15 @@ export const metadata: Metadata = {
   themeColor: siteMetadata.theme,
 };
 
+// <Loader />
+
 const RootLayout = ({ children }: { children: React.ReactNode }) => {
   return (
     <html lang="en">
       <Providers>
         <ScrollContainer>
           <body>
-          //  <Loader />
+          
 
             <Cursor />
 
