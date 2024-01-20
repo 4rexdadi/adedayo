@@ -99,19 +99,19 @@ const ContactMe: FC<ContactMeProps> = ({
           />
           <div className={cx(style.action)}>
             <div className={cx(style.socials)}>
-              <a target="_blank" href="goo">
+              <a target="_blank" href="https://www.instagram.com/4rexdadi">
                 <Instagram className={cx(style.instagram, "instagram")} />
               </a>
 
-              <a target="_blank" href="goo">
+              <a target="_blank" href="https://twitter.com/Forexdadi">
                 <Twitter className={cx(style.twitter, "twitter")} />
               </a>
 
-              <a target="_blank" href="goo">
+              <a target="_blank" href="https://www.linkedin.com/in/adedayoaturu">
                 <Linkedin className={cx(style.linkedinSvg, "linkedin")} />
               </a>
 
-              <a target="_blank" href="goo">
+              <a target="_blank" href="https://github.com/4rexdadi">
                 <GitHub className={cx(style.gitHub, "gitHub")} />
               </a>
             </div>
@@ -125,7 +125,3 @@ const ContactMe: FC<ContactMeProps> = ({
 };
 
 export default ContactMe;
-
-// With experience building complex interfaces means that I'm happy to deliver anything from single-page apps to scalable design systems.
-
-// If this sounds like something you're interested in,
