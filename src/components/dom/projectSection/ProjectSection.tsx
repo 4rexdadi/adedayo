@@ -3,6 +3,7 @@
 import { FC } from "react";
 import { LeftArrow, RightArrow } from "../../../../public/assets/svg/Svg";
 import Dragger from "../../subComponent/dragger/Dragger";
+import SingleProject from "../../subComponent/singleProject/SingleProject";
 import style from "./projectSectionStyle.module.scss";
 
 interface ProjectSectionProps {}
@@ -66,6 +67,8 @@ const ProjectSection: FC<ProjectSectionProps> = () => {
           })}
         </ul>
       </Dragger>
+
+      <SingleProject />
     </section>
   );
 };

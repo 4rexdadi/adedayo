@@ -8,6 +8,7 @@ import {
   Twitter,
 } from "../../../../public/assets/svg/Svg";
 import cx from "../../../utils";
+import handleSubmitMail from "../../../utils/sendMail";
 import style from "./contactMeStyle.module.scss";
 
 interface ContactMeProps {
@@ -37,8 +38,21 @@ const ContactMe: FC<ContactMeProps> = ({
     };
   }, []);
 
-  const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+    const data = {
+      name: fullName,
+      email,
+      message,
+    };
+
+    const res = await handleSubmitMail(data);
+
+    if (res === 1) {
+      setFullName("");
+      setEmail("");
+      setMessage("");
+    }
   };
 
   return (
@@ -99,19 +113,35 @@ const ContactMe: FC<ContactMeProps> = ({
           />
           <div className={cx(style.action)}>
             <div className={cx(style.socials)}>
-              <a target="_blank" rel="noreferrer" href="https://www.instagram.com/4rexdadi">
+              <a
+                target="_blank"
+                rel="noreferrer"
+                href="https://www.instagram.com/4rexdadi"
+              >
                 <Instagram className={cx(style.instagram, "instagram")} />
               </a>
 
-              <a target="_blank" rel="noreferrer" href="https://twitter.com/Forexdadi">
+              <a
+                target="_blank"
+                rel="noreferrer"
+                href="https://twitter.com/Forexdadi"
+              >
                 <Twitter className={cx(style.twitter, "twitter")} />
               </a>
 
-              <a target="_blank" rel="noreferrer" href="https://www.linkedin.com/in/adedayoaturu">
+              <a
+                target="_blank"
+                rel="noreferrer"
+                href="https://www.linkedin.com/in/adedayoaturu"
+              >
                 <Linkedin className={cx(style.linkedinSvg, "linkedin")} />
               </a>
 
-              <a target="_blank" rel="noreferrer" href="https://github.com/4rexdadi">
+              <a
+                target="_blank"
+                rel="noreferrer"
+                href="https://github.com/4rexdadi"
+              >
                 <GitHub className={cx(style.gitHub, "gitHub")} />
               </a>
             </div>

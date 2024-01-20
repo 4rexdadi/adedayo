@@ -24,8 +24,6 @@ const handleSubmitMail = async (
     return 1;
   }
 
-  // eslint-disable-next-line no-console
-  console.log(res);
   return 0;
 };
 
