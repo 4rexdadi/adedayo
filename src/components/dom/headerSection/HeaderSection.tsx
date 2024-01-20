@@ -2,7 +2,6 @@
 
 // imports
 import { FC, useEffect, useRef } from "react";
-import Lenis from '@studio-freight/lenis'
 import cx from "../../../utils";
 import style from "./headerSectionStyle.module.scss";
 
@@ -10,7 +9,6 @@ interface HeaderSectionProps {}
 
 const HeaderSection: FC<HeaderSectionProps> = () => {
   const headerContainerRef = useRef<HTMLElement>(null);
-  const lenis = new Lenis()
 
   useEffect(() => {
     let oldScrollY = window.scrollY;
@@ -43,7 +41,7 @@ const HeaderSection: FC<HeaderSectionProps> = () => {
           <span>Dev</span>
         </h2>
 
-        <button type="button" className="btn" onClick={() => lenis.scrollTo("contactMeContainer")}>
+        <button type="button" className="btn" onClick={() => window.scrollTo(0, document.body.scrollHeight)}>
           contact
         </button>
       </div>
