@@ -6,7 +6,7 @@
     url("/assets/fonts/Calibre/Calibre-Light.ttf") format("truetype");
   font-weight: 300;
   font-style: normal;
-  font-display: fallback;
+  font-display: swap;
 }
 
 @font-face {
@@ -17,7 +17,7 @@
     url("/assets/fonts/Calibre/Calibre-Regular.ttf") format("truetype");
   font-weight: 400;
   font-style: normal;
-  font-display: fallback;
+  font-display: swap;
 }
 
 @font-face {
@@ -28,7 +28,7 @@
     url("/assets/fonts/Calibre/Calibre-Medium.ttf") format("truetype");
   font-weight: 500;
   font-style: normal;
-  font-display: fallback;
+  font-display: swap;
 }
 
 @font-face {
@@ -39,7 +39,7 @@
     url("/assets/fonts/Calibre/Calibre-Semibold.ttf") format("truetype");
   font-weight: 600;
   font-style: normal;
-  font-display: fallback;
+  font-display: swap;
 }
 
 @font-face {
@@ -50,7 +50,7 @@
     url("/assets/fonts/Calibre/Calibre-LightItalic.ttf") format("truetype");
   font-weight: 300;
   font-style: italic;
-  font-display: fallback;
+  font-display: swap;
 }
 
 @font-face {
@@ -61,7 +61,7 @@
     url("/assets/fonts/Calibre/Calibre-RegularItalic.ttf") format("truetype");
   font-weight: 400;
   font-style: italic;
-  font-display: fallback;
+  font-display: swap;
 }
 
 @font-face {
@@ -72,7 +72,7 @@
     url("/assets/fonts/Calibre/Calibre-MediumItalic.ttf") format("truetype");
   font-weight: 500;
   font-style: italic;
-  font-display: fallback;
+  font-display: swap;
 }
 
 @font-face {
@@ -83,7 +83,7 @@
     url("/assets/fonts/Calibre/Calibre-SemiboldItalic.ttf") format("truetype");
   font-weight: 600;
   font-style: italic;
-  font-display: fallback;
+  font-display: swap;
 }
 
 @font-face {
@@ -94,7 +94,7 @@
     url("/assets/fonts/SFMono/SFMono-Regular.ttf") format("truetype");
   font-weight: 400;
   font-style: normal;
-  font-display: fallback;
+  font-display: swap;
 }
 
 @font-face {
@@ -105,7 +105,7 @@
     url("/assets/fonts/SFMono/SFMono-Semibold.ttf") format("truetype");
   font-weight: 600;
   font-style: normal;
-  font-display: fallback;
+  font-display: swap;
 }
 
 @font-face {
@@ -116,7 +116,7 @@
     url("/assets/fonts/SFMono/SFMono-RegularItalic.ttf") format("truetype");
   font-weight: 400;
   font-style: italic;
-  font-display: fallback;
+  font-display: swap;
 }
 
 @font-face {
@@ -127,7 +127,7 @@
     url("/assets/fonts/SFMono/SFMono-SemiboldItalic.ttf") format("truetype");
   font-weight: 600;
   font-style: italic;
-  font-display: fallback;
+  font-display: swap;
 }
 
 :root {
@@ -181,6 +181,7 @@ html {
 
 body {
   line-height: 1.6;
+  visibility: hidden;
 }
 
 h1,
