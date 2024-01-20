@@ -104,7 +104,7 @@ const ContactMe: FC<ContactMeProps> = ({
               </a>
             </div>
 
-            <button type="submit">Submit</button>
+            <button type="submit">Send</button>
           </div>
         </form>
       </div>
