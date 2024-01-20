@@ -42,7 +42,9 @@
     transition: transform 250ms ease;
   }
 
-  .projectCard:hover {
-    transform: translate3d(0px, -2.5%, 0px);
+  @media (min-width: 1025px) {
+    .projectCard:hover {
+      transform: translate3d(0px, -2.5%, 0px);
+    }
   }
 }

@@ -50,7 +50,16 @@ const ContactMe: FC<ContactMeProps> = ({
           <br />
           <br />
           If this sounds like something you&apos;re interested in, drop me a
-          mail <span className={style.email}>adedayoaturu@gmail.com</span>
+          mail{" "}
+          <span className={style.email}>
+            <a
+              target="_blank"
+              href="mailto:adedayoaturu@gmail.com"
+              rel="noreferrer"
+            >
+              adedayoaturu@gmail.com
+            </a>
+          </span>
           <br />
           <br />
           <span>or</span>
@@ -66,6 +75,7 @@ const ContactMe: FC<ContactMeProps> = ({
             id="textarea"
             value={message}
             placeholder="Type your message..."
+            required
           />
 
           <input
@@ -75,6 +85,7 @@ const ContactMe: FC<ContactMeProps> = ({
             value={fullName}
             onChange={(e) => setFullName(e.target.value)}
             placeholder="name here..."
+            required
           />
 
           <input
@@ -84,6 +95,7 @@ const ContactMe: FC<ContactMeProps> = ({
             value={email}
             onChange={(e) => setEmail(e.target.value)}
             placeholder="email here..."
+            required
           />
           <div className={cx(style.action)}>
             <div className={cx(style.socials)}>
@@ -96,7 +108,7 @@ const ContactMe: FC<ContactMeProps> = ({
               </a>
 
               <a target="_blank" href="goo">
-                <Linkedin className={cx(style.linkedin, "linkedin")} />
+                <Linkedin className={cx(style.linkedinSvg, "linkedin")} />
               </a>
 
               <a target="_blank" href="goo">

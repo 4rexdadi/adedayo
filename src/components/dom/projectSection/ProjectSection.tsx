@@ -15,6 +15,29 @@ const ProjectSection: FC<ProjectSectionProps> = () => {
 
   // }, [clickedProject]);
 
+  const projects = [
+    {
+      id: 0,
+      background: "green",
+    },
+    {
+      id: 1,
+      background: "pink",
+    },
+    {
+      id: 2,
+      background: "blue",
+    },
+    {
+      id: 3,
+      background: "orange",
+    },
+    {
+      id: 4,
+      background: "red",
+    },
+  ];
+
   return (
     <section className={style.projectContainer}>
       <div className={style.projectHeader}>
@@ -32,11 +55,15 @@ const ProjectSection: FC<ProjectSectionProps> = () => {
         friction={0.95}
       >
         <ul className={style.projects}>
-          <li className={style.projectCard} style={{ background: "red" }} />
-          <li className={style.projectCard} style={{ background: "green" }} />
-          <li className={style.projectCard} style={{ background: "pink" }} />
-          <li className={style.projectCard} style={{ background: "blue" }} />
-          <li className={style.projectCard} style={{ background: "orange" }} />
+          {projects.map((project) => {
+            return (
+              <li
+                key={project.id}
+                className={style.projectCard}
+                style={{ background: project.background }}
+              />
+            );
+          })}
         </ul>
       </Dragger>
     </section>

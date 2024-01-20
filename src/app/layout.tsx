@@ -1,6 +1,7 @@
 // Imports
 import type { Metadata } from "next";
 import Cursor from "../components/subComponent/cursor/Cursor";
+import Loader from "../components/subComponent/loader/Loader";
 import ScrollContainer from "../components/subComponent/scrollContainer/ScrollContainer";
 import siteMetadata from "../data/siteMetaData";
 import Providers from "../redux/Providers";
@@ -48,6 +49,8 @@ const RootLayout = ({ children }: { children: React.ReactNode }) => {
       <Providers>
         <ScrollContainer>
           <body>
+            <Loader />
+
             <Cursor />
 
             {children}
