@@ -52,6 +52,10 @@
     .companyName {
       color: var(--secondary);
     }
+   
+    a {
+      font-weight: 700;
+    }
 
     a:hover {
       text-decoration: underline;
