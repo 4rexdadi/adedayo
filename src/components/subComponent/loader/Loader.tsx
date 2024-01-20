@@ -20,7 +20,6 @@ const Loader: FC<LoaderProps> = () => {
     const t1 = gsap.timeline({
       onComplete: () => {
         setIsLoading(false);
-        document.body.style.visibility = 'visible';
       },
     });
     t1.to(".follow", {
