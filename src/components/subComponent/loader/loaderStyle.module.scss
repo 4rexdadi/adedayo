@@ -8,54 +8,5 @@
   overflow: hidden;
   z-index: 1450;
   touch-action: none;
-
-  .loading {
-    position: relative;
-    height: 100%;
-    width: 100%;
-    background-color: var(--black);
-    display: flex;
-    align-items: center;
-  }
-
-  .follow {
-    position: absolute;
-    background-color: var(--secondary);
-    height: rem(2);
-    width: 100%;
-    transform: translateX(-100%);
-    z-index: 1401;
-  }
-
-  .progressBar {
-    background-color: var(--white);
-    height: rem(2);
-    width: 100%;
-    transform: translateX(-100%);
-    transition: transform 100ms linear;
-    /* will-change: transform; */
-  }
-
-  .count {
-    position: absolute;
-    color: var(--white);
-    bottom: 7%;
-    left: 0;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-
-  .contentDisplay {
-    position: absolute;
-    left: 0;
-    top: 0;
-    height: 100%;
-    width: 100%;
-    transform: translateX(-100%);
-    transform-origin: left;
-    background-color: var(--black);
-    z-index: 1410;
-  }
+  display: none; 
 }
