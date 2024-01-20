@@ -36,8 +36,9 @@ const ExperienceSection: FC<ExperienceSectionProps> = (): JSX.Element => {
               return (
                 <div key={experiences.id}>
                   <p className={style.experiencesInfo}>
-                    <span>{experiences.role} @</span>
+                    <span>{experiences.role}</span>
                     <span className={style.companyName}>
+                      {" @ "}
                       <a
                         target="_blank"
                         href={experiences.companyWebsite}
