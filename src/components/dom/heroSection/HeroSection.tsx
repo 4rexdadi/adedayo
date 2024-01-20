@@ -19,7 +19,7 @@ const HeroSection: FC<HeroSectionProps> = () => {
             <a href="google.com">Lagos, Nigeria</a>, focused on creating and
             occasionally designing exceptional and engaging digital experiences.
             <br />
-            Check out my <a href="google.com">résumé</a> for relevant
+            Check out my <a target="_black" href="/assets/resume.pdf">résumé</a> for relevant
             experience.
           </span>
 
