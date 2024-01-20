@@ -1,7 +1,7 @@
 // Imports
 import type { Metadata } from "next";
 import Cursor from "../components/subComponent/cursor/Cursor";
-// import Loader from "../components/subComponent/loader/Loader";
+import Loader from "../components/subComponent/loader/Loader";
 import ScrollContainer from "../components/subComponent/scrollContainer/ScrollContainer";
 import siteMetadata from "../data/siteMetaData";
 import Providers from "../redux/Providers";
@@ -43,15 +43,13 @@ export const metadata: Metadata = {
   themeColor: siteMetadata.theme,
 };
 
-// <Loader />
-
 const RootLayout = ({ children }: { children: React.ReactNode }) => {
   return (
     <html lang="en">
       <Providers>
         <ScrollContainer>
           <body>
-          
+            <Loader />
 
             <Cursor />
 
