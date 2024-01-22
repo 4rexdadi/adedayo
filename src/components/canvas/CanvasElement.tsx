@@ -4,6 +4,7 @@
 // import { Preload } from "@react-three/drei";
 import { Canvas, Props } from "@react-three/fiber";
 import { JSX, RefAttributes, Suspense, useEffect, useRef } from "react";
+import Loader from "../subComponent/loader/Loader";
 import { useAppDispatch } from "../../hooks/storeHook";
 import { setCanvas } from "../../redux/features/refsSlice";
 import Lights from "./utils/Lights";
@@ -22,7 +23,7 @@ const CanvasElement = (
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
   return (
-   <Suspense fallback={null}>
+   <Suspense fallback={<Loader />}>
     <Canvas
       {...props}
       ref={ref}
