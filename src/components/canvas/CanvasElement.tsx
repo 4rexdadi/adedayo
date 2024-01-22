@@ -5,6 +5,7 @@
 import { Canvas, Props } from "@react-three/fiber";
 import { JSX, RefAttributes, Suspense, useEffect, useRef } from "react";
 import { useAppDispatch } from "../../hooks/storeHook";
+import Loader from "../subComponent/loader/Loader";
 import { setCanvas } from "../../redux/features/refsSlice";
 import Lights from "./utils/Lights";
 
@@ -43,7 +44,7 @@ const CanvasElement = (
       //   rotation: [0, 0, 0],
       // }}
     >
-      <Suspense fallback={null}>
+      <Suspense fallback={<Loader />}>
         <Lights />
 
         {children}
