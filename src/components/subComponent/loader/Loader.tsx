@@ -10,11 +10,11 @@ interface HexBrickProps {
 }
 
 const HexBrick: React.FC<HexBrickProps> = ({ type }) => (
-  <div className={`${styles['hex-brick']} ${styles[type]}`}></div>
+  <div className={`${style['hex-brick']} ${style[type]}`}></div>
 );
 
 const GelRow: React.FC<{ column: number }> = ({ column }) => (
-  <div className={`${styles.gel} ${styles[`c${column}`]} ${styles.r3}`}>
+  <div className={`${style.gel} ${style[`c${column}`]} ${style.r3}`}>
     <HexBrick type="h1" />
     <HexBrick type="h2" />
     <HexBrick type="h3" />
