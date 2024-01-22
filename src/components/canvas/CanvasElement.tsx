@@ -1,5 +1,3 @@
-"use client";
-
 // import
 // import { Preload } from "@react-three/drei";
 import { Canvas, Props } from "@react-three/fiber";
@@ -13,20 +11,11 @@ const CanvasElement = (
   props: JSX.IntrinsicAttributes & Props & RefAttributes<HTMLCanvasElement>
 ) => {
   const { children } = props;
-  const ref = useRef<HTMLCanvasElement>(null);
-  const dispatch = useAppDispatch();
 
-  useEffect(() => {
-    if (ref.current) {
-      dispatch(setCanvas(ref.current));
-    }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
   return (
    <Suspense fallback={<Loader />}>
     <Canvas
       {...props}
-      ref={ref}
       style={{
         backgroundColor: "transparent",
         width: " 100%",
