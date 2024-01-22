@@ -10,7 +10,7 @@ interface HexBrickProps {
 }
 
 const HexBrick: React.FC<HexBrickProps> = ({ type }) => (
-  <div className={`${style['hex-brick']} ${style[type]}`}></div>
+  <div className={`${style['hex-brick']} ${style[type]}`} />
 );
 
 const GelRow: React.FC<{ column: number }> = ({ column }) => (
