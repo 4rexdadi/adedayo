@@ -1,4 +1,3 @@
-"use client";
 
 // import
 import { FC } from "react";
