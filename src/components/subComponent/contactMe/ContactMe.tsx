@@ -62,7 +62,7 @@ const ContactMe: FC<ContactMeProps> = ({
           Having experience in building complex interfaces means that I am happy to deliver anything from single-page apps to scalable design systems.
           <br />
           <br />
-          If this sounds like something you&apos;re interested in, drop me a line.{" "}
+          If this sounds like something you&apos;re interested in, drop me a line{" "}
           <span className={style.email}>
             <a
               target="_blank"
