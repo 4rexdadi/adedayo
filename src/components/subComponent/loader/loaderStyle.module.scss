@@ -8,5 +8,61 @@
   overflow: hidden;
   z-index: 1450;
   touch-action: none;
-  display: none; 
+  display: grid; 
+  place-items: center;
+
+
+  .socket {
+  width: 200px;
+  height: 200px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.hexBrick {
+  background: #ABF8FF;
+  width: 30px;
+  height: 17px;
+  position: absolute;
+  top: 5px;
+  animation: fade 2s infinite;
+}
+
+.h2 {
+  transform: rotate(60deg);
+}
+
+.h3 {
+  transform: rotate(-60deg);
+}
+
+.gel {
+  height: 30px;
+  width: 30px;
+  transition: all 0.3s;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.center-gel {
+  margin-left: -15px;
+  margin-top: -15px;
+  animation: pulse 2s infinite;
+}
+
+@keyframes fade {
+  to {
+    opacity: 0.5;
+  }
+}
+
+@keyframes pulse {
+  50% {
+    transform: scale(1.1);
+  }
+}
 }
