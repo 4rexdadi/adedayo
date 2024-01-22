@@ -23,6 +23,7 @@ const CanvasElement = (
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
   return (
+   <Suspense fallback={<Loader />}>
     <Canvas
       {...props}
       ref={ref}
@@ -44,11 +45,9 @@ const CanvasElement = (
       //   rotation: [0, 0, 0],
       // }}
     >
-      <Suspense fallback={<Loader />}>
         <Lights />
 
         {children}
-      </Suspense>
 
       {/* <OrbitControls makeDefault /> */}
 
@@ -56,6 +55,7 @@ const CanvasElement = (
 
       {/* <Preload all /> */}
     </Canvas>
+  </Suspense>
   );
 };
 
