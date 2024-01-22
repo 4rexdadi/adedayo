@@ -1,7 +1,7 @@
 // import
 // import { Preload } from "@react-three/drei";
 import { Canvas, Props } from "@react-three/fiber";
-import { JSX, RefAttributes, Suspense, useEffect, useRef } from "react";
+import { JSX, RefAttributes, Suspense } from "react";
 import Loader from "../subComponent/loader/Loader";
 import { useAppDispatch } from "../../hooks/storeHook";
 import { setCanvas } from "../../redux/features/refsSlice";
