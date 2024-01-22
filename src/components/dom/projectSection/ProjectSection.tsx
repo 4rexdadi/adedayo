@@ -19,23 +19,23 @@ const ProjectSection: FC<ProjectSectionProps> = () => {
   const projects = [
     {
       id: 0,
-      background: "green",
+      background: "#5b5b5b",
     },
     {
       id: 1,
-      background: "pink",
+      background: "#5b5b5b",
     },
     {
       id: 2,
-      background: "blue",
+      background: "#5b5b5b",
     },
     {
       id: 3,
-      background: "orange",
+      background: "#5b5b5b",
     },
     {
       id: 4,
-      background: "red",
+      background: "#5b5b5b",
     },
   ];
 
