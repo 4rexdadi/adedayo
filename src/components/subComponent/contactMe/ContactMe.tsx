@@ -59,12 +59,10 @@ const ContactMe: FC<ContactMeProps> = ({
     <div className={cx(style.contactMeContainer, className)}>
       <div className={cx(style.contactMe, "contactMe")}>
         <p className={style.contactTitle}>
-          With experience building complex interfaces means that I&apos;m happy
-          to deliver anything from single-page apps to scalable design systems.
+          Having experience in building complex interfaces means that I am happy to deliver anything from single-page apps to scalable design systems.
           <br />
           <br />
-          If this sounds like something you&apos;re interested in, drop me a
-          mail{" "}
+          If this sounds like something you&apos;re interested in, drop me a line.{" "}
           <span className={style.email}>
             <a
               target="_blank"
@@ -88,7 +86,7 @@ const ContactMe: FC<ContactMeProps> = ({
             name="textarea"
             id="textarea"
             value={message}
-            placeholder="Type your message..."
+            placeholder="Type your message here."
             required
           />
 
@@ -98,7 +96,7 @@ const ContactMe: FC<ContactMeProps> = ({
             name="name"
             value={fullName}
             onChange={(e) => setFullName(e.target.value)}
-            placeholder="name here..."
+            placeholder="Name here."
             required
           />
 
@@ -108,7 +106,7 @@ const ContactMe: FC<ContactMeProps> = ({
             name="email"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
-            placeholder="email here..."
+            placeholder="Email here."
             required
           />
           <div className={cx(style.action)}>
