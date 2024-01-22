@@ -3,7 +3,6 @@
 import { Canvas, Props } from "@react-three/fiber";
 import { JSX, RefAttributes, Suspense } from "react";
 import Loader from "../subComponent/loader/Loader";
-import { useAppDispatch } from "../../hooks/storeHook";
 import { setCanvas } from "../../redux/features/refsSlice";
 import Lights from "./utils/Lights";
 
