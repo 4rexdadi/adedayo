@@ -11,7 +11,7 @@ const Loader: FC<LoaderProps> = () => {
   type: string;
 };
 
-const HexBrick: React.FC<HexBrickProps> = ({ type }) => <div className={`${style.hexBrick} ${style.type}`} />;
+const HexBrick: React.FC<HexBrickProps> = ({ type }) => <div className={`${style.hexBrick} ${type}`} />;
 
 interface GelProps {
   column: string;
@@ -20,9 +20,9 @@ interface GelProps {
 
 const Gel: React.FC<GelProps> = ({ column, row }) => (
   <div className={`${style.gel} ${style.column} r${style.row}`}>
-    <HexBrick type="h1" />
-    <HexBrick type="h2" />
-    <HexBrick type="h3" />
+    <HexBrick type={style.h1} />
+    <HexBrick type={style.h2} />
+    <HexBrick type={style.h3} />
   </div>
 );
 
