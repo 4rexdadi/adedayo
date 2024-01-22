@@ -1,3 +1,36 @@
+  $color1: #ABF8FF;
+$color2: #90BBBF;
+$color3: #389CA6;
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(0.01);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes fade {
+  0% {
+    background: $color1;
+  }
+
+  50% {
+    background: $color2;
+  }
+
+  100% {
+    background: $color1;
+  }
+}
+
+
 .loaderContainer {
   width: 100%;
   height: 100%;
@@ -11,23 +44,24 @@
   display: grid; 
   place-items: center;
 
-
-  .socket {
+.socket {
   width: 200px;
   height: 200px;
   position: absolute;
   left: 50%;
+  margin-left: -100px;
   top: 50%;
-  transform: translate(-50%, -50%);
+  margin-top: -100px;
 }
 
-.hexBrick {
-  background: #ABF8FF;
+.hex-brick {
+  background: $color1;
   width: 30px;
   height: 17px;
   position: absolute;
   top: 5px;
   animation: fade 2s infinite;
+  @include fade;
 }
 
 .h2 {
@@ -45,24 +79,35 @@
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
-}
 
-.center-gel {
-  margin-left: -15px;
-  margin-top: -15px;
-  animation: pulse 2s infinite;
-}
-
-@keyframes fade {
-  to {
-    opacity: 0.5;
+  &.center-gel {
+    margin-left: -15px;
+    margin-top: -15px;
+    animation: pulse 2s infinite;
   }
-}
 
-@keyframes pulse {
-  50% {
-    transform: scale(1.1);
+  &.c1 {
+    margin-left: -47px;
+    margin-top: -15px;
+  }
+
+  // ... (Repeat for other .c classes)
+
+  &.c37 {
+    margin-left: 81px;
+    margin-top: -15px;
+  }
+
+  &.r1, &.r2, &.r3 {
+    animation: pulse 2s infinite;
+    animation-delay: 0.2s; // Adjust delay for each row
+  }
+
+  &.r1 > .hex-brick,
+  &.r2 > .hex-brick,
+  &.r3 > .hex-brick {
+    animation: fade 2s infinite;
+    animation-delay: 0.2s; // Adjust delay for each row
   }
 }
 }
