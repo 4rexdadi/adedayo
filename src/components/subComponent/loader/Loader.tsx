@@ -5,38 +5,30 @@ import { FC } from "react";
 import style from "./loaderStyle.module.scss";
 
 interface LoaderProps {}
-
-const Loader: FC<LoaderProps> = () => {
-  interface HexBrickProps {
+interface HexBrickProps {
   type: string;
-};
+}
 
-const HexBrick: React.FC<HexBrickProps> = ({ type }) => <div className={`${style.hexBrick} ${type}`} />;
+const HexBrick: React.FC<HexBrickProps> = ({ type }) => (
+  <div className={`${styles['hex-brick']} ${styles[type]}`}></div>
+);
 
-interface GelProps {
-  column: string;
-  row: number;
-};
-
-const Gel: React.FC<GelProps> = ({ column, row }) => (
-  <div className={`${style.gel} ${style.column} r${style.row}`}>
-    <HexBrick type={style.h1} />
-    <HexBrick type={style.h2} />
-    <HexBrick type={style.h3} />
+const GelRow: React.FC<{ column: number }> = ({ column }) => (
+  <div className={`${styles.gel} ${styles[`c${column}`]} ${styles.r3}`}>
+    <HexBrick type="h1" />
+    <HexBrick type="h2" />
+    <HexBrick type="h3" />
   </div>
 );
 
+const Loader: FC<LoaderProps> = () => {
+  const columns = Array.from({ length: 12 }, (_, index) => index + 28);
 
   return (
     <div className={`${style.loaderContainer} loaderContainer`}>
-    <Gel column="c30" row={3} />
-    <Gel column="c31" row={3} />
-    <Gel column="c32" row={3} />
-    <Gel column="c33" row={3} />
-    <Gel column="c34" row={3} />
-    <Gel column="c35" row={3} />
-    <Gel column="c36" row={3} />
-    <Gel column="c37" row={3} />
+      {columns.map((column) => (
+        <GelRow key={column} column={column} />
+      ))}
     </div>
   );
 };
