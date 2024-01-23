@@ -8,7 +8,6 @@ import ProjectSection from "../components/dom/projectSection/ProjectSection";
 import ServicesSection from "../components/dom/servicesSection/ServicesSection";
 
 const Home: FC = (): JSX.Element => {
-
   return (
     <div className="DomElement noSelect mainContainer" id="DomElement">
       <header id="header">
@@ -26,7 +25,6 @@ const Home: FC = (): JSX.Element => {
 
         <ContactSection />
       </main>
-
     </div>
   );
 };

@@ -1,6 +1,6 @@
-// "use client";
+"use client";
 
-import { FC } from "react";
+import { FC, useEffect, useState } from "react";
 import { LeftArrow, RightArrow } from "../../../../public/assets/svg/Svg";
 import Dragger from "../../subComponent/dragger/Dragger";
 import SingleProject from "../../subComponent/singleProject/SingleProject";
@@ -9,33 +9,25 @@ import style from "./projectSectionStyle.module.scss";
 interface ProjectSectionProps {}
 
 const ProjectSection: FC<ProjectSectionProps> = () => {
-  // const [clickedProject, setClickedProject] = useState<EventTarget>();
+  const [clickedProject, setClickedProject] = useState<EventTarget>();
 
-  // useEffect(() => {
-  //   if (!clickedProject) return;
-
-  // }, [clickedProject]);
+  useEffect(() => {}, [clickedProject]);
 
   const projects = [
     {
       id: 0,
-      background: "#5b5b5b",
     },
     {
       id: 1,
-      background: "#5b5b5b",
     },
     {
       id: 2,
-      background: "#5b5b5b",
     },
     {
       id: 3,
-      background: "#5b5b5b",
     },
     {
       id: 4,
-      background: "#5b5b5b",
     },
   ];
 
@@ -51,24 +43,20 @@ const ProjectSection: FC<ProjectSectionProps> = () => {
       </div>
 
       <Dragger
-        // onStaticClick={(e) => setClickedProject(e)}
+        onStaticClick={(e) => setClickedProject(e)}
         className="dragger"
         friction={0.95}
       >
         <ul className={style.projects}>
           {projects.map((project) => {
             return (
-              <li
-                key={project.id}
-                className={style.projectCard}
-                style={{ background: project.background }}
-              />
+              <li key={project.id} className={style.projectCard}>
+                <SingleProject clicked />
+              </li>
             );
           })}
         </ul>
       </Dragger>
-
-      <SingleProject />
     </section>
   );
 };
