@@ -1,6 +1,7 @@
 // import
-import { FC } from "react";
-import ContactSection from "../components/dom/contactSection/ContactSection";
+import { FC, Suspense } from "react";
+import dynamic from "next/dynamic"
+// import ContactSection from "../components/dom/contactSection/ContactSection";
 import ExperienceSection from "../components/dom/experienceSection/ExperienceSection";
 import HeaderSection from "../components/dom/headerSection/HeaderSection";
 import HeroSection from "../components/dom/heroSection/HeroSection";
@@ -8,6 +9,10 @@ import ProjectSection from "../components/dom/projectSection/ProjectSection";
 import ServicesSection from "../components/dom/servicesSection/ServicesSection";
 
 const Home: FC = (): JSX.Element => {
+const ContactSection = dynamic(
+  () => import("../components/dom/contactSection/ContactSection")
+);
+
   return (
     <div className="DomElement noSelect mainContainer" id="DomElement">
       <header id="header">
@@ -15,6 +20,7 @@ const Home: FC = (): JSX.Element => {
       </header>
 
       <main id="main">
+      <Suspense fallback={null}>
         <HeroSection />
 
         <ProjectSection />
@@ -25,6 +31,7 @@ const Home: FC = (): JSX.Element => {
 
         <ContactSection />
       </main>
+      </Suspense>
     </div>
   );
 };
