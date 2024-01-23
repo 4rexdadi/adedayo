@@ -19,8 +19,8 @@ const ContactSection = dynamic(
         <HeaderSection />
       </header>
 
-      <main id="main">
       <Suspense fallback={null}>
+      <main id="main">
         <HeroSection />
 
         <ProjectSection />
