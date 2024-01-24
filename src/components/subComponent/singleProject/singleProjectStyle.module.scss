@@ -1,8 +1,5 @@
 .singleProjectContainer {
-  /* 12.00px → 48.00px left and right */
-  --wrapper-margin: clamp(1.5rem, calc(-1.3rem + 14.01vw), 6rem);
-
-  width: min(100% - var(--wrapper-margin), 1327px);
+  width: 100%;
   height: 90vh;
   background: #5b5b5b3b;
   position: fixed;
@@ -10,4 +7,11 @@
   left: 50%;
   /* transform: translate(-50%, 50%); */
   transition: transform 1.2s ease;
+  overflow: scroll;
+  z-index: 9999;
+
+  .singleProjectWrapper {
+    height: 700vh;
+    background: red;
+  }
 }

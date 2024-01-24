@@ -10,6 +10,7 @@ interface ProjectSectionProps {}
 
 const ProjectSection: FC<ProjectSectionProps> = () => {
   const [clickedProject, setClickedProject] = useState("");
+  const [isClicked, setIsClicked] = useState(0);
 
   const projects = [
     {
@@ -41,7 +42,12 @@ const ProjectSection: FC<ProjectSectionProps> = () => {
       </div>
 
       <Dragger
-        onStaticClick={(e) => setClickedProject(e.id)}
+        onStaticClick={(e) => {
+          setClickedProject(e.id);
+          if (e.id) {
+            setIsClicked((prev) => prev + 1);
+          }
+        }}
         className="dragger"
         friction={0.95}
       >
@@ -59,6 +65,7 @@ const ProjectSection: FC<ProjectSectionProps> = () => {
       </Dragger>
 
       <SingleProject
+        isClicked={isClicked}
         clicked={
           projects.filter(
             (projects) => projects.id.toString() === clickedProject

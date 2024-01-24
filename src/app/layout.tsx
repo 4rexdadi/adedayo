@@ -48,7 +48,7 @@ const RootLayout = ({ children }: { children: React.ReactNode }) => {
   return (
     <html lang="en">
       <Providers>
-        <ScrollContainer>
+        <ScrollContainer root>
           <body>
             <Loader />
 

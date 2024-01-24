@@ -1,32 +1,32 @@
 /* WebKit manipulate Scrollbar */
 
-* {
-  scrollbar-width: none !important;
-  scrollbar-color: var(--secondary) transparent;
-}
+// * {
+//   scrollbar-width: none !important;
+//   scrollbar-color: var(--secondary) transparent;
+// }
 
-*::-webkit-scrollbar {
-  display: none !important;
-  width: 0 !important;
-  height: 0 !important;
-}
+// *::-webkit-scrollbar {
+//   display: none !important;
+//   width: 0 !important;
+//   height: 0 !important;
+// }
 
-*::-webkit-scrollbar-thumb {
-  display: none !important;
-  width: 0 !important;
-  height: 0 !important;
-  background: var(--secondary) !important;
-}
+// *::-webkit-scrollbar-thumb {
+//   display: none !important;
+//   width: 0 !important;
+//   height: 0 !important;
+//   background: var(--secondary) !important;
+// }
 
-*::-webkit-scrollbar-thumb:active {
-  background: rgb(1, 126, 126);
-}
+// *::-webkit-scrollbar-thumb:active {
+//   background: rgb(1, 126, 126);
+// }
 
-*::-webkit-scrollbar-track {
-  display: none !important;
-  width: 0 !important;
-  height: 0 !important;
-}
+// *::-webkit-scrollbar-track {
+//   display: none !important;
+//   width: 0 !important;
+//   height: 0 !important;
+// }
 
 html.lenis {
   height: auto;
