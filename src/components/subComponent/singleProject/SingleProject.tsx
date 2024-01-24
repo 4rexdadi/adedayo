@@ -2,11 +2,15 @@ import { FC } from "react";
 import style from "./singleProjectStyle.module.scss";
 
 interface SingleProjectProps {
-  clicked: boolean;
+  clicked: { id: number } | undefined;
 }
 
 const SingleProject: FC<SingleProjectProps> = ({ clicked }): JSX.Element => {
-  return <div className={style.singleProjectContainer}> {clicked} </div>;
+  return (
+    <div
+      className={style.singleProjectContainer}
+    >{`Project${clicked?.id}`}</div>
+  );
 };
 
 export default SingleProject;

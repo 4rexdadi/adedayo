@@ -25,7 +25,7 @@ type TProps = {
   setCursorStyles?: boolean;
   draggerRef?: (args: DraggerRefParams) => void;
   onFrame?: (args: OnFrameType) => void;
-  onStaticClick?: (e: EventTarget) => void;
+  onStaticClick?: (e: HTMLElement) => void;
   onDown?: () => void;
   onUp?: () => void;
   style?: React.CSSProperties;

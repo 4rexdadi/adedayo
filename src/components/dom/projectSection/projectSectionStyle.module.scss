@@ -41,6 +41,8 @@
     border-radius: 1rem;
     transition: transform 250ms ease;
     position: relative;
+    border: 2px solid hsl(0 0% 20%);
+    box-shadow: 0 0.5px hsl(0 0% 100% / 0.75) inset;
   }
 
   @media (min-width: 1025px) {
