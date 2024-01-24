@@ -393,8 +393,8 @@ const Dragger = ({
     if (onUp) onUp(); // optional props
 
     // if the slider hasn't dragged sufficiently treat it as a static click
-   // const moveVector = Math.abs(downX.current - e.pageX);
-    if ( onStaticClick) {
+   const moveVector = Math.abs(downX.current - e.pageX);
+    if (moveVector < 50 && onStaticClick) {
       onStaticClick(e.target);
     }
 
