@@ -2,7 +2,7 @@
 
 /* eslint-disable @typescript-eslint/no-explicit-any */
 
-import React, { FC, ReactNode, useEffect, useRef, useState } from "react";
+import React, { FC, ReactNode, useEffect, useRef } from "react";
 import { ReactLenis } from "@studio-freight/react-lenis";
 import { gsap } from "gsap"
 
