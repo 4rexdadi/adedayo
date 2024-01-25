@@ -15,7 +15,9 @@ const SingleProject: FC<SingleProjectProps> = ({
   isClicked,
 }): JSX.Element => {
   const [close, setClose] = useState(true);
-
+  const weapper = useRef<any>(null);
+  const content = useRef<any>(null);
+  
   useEffect(() => {
     if (clicked?.id || clicked?.id === 0) {
       setClose(false);
@@ -24,6 +26,7 @@ const SingleProject: FC<SingleProjectProps> = ({
 
   return (
     <div
+      ref={wrapper}
       style={{
         transform: close ? "translate(-50%, 100%)" : "translate(-50%, 0)",
       }}
@@ -35,11 +38,12 @@ const SingleProject: FC<SingleProjectProps> = ({
            lerp: 0.1,
            duration: 1.5,
            smoothTouch: false,
-           wrapper: document.querySelector(".testCont"),
-           content: document.querySelector(".singleProjectWrapper"),
+           wrapper: wrapper.current,
+           content: content.current,
          }}
          >
         <div
+          ref={content}
           className={cx(
             style.singleProjectWrapper,
             "mainContainer",
