@@ -27,7 +27,7 @@ const SingleProject: FC<SingleProjectProps> = ({
       style={{
         transform: close ? "translate(-50%, 100%)" : "translate(-50%, 0)",
       }}
-      className={cx(style.singleProjectContainer, "mainContainer")}
+      className={cx(style.singleProjectContainer, "testCont", "mainContainer")}
     >
         <ScrollContainer 
          root={false}
@@ -35,6 +35,8 @@ const SingleProject: FC<SingleProjectProps> = ({
            lerp: 0.1,
            duration: 1.5,
            smoothTouch: false,
+           wrapper: document.querySelector(".testCont"),
+           content: document.querySelector(".singleProjectWrapper"),
          }}
          >
         <div
