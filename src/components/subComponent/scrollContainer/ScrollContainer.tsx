@@ -28,7 +28,7 @@ interface ScrollContainerProps {
 }
 
 const ScrollContainer: FC<ScrollContainerProps> = ({ children, root, options }) => {
-  const lenisRef = useRef()
+  const lenisRef = useRef<any>()
   
   useEffect(() => {
     function update(time: number) {
