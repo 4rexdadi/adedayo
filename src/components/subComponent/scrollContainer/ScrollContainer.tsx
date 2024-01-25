@@ -10,8 +10,8 @@ interface ScrollContainerProps {
   children: ReactNode;
   root: boolean;
   options: {
-    wrapper?: (HTMLElement | Window);
-    content?: HTMLElement | undefined;
+    wrapper?: (HTMLElement | Window | any);
+    content?: HTMLElement | undefined | any;
     wheelEventsTarget?: (HTMLElement | Window);
     lerp?: number | undefined;
     duration?: number | undefined;
