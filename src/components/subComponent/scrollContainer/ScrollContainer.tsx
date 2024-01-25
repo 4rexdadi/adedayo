@@ -7,9 +7,27 @@ import { gsap } from "gsap"
 interface ScrollContainerProps {
   children: ReactNode;
   root: boolean;
+  options: {
+    wrapper?: (HTMLElement | Window);
+    content?: HTMLElement | undefined;
+    wheelEventsTarget?: (HTMLElement | Window);
+    lerp?: number | undefined;
+    duration?: number | undefined;
+    easing?: EasingFunction | undefined;
+    orientation?: string | undefined;
+    gestureOrientation?: string | undefined;
+    smoothWheel?: boolean | undefined;
+    smoothTouch?: boolean | undefined;
+    syncTouch?: boolean | undefined;
+    syncTouchLerp?: number | undefined;
+    touchInertiaMultiplier?: number | undefined;
+    normalizeWheel?: boolean | undefined;
+    infinite?: boolean | undefined;
+    autoResize?: boolean | undefined;
+  };
 }
 
-const ScrollContainer: FC<ScrollContainerProps> = ({ children, root }) => {
+const ScrollContainer: FC<ScrollContainerProps> = ({ children, root, options }) => {
   const lenisRef = useRef()
   
   useEffect(() => {
@@ -30,12 +48,7 @@ const ScrollContainer: FC<ScrollContainerProps> = ({ children, root }) => {
       ref={lenisRef} 
       autoRaf={false}
       root={root}
-      options={{
-        lerp: 0.1,
-        duration: 1.5,
-        smoothTouch: false,
-        // wrapper: document.querySelector(".singleProjectWrapper"),
-      }}
+      options={options}
     >
       {children}
     </ReactLenis>
