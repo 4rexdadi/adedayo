@@ -29,7 +29,14 @@ const SingleProject: FC<SingleProjectProps> = ({
       }}
       className={cx(style.singleProjectContainer, "mainContainer")}
     >
-      <ScrollContainer root={false}>
+        <ScrollContainer 
+         root={false}
+         options={{
+           lerp: 0.1,
+           duration: 1.5,
+           smoothTouch: false,
+         }}
+         >
         <div
           className={cx(
             style.singleProjectWrapper,
