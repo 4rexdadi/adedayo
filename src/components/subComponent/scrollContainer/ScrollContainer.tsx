@@ -31,7 +31,7 @@ const ScrollContainer: FC<ScrollContainerProps> = ({ children, root, options }) 
   const lenisRef = useRef()
   
   useEffect(() => {
-    function update(time) {
+    function update(time: number) {
       lenisRef.current?.lenis?.raf(time * 1000)
     }
   
