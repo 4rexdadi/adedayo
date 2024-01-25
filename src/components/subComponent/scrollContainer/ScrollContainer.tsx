@@ -2,9 +2,8 @@
 
 /* eslint-disable @typescript-eslint/no-explicit-any */
 
-import React, { ReactNode, useEffect, useRef, useState } from "react";
+import React, { FC, ReactNode, useEffect, useRef, useState } from "react";
 import { ReactLenis } from "@studio-freight/react-lenis";
-import { FC, ReactNode, useRef, useEffect} from "react";
 import { gsap } from "gsap"
 
 interface ScrollContainerProps {
