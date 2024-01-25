@@ -2,7 +2,7 @@
 
 import { ReactLenis } from "@studio-freight/react-lenis";
 import { FC, ReactNode, useRef, useEffect} from "react";
-inport { gsap } from "gsap"
+import { gsap } from "gsap"
 
 interface ScrollContainerProps {
   children: ReactNode;
