@@ -13,7 +13,7 @@ interface ScrollContainerProps {
     wheelEventsTarget?: (HTMLElement | Window);
     lerp?: number | undefined;
     duration?: number | undefined;
-    easing?: EasingFunction | undefined;
+    easing?: (rawValue: number) => number | undefined;
     orientation?: string | undefined;
     gestureOrientation?: string | undefined;
     smoothWheel?: boolean | undefined;
