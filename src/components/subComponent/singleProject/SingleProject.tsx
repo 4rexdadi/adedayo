@@ -1,5 +1,7 @@
 "use client";
 
+/* eslint-disable @typescript-eslint/no-explicit-any */
+
 import { FC, useEffect, useState } from "react";
 import cx from "../../../utils";
 import ScrollContainer from "../scrollContainer/ScrollContainer";
