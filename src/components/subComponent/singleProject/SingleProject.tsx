@@ -17,7 +17,7 @@ const SingleProject: FC<SingleProjectProps> = ({
   isClicked,
 }): JSX.Element => {
   const [close, setClose] = useState(true);
-  const weapper = useRef<any>(null);
+  const wrapper = useRef<any>(null);
   const content = useRef<any>(null);
   
   useEffect(() => {
