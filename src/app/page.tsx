@@ -1,5 +1,6 @@
 // import
 import { FC } from "react";
+import dynamic from "next/dynamic";
 // import ContactSection from "../components/dom/contactSection/ContactSection";
 import ExperienceSection from "../components/dom/experienceSection/ExperienceSection";
 import HeaderSection from "../components/dom/headerSection/HeaderSection";
