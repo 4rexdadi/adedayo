@@ -1,5 +1,6 @@
 // import
 import { Canvas, Props } from "@react-three/fiber";
+import { Preload } from "@react-three/drei";
 import { JSX, RefAttributes, Suspense } from "react";
 import Lights from "./utils/Lights";
 
@@ -30,6 +31,8 @@ const CanvasElement = (
         //   rotation: [0, 0, 0],
         // }}
       >
+        <Preload all />
+
         <Lights />
 
         {children}
