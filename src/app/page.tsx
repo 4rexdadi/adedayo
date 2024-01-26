@@ -1,6 +1,6 @@
 // import
 import { FC } from "react";
-import ContactSection from "../components/dom/contactSection/ContactSection";
+// import ContactSection from "../components/dom/contactSection/ContactSection";
 import ExperienceSection from "../components/dom/experienceSection/ExperienceSection";
 import HeaderSection from "../components/dom/headerSection/HeaderSection";
 import HeroSection from "../components/dom/heroSection/HeroSection";
@@ -23,7 +23,7 @@ const Home: FC = (): JSX.Element => {
 
         <ServicesSection />
 
-        <ContactSection />
+        {/* <ContactSection /> */}
       </main>
     </div>
   );

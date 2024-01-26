@@ -1,17 +1,14 @@
-.singleProjectContainer {
-  width: 100%;
-  height: 90vh;
+.scrollContainer {
   background: #5b5b5b3b;
   position: fixed;
+  width: 100%;
   bottom: 0;
   left: 50%;
   /* transform: translate(-50%, 50%); */
   transition: transform 1.2s ease;
-  overflow: scroll;
   z-index: 9999;
 
   .singleProjectWrapper {
-    height: 700vh;
-    background: red;
+    height: 90vh;
   }
 }

@@ -1,23 +1,29 @@
 "use client";
 
-/* eslint-disable @typescript-eslint/no-explicit-any */
-
-import React, { FC, ReactNode, useEffect, useRef } from "react";
-import { ReactLenis } from "@studio-freight/react-lenis";
-import { gsap } from "gsap"
+import { useFrame } from "@studio-freight/hamo";
+import Lenis from "@studio-freight/lenis";
+import {
+  CSSProperties,
+  FC,
+  ReactNode,
+  useEffect,
+  useRef,
+  useState,
+} from "react";
 
 interface ScrollContainerProps {
   children: ReactNode;
-  root: boolean;
+  className?: string;
+  style?: CSSProperties | undefined;
+  reset?: boolean;
+  root?: boolean;
   options: {
-    wrapper?: (HTMLElement | Window | any);
-    content?: HTMLElement | undefined | any;
-    wheelEventsTarget?: (HTMLElement | Window);
+    wheelEventsTarget?: HTMLElement | Window;
     lerp?: number | undefined;
     duration?: number | undefined;
-    easing?: (rawValue: number) => number | undefined;
-    orientation?: string | undefined;
-    gestureOrientation?: string | undefined;
+    easing?: ((t: number) => number) | undefined;
+    orientation?: "vertical" | "horizontal" | undefined;
+    gestureOrientation?: "vertical" | "horizontal" | "both" | undefined;
     smoothWheel?: boolean | undefined;
     smoothTouch?: boolean | undefined;
     syncTouch?: boolean | undefined;
@@ -29,31 +35,50 @@ interface ScrollContainerProps {
   };
 }
 
-const ScrollContainer: FC<ScrollContainerProps> = ({ children, root, options }) => {
-  const lenisRef = useRef<any>()
-  
+const ScrollContainer: FC<ScrollContainerProps> = ({
+  children,
+  className = "",
+  style = undefined,
+  reset = false,
+  root = true,
+  options,
+}) => {
+  const [lenis, setLenis] = useState<Lenis | null>(null);
+  const wrapperRef = useRef<HTMLDivElement>(null);
+  const contentRef = useRef<HTMLDivElement>(null);
+
   useEffect(() => {
-    function update(time: number) {
-      lenisRef.current?.lenis?.raf(time * 1000)
-    }
-  
-    gsap.ticker.add(update)
-  
+    if (!wrapperRef.current || !contentRef.current) return undefined;
+
+    const lenis = new Lenis({
+      wrapper: root ? undefined : wrapperRef.current, // element which has overflow
+      content: root ? undefined : contentRef.current, // usually wrapper's direct child
+
+      ...options,
+    });
+
+    lenis.start();
+    setLenis(lenis);
+
     return () => {
-      gsap.ticker.remove(update)
+      lenis.destroy();
+    };
+  }, [options, root]);
+
+  useEffect(() => {
+    if (reset) {
+      lenis?.scrollTo(0, { immediate: true });
     }
-  })
-  
-  
+  }, [lenis, reset]);
+
+  useFrame((time: number) => {
+    lenis?.raf(time);
+  });
+
   return (
-    <ReactLenis
-      ref={lenisRef} 
-      autoRaf={false}
-      root={root}
-      options={options}
-    >
-      {children}
-    </ReactLenis>
+    <div className={className} style={style} ref={wrapperRef}>
+      <div ref={contentRef}>{children}</div>
+    </div>
   );
 };
 

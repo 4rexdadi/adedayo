@@ -2,7 +2,7 @@
 import type { Metadata } from "next";
 import Cursor from "../components/subComponent/cursor/Cursor";
 import KeepScrolling from "../components/subComponent/keepScrolling/KeepScrolling";
-import Loader from "../components/subComponent/loader/Loader";
+// import Loader from "../components/subComponent/loader/Loader";
 import ScrollContainer from "../components/subComponent/scrollContainer/ScrollContainer";
 import siteMetadata from "../data/siteMetaData";
 import Providers from "../redux/Providers";
@@ -48,24 +48,23 @@ const RootLayout = ({ children }: { children: React.ReactNode }) => {
   return (
     <html lang="en">
       <Providers>
-        <ScrollContainer 
-         root 
-         options={{
-           lerp: 0.1,
-           duration: 1.5,
-           smoothTouch: false,
-         }}
-         >
-          <body>
-            <Loader />
+        <body>
+          <ScrollContainer
+            options={{
+              lerp: 0.1,
+              duration: 1.5,
+              smoothTouch: false,
+            }}
+          >
+            {/* <Loader /> */}
 
             <Cursor />
 
             {children}
 
             <KeepScrolling />
-          </body>
-        </ScrollContainer>
+          </ScrollContainer>
+        </body>
       </Providers>
     </html>
   );
