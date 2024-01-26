@@ -8,6 +8,10 @@ import ProjectSection from "../components/dom/projectSection/ProjectSection";
 import ServicesSection from "../components/dom/servicesSection/ServicesSection";
 
 const Home: FC = (): JSX.Element => {
+  const ContactSection = dynamic(() => import("../components/dom/contactSection/ContactSection"), {
+    ssr: false,
+  })
+
   return (
     <div className="DomElement noSelect mainContainer" id="DomElement">
       <header id="header">
@@ -23,7 +27,7 @@ const Home: FC = (): JSX.Element => {
 
         <ServicesSection />
 
-        {/* <ContactSection /> */}
+        <ContactSection />
       </main>
     </div>
   );
