@@ -94,7 +94,7 @@ const ScrollContainer: FC<ScrollContainerProps> = ({
     if (root) {
       if (overFlow) {
         lenis?.start();
-        body?.style.overflow = 'auto';
+        body?.style.overflow = auto;
         body?.style.touchAction = auto;
       } else {
         lenis?.stop();
