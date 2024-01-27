@@ -1,6 +1,6 @@
 .keepScrollingContainer {
   position: fixed;
-  right: 1.2rem;
+  right: calc(clamp(1.5rem, calc(-1.3rem + 14.01vw), 6rem) / 2);
   bottom: 1rem;
   z-index: 9000;
   display: grid;
