@@ -9,6 +9,7 @@
   transition: transform 1.5s ease;
   z-index: 9999;
   border-radius: 2rem 2rem 0 0;
+  overscroll-behavior: none;
 
   .singleProjectWrapper {
     position: relative;
