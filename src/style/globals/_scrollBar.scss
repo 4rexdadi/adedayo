@@ -28,13 +28,13 @@
   height: 0 !important;
 }
 
-html.lenis {
-  height: auto;
-}
-
 html,
 body {
   overscroll-behavior: none;
+}
+
+html.lenis {
+  height: auto;
 }
 
 .lenis.lenis-smooth [data-lenis-prevent] {
@@ -47,4 +47,8 @@ body {
 
 .lenis.lenis-scrolling iframe {
   pointer-events: none;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
 }
