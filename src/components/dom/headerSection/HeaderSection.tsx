@@ -41,7 +41,11 @@ const HeaderSection: FC<HeaderSectionProps> = () => {
           <span>Dev</span>
         </h2>
 
-        <button type="button" className="btn" onClick={() => window.scrollTo(0, document.body.scrollHeight)}>
+        <button
+          type="button"
+          className="btn"
+          onClick={() => window.scrollTo(0, document.body.scrollHeight)}
+        >
           contact
         </button>
       </div>

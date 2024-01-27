@@ -1,15 +1,31 @@
 .scrollContainer {
-  background: #5b5b5b3b;
+  background: #292929af;
   position: fixed;
   width: 100%;
   height: 90dvh;
   bottom: 0;
   left: 50%;
   /* transform: translate(-50%, 50%); */
-  transition: transform 1.2s ease;
+  transition: transform 1.5s ease;
   z-index: 9999;
+  border-radius: 2rem 2rem 0 0;
 
   .singleProjectWrapper {
+    position: relative;
     height: 100%;
+    padding-bottom: 2rem;
+  }
+
+  .singleProjectHeader {
+    position: sticky;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 0;
+  }
+
+  .singleProjectContent {
+    margin-top: 1.5rem;
   }
 }

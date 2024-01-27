@@ -10,6 +10,8 @@ import {
   useRef,
   useState,
 } from "react";
+import { useAppDispatch, useAppSelector } from "../../../hooks/storeHook";
+import { setLenis } from "../../../redux/features/scrollSlice";
 
 interface ScrollContainerProps {
   children: ReactNode;
@@ -17,22 +19,25 @@ interface ScrollContainerProps {
   style?: CSSProperties | undefined;
   reset?: boolean;
   root?: boolean;
-  options: {
-    wheelEventsTarget?: HTMLElement | Window;
-    lerp?: number | undefined;
-    duration?: number | undefined;
-    easing?: ((t: number) => number) | undefined;
-    orientation?: "vertical" | "horizontal" | undefined;
-    gestureOrientation?: "vertical" | "horizontal" | "both" | undefined;
-    smoothWheel?: boolean | undefined;
-    smoothTouch?: boolean | undefined;
-    syncTouch?: boolean | undefined;
-    syncTouchLerp?: number | undefined;
-    touchInertiaMultiplier?: number | undefined;
-    normalizeWheel?: boolean | undefined;
-    infinite?: boolean | undefined;
-    autoResize?: boolean | undefined;
-  };
+  options?:
+    | {
+        wheelEventsTarget?: HTMLElement | Window;
+        lerp?: number | undefined;
+        duration?: number | undefined;
+        easing?: ((t: number) => number) | undefined;
+        orientation?: "vertical" | "horizontal" | undefined;
+        gestureOrientation?: "vertical" | "horizontal" | "both" | undefined;
+        smoothWheel?: boolean | undefined;
+        smoothTouch?: boolean | undefined;
+        syncTouch?: boolean | undefined;
+        syncTouchLerp?: number | undefined;
+        touchInertiaMultiplier?: number | undefined;
+        wheelMultiplier?: number | undefined;
+        normalizeWheel?: boolean | undefined;
+        infinite?: boolean | undefined;
+        autoResize?: boolean | undefined;
+      }
+    | undefined;
 }
 
 const ScrollContainer: FC<ScrollContainerProps> = ({
@@ -43,9 +48,11 @@ const ScrollContainer: FC<ScrollContainerProps> = ({
   root = true,
   options,
 }) => {
-  const [lenis, setLenis] = useState<Lenis | null>(null);
+  const [lenis, setLenisScroll] = useState<Lenis | null>(null);
   const wrapperRef = useRef<HTMLDivElement>(null);
   const contentRef = useRef<HTMLDivElement>(null);
+  const dispatch = useAppDispatch();
+  const overFlow = useAppSelector((state) => state.scrollSlice.overflow);
 
   useEffect(() => {
     if (!wrapperRef.current || !contentRef.current) return undefined;
@@ -58,7 +65,7 @@ const ScrollContainer: FC<ScrollContainerProps> = ({
     });
 
     lenis.start();
-    setLenis(lenis);
+    setLenisScroll(lenis);
 
     return () => {
       lenis.destroy();
@@ -71,12 +78,33 @@ const ScrollContainer: FC<ScrollContainerProps> = ({
     }
   }, [lenis, reset]);
 
+  useEffect(() => {
+    if (lenis) {
+      dispatch(setLenis(lenis));
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [lenis]);
+
+  useEffect(() => {
+    if (root) {
+      if (overFlow) {
+        lenis?.start();
+      } else {
+        lenis?.stop();
+      }
+    }
+  }, [lenis, overFlow, root]);
+
   useFrame((time: number) => {
     lenis?.raf(time);
   });
 
   return (
-    <div className={className} style={style} ref={wrapperRef}>
+    <div
+      className={className}
+      style={{ overflow: "auto", ...style }}
+      ref={wrapperRef}
+    >
       <div ref={contentRef}>{children}</div>
     </div>
   );

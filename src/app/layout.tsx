@@ -52,8 +52,9 @@ const RootLayout = ({ children }: { children: React.ReactNode }) => {
           <ScrollContainer
             options={{
               lerp: 0.1,
-              duration: 1.5,
+              duration: 1.2,
               smoothTouch: false,
+              wheelMultiplier: 0.7,
             }}
           >
             <Loader />

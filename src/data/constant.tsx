@@ -1,4 +1,4 @@
-type Work = {
+export type Work = {
   id: number;
   company: string;
   companyWebsite: string;
@@ -11,13 +11,29 @@ type Work = {
     id: number;
     point: string;
   }[];
-}[];
+};
 
-export const projectData = [
+export type Project = {
+  id: number;
+  date: number;
+  title: string;
+  liveSite: string;
+  roles: string;
+  gitHub: string;
+  technologies: {
+    frontEnd: string;
+    backEnd: string;
+  };
+  video: string;
+  images: string[];
+  description: string;
+};
+
+export const projectData: Project[] = [
   {
     id: 0,
     date: 2021,
-    tittle: "",
+    title: "",
     liveSite: "",
     roles: "",
     gitHub: "",
@@ -25,12 +41,73 @@ export const projectData = [
       frontEnd: "",
       backEnd: "",
     },
-    vid: "",
+    video: "",
+    images: [""],
+    description: "",
+  },
+  {
+    id: 1,
+    date: 2021,
+    title: "",
+    liveSite: "",
+    roles: "",
+    gitHub: "",
+    technologies: {
+      frontEnd: "",
+      backEnd: "",
+    },
+    video: "",
+    images: [""],
+    description: "",
+  },
+  {
+    id: 2,
+    date: 2021,
+    title: "",
+    liveSite: "",
+    roles: "",
+    gitHub: "",
+    technologies: {
+      frontEnd: "",
+      backEnd: "",
+    },
+    video: "",
+    images: [""],
+    description: "",
+  },
+  {
+    id: 3,
+    date: 2021,
+    title: "",
+    liveSite: "",
+    roles: "",
+    gitHub: "",
+    technologies: {
+      frontEnd: "",
+      backEnd: "",
+    },
+    video: "",
+    images: [""],
+    description: "",
+  },
+  {
+    id: 4,
+    date: 2021,
+    title: "",
+    liveSite: "",
+    roles: "",
+    gitHub: "",
+    technologies: {
+      frontEnd: "",
+      backEnd: "",
+    },
+    video: "",
+    images: [""],
     description: "",
   },
 ];
 
-export const jobData: Work = [
+export const jobData: Work[] = [
   {
     id: 0,
     company: "AfroTada",

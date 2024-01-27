@@ -2,6 +2,7 @@
 
 import { FC, useState } from "react";
 import { LeftArrow, RightArrow } from "../../../../public/assets/svg/Svg";
+import { projectData } from "../../../data/constant";
 import Dragger from "../../subComponent/dragger/Dragger";
 import SingleProject from "../../subComponent/singleProject/SingleProject";
 import style from "./projectSectionStyle.module.scss";
@@ -11,24 +12,6 @@ interface ProjectSectionProps {}
 const ProjectSection: FC<ProjectSectionProps> = () => {
   const [clickedProject, setClickedProject] = useState("");
   const [isClicked, setIsClicked] = useState(0);
-
-  const projects = [
-    {
-      id: 0,
-    },
-    {
-      id: 1,
-    },
-    {
-      id: 2,
-    },
-    {
-      id: 3,
-    },
-    {
-      id: 4,
-    },
-  ];
 
   return (
     <section className={style.projectContainer}>
@@ -52,7 +35,7 @@ const ProjectSection: FC<ProjectSectionProps> = () => {
         friction={0.95}
       >
         <ul className={style.projects}>
-          {projects.map((project) => {
+          {projectData.map((project) => {
             return (
               <li
                 key={project.id}
@@ -66,8 +49,8 @@ const ProjectSection: FC<ProjectSectionProps> = () => {
 
       <SingleProject
         isClicked={isClicked}
-        clicked={
-          projects.filter(
+        clickedProject={
+          projectData.filter(
             (projects) => projects.id.toString() === clickedProject
           )[0]
         }

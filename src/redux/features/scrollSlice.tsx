@@ -20,7 +20,7 @@ const scrollSlice = createSlice({
     setLenis: (state, action) => {
       state.lenis = action.payload;
     },
-    setOverflow: (state, action) => {
+    setOverflow: (state, action: { payload: boolean }) => {
       state.overflow = action.payload;
     },
   },

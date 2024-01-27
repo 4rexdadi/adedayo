@@ -1,7 +1,27 @@
 .keepScrollingContainer {
   position: fixed;
-  right: 3rem;
-  bottom: 2rem;
-  color: var(--secondary);
+  right: 1rem;
+  bottom: 1rem;
   z-index: 9000;
+  display: grid;
+  place-items: center;
+  transform: rotate(-90deg);
+
+  svg {
+    circle {
+      stroke: var(--secondary);
+    }
+  }
+
+  button {
+    position: absolute;
+    transform: rotate(-90deg);
+    cursor: pointer;
+
+    svg {
+      width: 20px;
+      height: 20px;
+      stroke: var(--secondary);
+    }
+  }
 }
