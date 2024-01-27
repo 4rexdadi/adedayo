@@ -3,10 +3,12 @@ import { configureStore } from "@reduxjs/toolkit";
 
 import cursorReducer from "./features/cursorSlice";
 import refsReducer from "./features/refsSlice";
+import scrollReducer from "./features/scrollSlice";
 
 const store = configureStore({
   reducer: {
     cursorSlice: cursorReducer,
+    scrollSlice: scrollReducer,
     refsSlice: refsReducer,
   },
   middleware: (getDefaultMiddleware) =>
