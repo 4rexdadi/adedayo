@@ -32,8 +32,9 @@ html.lenis {
   height: auto;
 }
 
-.lenis.lenis-smooth {
-  scroll-behavior: auto;
+html,
+body {
+  overscroll-behavior: none;
 }
 
 .lenis.lenis-smooth [data-lenis-prevent] {
