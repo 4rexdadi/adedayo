@@ -91,14 +91,14 @@ const ScrollContainer: FC<ScrollContainerProps> = ({
       if (overFlow) {
         lenis?.start();
         if(body){
-           body.stye.overflow = "auto";
-           body.stye.touchAction = "auto";
+           body.style.overflow = "auto";
+           body.style.touchAction = "auto";
          };
       } else {
         lenis?.stop();
          if(body){
-           body.stye.overflow = "hidden";
-           body.stye.touchAction = "none";
+           body.style.overflow = "hidden";
+           body.style.touchAction = "none";
          };
       }
     }
