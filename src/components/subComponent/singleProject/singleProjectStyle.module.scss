@@ -2,6 +2,7 @@
   background: #5b5b5b3b;
   position: fixed;
   width: 100%;
+  height: 90dvh;
   bottom: 0;
   left: 50%;
   /* transform: translate(-50%, 50%); */
@@ -9,6 +10,6 @@
   z-index: 9999;
 
   .singleProjectWrapper {
-    height: 90%;
+    height: 100%;
   }
 }
