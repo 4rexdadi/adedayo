@@ -102,7 +102,7 @@ const ScrollContainer: FC<ScrollContainerProps> = ({
   return (
     <div
       className={className}
-      style={{ overflow: root && !overFlow ? "hidden" : "auto", background: root && !overFlow ? "red" : "blue"  ,...style }}
+      style={{ overflow: "auto", touchAction: root && !overFlow ? "none" : "default"  ,...style }}
       ref={wrapperRef}
     >
       <div ref={contentRef}>{children}</div>
