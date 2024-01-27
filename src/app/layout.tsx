@@ -10,7 +10,6 @@ import Providers from "../redux/Providers";
 import "../style/GlobalStyle.scss";
 
 export const metadata: Metadata = {
-  const overFlow = useAppSelector((state) => state.scrollSlice.overflow);
   metadataBase: new URL(siteMetadata.siteUrl),
   title: {
     template: `%s | ${siteMetadata.title}`,
@@ -47,6 +46,8 @@ export const metadata: Metadata = {
 };
 
 const RootLayout = ({ children }: { children: React.ReactNode }) => {
+const overFlow = useAppSelector((state) => state.scrollSlice.overflow);
+
   return (
     <html lang="en" className={ overFlow ? "" : "lenis lenis-stopped" }>
       <Providers>
