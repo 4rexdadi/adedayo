@@ -4,11 +4,13 @@ import Cursor from "../components/subComponent/cursor/Cursor";
 import KeepScrolling from "../components/subComponent/keepScrolling/KeepScrolling";
 import Loader from "../components/subComponent/loader/Loader";
 import ScrollContainer from "../components/subComponent/scrollContainer/ScrollContainer";
+import useAppSelector from "../hooks/storeHook";
 import siteMetadata from "../data/siteMetaData";
 import Providers from "../redux/Providers";
 import "../style/GlobalStyle.scss";
 
 export const metadata: Metadata = {
+  const overFlow = useAppSelector((state) => state.scrollSlice.overflow);
   metadataBase: new URL(siteMetadata.siteUrl),
   title: {
     template: `%s | ${siteMetadata.title}`,
@@ -46,7 +48,7 @@ export const metadata: Metadata = {
 
 const RootLayout = ({ children }: { children: React.ReactNode }) => {
   return (
-    <html lang="en">
+    <html lang="en" className={ overFlow ? "" : "" }>
       <Providers>
         <body>
           <ScrollContainer
