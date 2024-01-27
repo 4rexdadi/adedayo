@@ -86,11 +86,17 @@ const ScrollContainer: FC<ScrollContainerProps> = ({
   }, [lenis]);
 
   useEffect(() => {
+    const body = document.body;
+
     if (root) {
       if (overFlow) {
         lenis?.start();
+        body?.style.overflow = 'auto';
+        body?.style.touchAction = 'auto';
       } else {
         lenis?.stop();
+        body?.style.overflow = 'hidden';
+        body?.style.touchAction = 'none';
       }
     }
   }, [lenis, overFlow, root]);
@@ -102,7 +108,7 @@ const ScrollContainer: FC<ScrollContainerProps> = ({
   return (
     <div
       className={className}
-      style={{ overflow: "auto", touchAction: root && !overFlow ? "none" : "default"  ,...style }}
+      style={{ overflow: "auto", ...style }}
       ref={wrapperRef}
     >
       <div ref={contentRef}>{children}</div>
