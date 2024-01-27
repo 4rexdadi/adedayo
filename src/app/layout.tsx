@@ -4,7 +4,7 @@ import Cursor from "../components/subComponent/cursor/Cursor";
 import KeepScrolling from "../components/subComponent/keepScrolling/KeepScrolling";
 import Loader from "../components/subComponent/loader/Loader";
 import ScrollContainer from "../components/subComponent/scrollContainer/ScrollContainer";
-import useAppSelector from "../hooks/storeHook";
+import { useAppSelector } from "../hooks/storeHook";
 import siteMetadata from "../data/siteMetaData";
 import Providers from "../redux/Providers";
 import "../style/GlobalStyle.scss";
@@ -48,7 +48,7 @@ export const metadata: Metadata = {
 
 const RootLayout = ({ children }: { children: React.ReactNode }) => {
   return (
-    <html lang="en" className={ overFlow ? "" : "" }>
+    <html lang="en" className={ overFlow ? "" : "lenis lenis-stopped" }>
       <Providers>
         <body>
           <ScrollContainer
