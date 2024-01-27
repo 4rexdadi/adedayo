@@ -1,3 +1,5 @@
+"use client";
+
 // Imports
 import type { Metadata } from "next";
 import Cursor from "../components/subComponent/cursor/Cursor";
