@@ -53,7 +53,7 @@ const RootLayout = ({ children }: { children: React.ReactNode }) => {
             options={{
               lerp: 0.1,
               duration: 1.2,
-              smoothTouch: false,
+              smoothTouch: true,
               wheelMultiplier: 0.7,
             }}
           >
