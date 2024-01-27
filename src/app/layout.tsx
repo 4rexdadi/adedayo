@@ -46,7 +46,7 @@ export const metadata: Metadata = {
 
 const RootLayout = ({ children }: { children: React.ReactNode }) => {
   return (
-    <html lang="en" className="lenis lenis-stopped">
+    <html lang="en">
       <Providers>
         <body>
           <ScrollContainer
