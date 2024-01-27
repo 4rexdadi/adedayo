@@ -86,11 +86,20 @@ const ScrollContainer: FC<ScrollContainerProps> = ({
   }, [lenis]);
 
   useEffect(() => {
+    const { body } = document;
     if (root) {
       if (overFlow) {
         lenis?.start();
+        if(body){
+           body.stye.overflow = "auto";
+           body.stye.touchAction = "auto";
+         };
       } else {
         lenis?.stop();
+         if(body){
+           body.stye.overflow = "hidden";
+           body.stye.touchAction = "none";
+         };
       }
     }
   }, [lenis, overFlow, root]);
