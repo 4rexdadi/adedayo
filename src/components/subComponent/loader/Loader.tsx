@@ -14,8 +14,6 @@ const Loader: FC<LoaderProps> = () => {
     <div className={`${style.loaderContainer} loaderContainer`}>
       <div className={style.loader}>
         <p>Loading</p>
-
-        <p>{progress}</p>
       </div>
     </div>
   );
