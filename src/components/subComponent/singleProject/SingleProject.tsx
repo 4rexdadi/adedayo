@@ -2,6 +2,7 @@
 
 /* eslint-disable @typescript-eslint/no-explicit-any */
 
+import Image from "next/image";
 import { FC, useEffect, useState } from "react";
 import { Project } from "../../../data/constant";
 import { useAppDispatch } from "../../../hooks/storeHook";
@@ -70,11 +71,14 @@ const SingleProject: FC<SingleProjectProps> = ({
         }}
       >
         <div className={style.singleProjectContent}>
-          <div style={{ height: "100vh", background: "red" }} />
-          <div style={{ height: "100vh", background: "blue" }} />
-          <div style={{ height: "100vh", background: "orange" }} />
-          <div style={{ height: "100vh", background: "pink" }} />
-          <div style={{ height: "100vh", background: "yellow" }} />
+          <div className={style.singleProjectContent}>
+            <Image
+              alt={clickedProject?.title || ""}
+              width={350}
+              height={250}
+              src={clickedProject?.mainImage || ""}
+            />
+          </div>
         </div>
       </ScrollContainer>
     </div>

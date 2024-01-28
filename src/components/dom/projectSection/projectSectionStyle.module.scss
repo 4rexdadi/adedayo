@@ -30,7 +30,7 @@
   .projects {
     display: grid;
     grid-template-columns: repeat(
-      5,
+      6,
       clamp(21.875rem, 17.527rem + 21.739vi, 34.375rem)
     );
     padding-top: 10px;
@@ -57,7 +57,7 @@
       position: absolute;
       left: 0;
       top: 0;
-      scale: 1.1;
+      scale: 1.46 1 1;
     }
   }
 

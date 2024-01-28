@@ -2,7 +2,6 @@
 
 import Image from "next/image";
 import { FC, useCallback, useRef, useState } from "react";
-import { LeftArrow, RightArrow } from "../../../../public/assets/svg/Svg";
 import { projectData } from "../../../data/constant";
 import Dragger, { OnFrameType } from "../../subComponent/dragger/Dragger";
 import SingleProject from "../../subComponent/singleProject/SingleProject";
@@ -12,7 +11,7 @@ interface ProjectSectionProps {}
 
 const ProjectSection: FC<ProjectSectionProps> = () => {
   const [clickedProject, setClickedProject] = useState("");
-  // const [log, setLog] = useState<OnFrameType>();
+  const [log, setLog] = useState<OnFrameType>();
   const [isClicked, setIsClicked] = useState(0);
   const innerRefArr = Array.from({ length: projectData.length }, () =>
     // eslint-disable-next-line react-hooks/rules-of-hooks
@@ -32,6 +31,8 @@ const ProjectSection: FC<ProjectSectionProps> = () => {
           (frame.x + outerRefArr[i].current!.offsetLeft) / parallaxFactor;
         ref.current!.style.transform = `translateX(${transformX}px)`;
       });
+
+      setLog(frame);
     },
     [innerRefArr, outerRefArr]
   );
@@ -42,8 +43,9 @@ const ProjectSection: FC<ProjectSectionProps> = () => {
         <p>Selected works</p>
 
         <span>
-          <LeftArrow className="" />
-          <RightArrow className="" />
+          {log && `${(log.progress * 100).toFixed()}%`}
+          {/* <LeftArrow className="" />
+          <RightArrow className="" /> */}
         </span>
       </div>
 
