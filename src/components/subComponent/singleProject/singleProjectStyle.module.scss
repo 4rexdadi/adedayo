@@ -19,11 +19,11 @@
   .singleProjectWrapper {
     position: relative;
     height: 100%;
-    padding: 2rem 0;
+    padding-bottom: 2rem;
   }
 
   .singleProjectHeader {
-    position: absolute;
+    position: sticky;
     top: 0;
     display: flex;
     align-items: center;
