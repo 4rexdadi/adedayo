@@ -29,15 +29,18 @@
 
   .projects {
     display: grid;
+    grid-template-columns: repeat(
+      5,
+      clamp(21.875rem, 17.527rem + 21.739vi, 34.375rem)
+    );
     padding-top: 10px;
-    grid-template-columns: repeat(5, 350px);
-    gap: 1.5rem;
+    gap: clamp(1.5rem, 0.63rem + 4.348vi, 4rem);
     width: 100%;
     overflow: hidden;
   }
 
   .projectCard {
-    height: 250px;
+    height: clamp(15.625rem, 13.451rem + 10.87vi, 21.875rem);
     transition: transform 250ms ease;
     position: relative;
     overflow: hidden;
@@ -50,6 +53,11 @@
       width: 100%;
       height: 100%;
       object-fit: cover;
+      pointer-events: none;
+      position: absolute;
+      left: 0;
+      top: 0;
+      scale: 1.1;
     }
   }
 

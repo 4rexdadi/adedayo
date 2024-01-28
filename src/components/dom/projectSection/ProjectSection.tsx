@@ -12,7 +12,7 @@ interface ProjectSectionProps {}
 
 const ProjectSection: FC<ProjectSectionProps> = () => {
   const [clickedProject, setClickedProject] = useState("");
-  const [log, setLog] = useState<OnFrameType>();
+  // const [log, setLog] = useState<OnFrameType>();
   const [isClicked, setIsClicked] = useState(0);
   const innerRefArr = Array.from({ length: projectData.length }, () =>
     // eslint-disable-next-line react-hooks/rules-of-hooks
@@ -34,7 +34,7 @@ const ProjectSection: FC<ProjectSectionProps> = () => {
       });
 
       // And then only using state here to update the output log in the DOM
-      setLog(frame);
+      // setLog(frame);
     },
     [innerRefArr, outerRefArr]
   );
