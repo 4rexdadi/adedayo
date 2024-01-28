@@ -32,9 +32,6 @@ const ProjectSection: FC<ProjectSectionProps> = () => {
           (frame.x + outerRefArr[i].current!.offsetLeft) / parallaxFactor;
         ref.current!.style.transform = `translateX(${transformX}px)`;
       });
-
-      // And then only using state here to update the output log in the DOM
-      // setLog(frame);
     },
     [innerRefArr, outerRefArr]
   );
