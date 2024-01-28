@@ -25,6 +25,7 @@ export type Project = {
     backEnd: string;
   };
   video: string;
+  mainImage: string;
   images: string[];
   description: string;
 };
@@ -33,7 +34,7 @@ export const projectData: Project[] = [
   {
     id: 0,
     date: 2021,
-    title: "",
+    title: "Forex dashboard",
     liveSite: "",
     roles: "",
     gitHub: "",
@@ -41,14 +42,15 @@ export const projectData: Project[] = [
       frontEnd: "",
       backEnd: "",
     },
-    video: "",
+    video: "/",
+    mainImage: "/assets/images/1.png",
     images: [""],
     description: "",
   },
   {
     id: 1,
     date: 2021,
-    title: "",
+    title: "Forex dashboard",
     liveSite: "",
     roles: "",
     gitHub: "",
@@ -56,14 +58,15 @@ export const projectData: Project[] = [
       frontEnd: "",
       backEnd: "",
     },
-    video: "",
+    video: "/",
+    mainImage: "/assets/images/1.png",
     images: [""],
     description: "",
   },
   {
     id: 2,
     date: 2021,
-    title: "",
+    title: "Forex dashboard",
     liveSite: "",
     roles: "",
     gitHub: "",
@@ -71,14 +74,15 @@ export const projectData: Project[] = [
       frontEnd: "",
       backEnd: "",
     },
-    video: "",
+    video: "/",
+    mainImage: "/assets/images/1.png",
     images: [""],
     description: "",
   },
   {
     id: 3,
     date: 2021,
-    title: "",
+    title: "Forex dashboard",
     liveSite: "",
     roles: "",
     gitHub: "",
@@ -86,14 +90,15 @@ export const projectData: Project[] = [
       frontEnd: "",
       backEnd: "",
     },
-    video: "",
+    video: "/",
+    mainImage: "/assets/images/1.png",
     images: [""],
     description: "",
   },
   {
     id: 4,
     date: 2021,
-    title: "",
+    title: "Forex dashboard",
     liveSite: "",
     roles: "",
     gitHub: "",
@@ -101,7 +106,8 @@ export const projectData: Project[] = [
       frontEnd: "",
       backEnd: "",
     },
-    video: "",
+    video: "/",
+    mainImage: "/assets/images/1.png",
     images: [""],
     description: "",
   },

@@ -34,33 +34,41 @@ const SingleProject: FC<SingleProjectProps> = ({
   }, [clickedProject, isClicked]);
 
   return (
-    <ScrollContainer
-      root={false}
+    <div
       style={{
         transform: close ? "translate(-50%, 150%)" : "translate(-50%, 0)",
       }}
-      className={cx(style.scrollContainer)}
-      options={{
-        lerp: 0.1,
-        duration: 1.2,
-        smoothTouch: false,
-        wheelMultiplier: 0.7,
-      }}
+      className={cx(style.singleProjectContainer)}
     >
-      <div className={cx(style.singleProjectWrapper, "mainContainer")}>
-        <div className={style.singleProjectHeader}>
-          <button
-            className="btn"
-            onClick={() => {
-              dispatch(setOverflow(true));
-              setClose(true);
-            }}
-            type="button"
-          >
-            Close
-          </button>
-        </div>
+      <div className={style.singleProjectHeader}>
+        <button
+          className="btn"
+          onClick={() => {
+            dispatch(setOverflow(true));
+            setClose(true);
+          }}
+          type="button"
+        >
+          Close
+        </button>
 
+        <p className={style.headerTitle}>{clickedProject?.title}</p>
+
+        <a target="_black" href={clickedProject?.liveSite}>
+          Live site
+        </a>
+      </div>
+
+      <ScrollContainer
+        root={false}
+        className={cx(style.scrollContainer, "mainContainer")}
+        options={{
+          lerp: 0.1,
+          duration: 1.2,
+          smoothTouch: false,
+          wheelMultiplier: 0.7,
+        }}
+      >
         <div className={style.singleProjectContent}>
           <div style={{ height: "100vh", background: "red" }} />
           <div style={{ height: "100vh", background: "blue" }} />
@@ -68,8 +76,8 @@ const SingleProject: FC<SingleProjectProps> = ({
           <div style={{ height: "100vh", background: "pink" }} />
           <div style={{ height: "100vh", background: "yellow" }} />
         </div>
-      </div>
-    </ScrollContainer>
+      </ScrollContainer>
+    </div>
   );
 };
 
