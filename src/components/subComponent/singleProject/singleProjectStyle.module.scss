@@ -19,21 +19,16 @@
   .singleProjectWrapper {
     position: relative;
     height: 100%;
-    padding-bottom: 2rem;
+    padding: 2rem 0;
   }
 
   .singleProjectHeader {
-    position: sticky;
+    position: absolute;
     top: 0;
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 1rem 0;
-    background: rgba( 100, 255, 218, 0.1 );
-    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
-    backdrop-filter: blur( 20px );
-    -webkit-backdrop-filter: blur( 20px );
-    border-bottom: 1px solid rgba( 255, 255, 255, 0.18 );
   }
 
   .singleProjectContent {
