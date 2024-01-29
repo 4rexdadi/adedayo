@@ -71,14 +71,22 @@ const SingleProject: FC<SingleProjectProps> = ({
         }}
       >
         <div className={style.singleProjectContent}>
-          <div className={style.singleProjectContent}>
-            <Image
-              alt={clickedProject?.title || ""}
-              width={350}
-              height={250}
-              src={clickedProject?.mainImage || ""}
-            />
-          </div>
+          <h3>{clickedProject?.title}</h3>
+
+          {clickedProject && (
+            <div className={style.singleProjectMainScreen}>
+              <Image
+                alt={clickedProject.title}
+                width={window.innerWidth}
+                height={window.innerHeight}
+                src={clickedProject.mainImage}
+              />
+            </div>
+          )}
+
+          <div style={{ height: "100vh", background: "transparent" }} />
+
+          <p>Bottom</p>
         </div>
       </ScrollContainer>
     </div>

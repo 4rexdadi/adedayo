@@ -27,6 +27,8 @@ const ProjectSection: FC<ProjectSectionProps> = () => {
       // bypass Reacts render method to perform frequent style updates, similar concept to React Spring
       const parallaxFactor = -10;
       innerRefArr.forEach((ref, i) => {
+        if (outerRefArr.length === i + 1) return;
+
         const transformX =
           (frame.x + outerRefArr[i].current!.offsetLeft) / parallaxFactor;
         ref.current!.style.transform = `translateX(${transformX}px)`;
