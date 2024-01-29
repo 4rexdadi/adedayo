@@ -45,9 +45,7 @@ const ProjectSection: FC<ProjectSectionProps> = () => {
         <p>Selected works</p>
 
         <span>
-          {log && `${(log.progress * 100).toFixed()}%`}
-          {/* <LeftArrow className="" />
-          <RightArrow className="" /> */}
+          {log && (log.progress * 100).toFixed()}
         </span>
       </div>
 
