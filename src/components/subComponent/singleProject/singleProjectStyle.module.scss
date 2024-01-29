@@ -13,6 +13,7 @@
   backdrop-filter: blur(13.5px);
   -webkit-backdrop-filter: blur(13.5px);
   border: 1px solid rgba(255, 255, 255, 0.18);
+  border-bottom: 0;
   overflow: hidden;
 
   @supports not ((-webkit-backdrop-filter: none) or (backdrop-filter: none)) {
