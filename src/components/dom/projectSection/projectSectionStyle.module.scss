@@ -1,5 +1,6 @@
 .projectContainer {
   margin-top: 6rem;
+  position: relative;
 
   .projectHeader {
     margin-bottom: 1.5rem;
@@ -14,10 +15,9 @@
     }
 
     span {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 0.4rem;
+      position: abosolute;
+      bottom: 0;
+      right; 0;
     }
 
     svg {
