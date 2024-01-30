@@ -147,7 +147,7 @@ const SingleProject: FC<SingleProjectProps> = ({
           </div>
 
           <div className={style.projectSnapshots}>
-            <p className={style.projectSubHeader}>Snapshots</p>
+            <p className={style.projectSubHeader}>Snapshots 📸</p>
 
             <div className={style.snapshotContainer}>
               {clickedProject?.images.map((img, index) => {
