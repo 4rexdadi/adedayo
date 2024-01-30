@@ -1,9 +1,10 @@
 "use client";
 
-/* eslint-disable @typescript-eslint/no-explicit-any */
+/* eslint-disable react/no-array-index-key */
 
 import Image from "next/image";
 import { FC, useEffect, useState } from "react";
+import { GitHub, RightArrow } from "../../../../public/assets/svg/Svg";
 import { Project } from "../../../data/constant";
 import { useAppDispatch } from "../../../hooks/storeHook";
 import { setOverflow } from "../../../redux/features/scrollSlice";
@@ -70,7 +71,7 @@ const SingleProject: FC<SingleProjectProps> = ({
           wheelMultiplier: 0.7,
         }}
       >
-        <div className={style.singleProjectContent}>
+        <div className={cx(style.singleProjectContent, "singleProjectContent")}>
           <h3>{clickedProject?.title}</h3>
 
           {clickedProject && (
@@ -84,9 +85,86 @@ const SingleProject: FC<SingleProjectProps> = ({
             </div>
           )}
 
-          <div style={{ height: "100vh", background: "transparent" }} />
+          <div className={style.singleProjectInfo}>
+            <p className={style.projectInfoHeader}>About the project</p>
+            <h4 className={style.projectIntroTitle}>
+              {clickedProject?.introTitle}
+            </h4>
 
-          <p>Bottom</p>
+            <div className={style.projectInfoContainer}>
+              <div className={style.projectLeft}>
+                <div className={style.projectDescription}>
+                  {clickedProject?.description.map((desc, index) => {
+                    return <p key={index}>{desc}</p>;
+                  })}
+                </div>
+
+                <div className={style.projectLinks}>
+                  <a
+                    href={clickedProject?.liveSite}
+                    rel="noreferrer"
+                    target="_blank"
+                  >
+                    <span>{clickedProject?.linkName}</span>
+                    <RightArrow className={style.rightArrowSvg} />
+                  </a>
+
+                  {clickedProject?.gitHub && (
+                    <a
+                      href={clickedProject?.gitHub}
+                      rel="noreferrer"
+                      target="_blank"
+                    >
+                      <GitHub className={style.gitHubSvg} />
+                    </a>
+                  )}
+                </div>
+              </div>
+
+              <div className={style.projectRight}>
+                <div>
+                  <p className={style.projectSubHeader}>role</p>
+                  <p>{clickedProject?.role}</p>
+                </div>
+
+                {clickedProject?.technologies && (
+                  <div>
+                    <p className={style.projectSubHeader}>technologies</p>
+                    <p className={style.projectTechs}>
+                      {clickedProject?.technologies.map((tech, index) => {
+                        return <span key={index}>{tech}</span>;
+                      })}
+                    </p>
+                  </div>
+                )}
+
+                <div>
+                  <p className={style.projectSubHeader}>date</p>
+                  <p>{clickedProject?.date}</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div className={style.projectSnapshots}>
+            <p className={style.projectSubHeader}>Snapshots</p>
+
+            <div className={style.snapshotContainer}>
+              {clickedProject?.images.map((img, index) => {
+                return (
+                  <div className={style.snapshotContent} key={index}>
+                    <Image
+                      src={img.url}
+                      alt={img.caption}
+                      width={window.innerWidth}
+                      height={window.innerHeight}
+                    />
+                    <p>{img.caption}</p>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
         </div>
       </ScrollContainer>
     </div>

@@ -17,17 +17,19 @@ export type Project = {
   id: number;
   date: number;
   title: string;
+  introTitle: string;
   liveSite: string;
-  roles: string;
+  linkName: string;
+  role: string;
   gitHub: string;
-  technologies: {
-    frontEnd: string;
-    backEnd: string;
-  };
+  technologies: string[];
   video: string;
   mainImage: string;
-  images: string[];
-  description: string;
+  images: {
+    url: string;
+    caption: string;
+  }[];
+  description: string[];
 };
 
 export const projectData: Project[] = [
@@ -35,81 +37,161 @@ export const projectData: Project[] = [
     id: 0,
     date: 2021,
     title: "Forex dashboard",
+    introTitle: "demo project",
     liveSite: "",
-    roles: "",
+    linkName: "check out the website",
+    role: "software developer",
     gitHub: "",
-    technologies: {
-      frontEnd: "",
-      backEnd: "",
-    },
+    technologies: ["react", "css", "next", "python"],
     video: "/",
     mainImage: "/assets/images/1.png",
-    images: [""],
-    description: "",
+    images: [
+      {
+        url: "/assets/images/1.png",
+        caption: "Demo caption",
+      },
+      {
+        url: "/assets/images/1.png",
+        caption: "Demo caption",
+      },
+      {
+        url: "/assets/images/1.png",
+        caption: "Demo caption",
+      },
+    ],
+    description: [
+      "would be the kind of project I take on: challenging, new, and, of course, fun. The initial pitch was simple: let's build a video-only dating app (Tinder meets TikTok)",
+      "Our collaboration was nothing like I had ever experienced before. They pushed me hard to explore uncharted paths that usually led to a better solution to the problem we were trying to solve",
+      "This remains one of the best projects I've been lucky enough to participate in. I've learned a lot, experienced a lot, failed a lot, and had some of the best product design thinking with Farb and Brian. 10/10 would recommend it 😄",
+    ],
   },
   {
     id: 1,
     date: 2021,
     title: "Forex dashboard",
+    introTitle: "demo project",
     liveSite: "",
-    roles: "",
+    linkName: "check out the website",
+    role: "software developer",
     gitHub: "",
-    technologies: {
-      frontEnd: "",
-      backEnd: "",
-    },
+    technologies: ["react", "css", "next", "python"],
     video: "/",
     mainImage: "/assets/images/1.png",
-    images: [""],
-    description: "",
+    images: [
+      {
+        url: "/assets/images/1.png",
+        caption: "Demo caption",
+      },
+      {
+        url: "/assets/images/1.png",
+        caption: "Demo caption",
+      },
+      {
+        url: "/assets/images/1.png",
+        caption: "Demo caption",
+      },
+    ],
+    description: [
+      "would be the kind of project I take on: challenging, new, and, of course, fun. The initial pitch was simple: let's build a video-only dating app (Tinder meets TikTok)",
+      "Our collaboration was nothing like I had ever experienced before. They pushed me hard to explore uncharted paths that usually led to a better solution to the problem we were trying to solve",
+      "This remains one of the best projects I've been lucky enough to participate in. I've learned a lot, experienced a lot, failed a lot, and had some of the best product design thinking with Farb and Brian. 10/10 would recommend it 😄",
+    ],
   },
   {
     id: 2,
     date: 2021,
     title: "Forex dashboard",
+    introTitle: "demo project",
     liveSite: "",
-    roles: "",
+    linkName: "check out the website",
+    role: "software developer",
     gitHub: "",
-    technologies: {
-      frontEnd: "",
-      backEnd: "",
-    },
+    technologies: ["react", "css", "next", "python"],
     video: "/",
     mainImage: "/assets/images/1.png",
-    images: [""],
-    description: "",
+    images: [
+      {
+        url: "/assets/images/1.png",
+        caption: "Demo caption",
+      },
+      {
+        url: "/assets/images/1.png",
+        caption: "Demo caption",
+      },
+      {
+        url: "/assets/images/1.png",
+        caption: "Demo caption",
+      },
+    ],
+    description: [
+      "would be the kind of project I take on: challenging, new, and, of course, fun. The initial pitch was simple: let's build a video-only dating app (Tinder meets TikTok)",
+      "Our collaboration was nothing like I had ever experienced before. They pushed me hard to explore uncharted paths that usually led to a better solution to the problem we were trying to solve",
+      "This remains one of the best projects I've been lucky enough to participate in. I've learned a lot, experienced a lot, failed a lot, and had some of the best product design thinking with Farb and Brian. 10/10 would recommend it 😄",
+    ],
   },
   {
     id: 3,
     date: 2021,
     title: "Forex dashboard",
+    introTitle: "demo project",
     liveSite: "",
-    roles: "",
+    linkName: "check out the website",
+    role: "software developer",
     gitHub: "",
-    technologies: {
-      frontEnd: "",
-      backEnd: "",
-    },
+    technologies: ["react", "css", "next", "python"],
     video: "/",
     mainImage: "/assets/images/1.png",
-    images: [""],
-    description: "",
+    images: [
+      {
+        url: "/assets/images/1.png",
+        caption: "Demo caption",
+      },
+      {
+        url: "/assets/images/1.png",
+        caption: "Demo caption",
+      },
+      {
+        url: "/assets/images/1.png",
+        caption: "Demo caption",
+      },
+    ],
+    description: [
+      "would be the kind of project I take on: challenging, new, and, of course, fun. The initial pitch was simple: let's build a video-only dating app (Tinder meets TikTok)",
+      "Our collaboration was nothing like I had ever experienced before. They pushed me hard to explore uncharted paths that usually led to a better solution to the problem we were trying to solve",
+      "This remains one of the best projects I've been lucky enough to participate in. I've learned a lot, experienced a lot, failed a lot, and had some of the best product design thinking with Farb and Brian. 10/10 would recommend it 😄",
+    ],
   },
   {
     id: 4,
     date: 2021,
     title: "Forex dashboard",
+    introTitle: "demo project",
     liveSite: "",
-    roles: "",
+    linkName: "check out the website",
+    role: "software developer",
     gitHub: "",
-    technologies: {
-      frontEnd: "",
-      backEnd: "",
-    },
+    technologies: ["react", "css", "next", "python"],
     video: "/",
     mainImage: "/assets/images/1.png",
-    images: [""],
-    description: "",
+    images: [
+      {
+        url: "/assets/images/1.png",
+        caption: "Demo caption",
+      },
+      {
+        url: "/assets/images/1.png",
+        caption: "Demo caption",
+      },
+      {
+        url: "/assets/images/1.png",
+        caption: "Demo caption",
+      },
+    ],
+    description: [
+      "would be the kind of project I take on: challenging, new, and, of course, fun. The initial pitch was simple: let's build a video-only dating app (Tinder meets TikTok)",
+      "Our collaboration was nothing like I had ever experienced before. They pushed me hard to explore uncharted paths that usually led to a better solution to the problem we were trying to solve",
+      "This remains one of the best projects I've been lucky enough to participate in. I've learned a lot, experienced a lot, failed a lot, and had some of the best product design thinking with Farb and Brian. 10/10 would recommend it 😄",
+    ],
   },
 ];
 

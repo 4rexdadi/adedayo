@@ -10,8 +10,7 @@ import {
   useRef,
   useState,
 } from "react";
-import { useAppDispatch, useAppSelector } from "../../../hooks/storeHook";
-import { setLenis } from "../../../redux/features/scrollSlice";
+import { useAppSelector } from "../../../hooks/storeHook";
 
 interface ScrollContainerProps {
   children: ReactNode;
@@ -51,7 +50,6 @@ const ScrollContainer: FC<ScrollContainerProps> = ({
   const [lenis, setLenisScroll] = useState<Lenis | null>(null);
   const wrapperRef = useRef<HTMLDivElement>(null);
   const contentRef = useRef<HTMLDivElement>(null);
-  const dispatch = useAppDispatch();
   const overFlow = useAppSelector((state) => state.scrollSlice.overflow);
 
   useEffect(() => {
@@ -66,10 +64,13 @@ const ScrollContainer: FC<ScrollContainerProps> = ({
 
     lenis.start();
     setLenisScroll(lenis);
+    // dispatch(setLenis(lenis));
 
     return () => {
       lenis.destroy();
     };
+
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [options, root]);
 
   useEffect(() => {
@@ -79,27 +80,20 @@ const ScrollContainer: FC<ScrollContainerProps> = ({
   }, [lenis, reset]);
 
   useEffect(() => {
-    if (lenis) {
-      dispatch(setLenis(lenis));
-    }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [lenis]);
-
-  useEffect(() => {
     const { body } = document;
     if (root) {
       if (overFlow) {
         lenis?.start();
-        if(body){
-           body.style.overflow = "auto";
-           body.style.touchAction = "auto";
-         };
+        if (body) {
+          body.style.overflow = "auto";
+          body.style.touchAction = "auto";
+        }
       } else {
         lenis?.stop();
-         if(body){
-           body.style.overflow = "hidden";
-           body.style.touchAction = "none";
-         };
+        if (body) {
+          body.style.overflow = "hidden";
+          body.style.touchAction = "none";
+        }
       }
     }
   }, [lenis, overFlow, root]);
