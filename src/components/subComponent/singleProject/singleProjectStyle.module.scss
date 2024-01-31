@@ -30,12 +30,24 @@
       text-transform: uppercase;
       font-size: var(--fs-300);
       font-weight: 600;
+      transition: color 250ms ease;
 
-      .rightArrowSvg {
+      svg {
         width: 20px;
-        height: 30px;
+        height: 20px;
         fill: var(--white);
         rotate: 90deg;
+        transition:
+          fill 250ms ease,
+          transform 250ms ease;
+      }
+
+      &:hover {
+        color: var(--secondary);
+
+        svg {
+          fill: var(--secondary);
+        }
       }
     }
   }
