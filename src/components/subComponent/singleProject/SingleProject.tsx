@@ -52,7 +52,9 @@ const SingleProject: FC<SingleProjectProps> = ({
           href={clickedProject?.liveSite}
           className={style.headerTitle}
         >
-          {clickedProject?.title}
+          <p>{clickedProject?.title}</p>
+
+          <RightArrow className={style.liveSiteRightArrowSvg} />
         </a>
 
         <button
