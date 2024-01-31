@@ -27,6 +27,11 @@
     justify-content: space-between;
 
     .headerTitle {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      gap: 0.7rem;
+      width: max-content;
       text-transform: uppercase;
       font-size: var(--fs-300);
       font-weight: 600;
@@ -36,7 +41,7 @@
         width: 20px;
         height: 20px;
         fill: var(--white);
-        rotate: 90deg;
+        rotate: -45deg;
         transition:
           fill 250ms ease,
           transform 250ms ease;
@@ -47,6 +52,7 @@
 
         svg {
           fill: var(--secondary);
+          transform: translateX(0.4rem);
         }
       }
     }
