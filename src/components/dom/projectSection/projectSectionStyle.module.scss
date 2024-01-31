@@ -34,30 +34,49 @@
   }
 
   .projectCard {
-    height: clamp(15.625rem, 13.451rem + 10.87vi, 21.875rem);
     transition: transform 250ms ease;
-    position: relative;
     overflow: hidden;
-    border-radius: 1rem;
-    border: 2px solid hsl(0 0% 20%);
-    box-shadow: 0 0.5px hsl(0 0% 100% / 0.75) inset;
 
-    img {
+    .projectCardImgContainer {
       border-radius: 1rem;
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      pointer-events: none;
-      position: absolute;
-      left: 0;
-      top: 0;
-      scale: 1.46 1 1;
-    }
-  }
+      position: relative;
+      height: clamp(18.75rem, 16.576rem + 10.869vi, 25rem);
+      border: 2px solid hsl(0 0% 20%);
+      overflow: hidden;
 
-  @media (min-width: 1025px) {
-    .projectCard:hover {
-      transform: translate3d(0px, -2.5%, 0px);
+      img {
+        border-radius: 1rem;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        pointer-events: none;
+        position: absolute;
+        left: 0;
+        top: 0;
+        scale: 1.46 1 1;
+      }
+    }
+
+    .projectCardInfo {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-family: var(--ff-secondary);
+      margin-top: 0.7rem;
+      margin-bottom: 0.5rem;
+      text-transform: capitalize;
+      font-size: var(--fs-200);
+    }
+
+    .projectCardTitle {
+      font-weight: 600;
+      font-size: var(--fs-300);
+    }
+
+    @media (min-width: 1025px) {
+      .projectCard:hover {
+        transform: translate3d(0px, -2.5%, 0px);
+      }
     }
   }
 }

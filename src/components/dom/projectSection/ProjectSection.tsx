@@ -11,7 +11,6 @@ interface ProjectSectionProps {}
 
 const ProjectSection: FC<ProjectSectionProps> = () => {
   const [clickedProject, setClickedProject] = useState("");
-  const [log, setLog] = useState<OnFrameType>();
   const [isClicked, setIsClicked] = useState(0);
   const innerRefArr = Array.from({ length: projectData.length }, () =>
     // eslint-disable-next-line react-hooks/rules-of-hooks
@@ -33,8 +32,6 @@ const ProjectSection: FC<ProjectSectionProps> = () => {
           (frame.x + outerRefArr[i].current!.offsetLeft) / parallaxFactor;
         ref.current!.style.transform = `translateX(${transformX}px)`;
       });
-
-      setLog(frame);
     },
     [innerRefArr, outerRefArr]
   );
@@ -43,8 +40,6 @@ const ProjectSection: FC<ProjectSectionProps> = () => {
     <section className={style.projectContainer}>
       <div className={style.projectHeader}>
         <p>Selected works</p>
-
-        <span>{log && (log.progress * 100).toFixed()}</span>
       </div>
 
       <Dragger
@@ -67,15 +62,30 @@ const ProjectSection: FC<ProjectSectionProps> = () => {
                 className={style.projectCard}
                 ref={outerRefArr[i]}
               >
-                <Image
-                  alt={project.title}
-                  width={350}
-                  height={250}
-                  src={project.mainImage}
-                  draggable={false}
-                  id={`${project.id}`}
-                  ref={innerRefArr[i]}
-                />
+                <div id={`${project.id}`}>
+                  <div
+                    id={`${project.id}`}
+                    className={style.projectCardImgContainer}
+                  >
+                    <Image
+                      alt={project.title}
+                      width={350}
+                      height={250}
+                      src={project.mainImage}
+                      draggable={false}
+                      ref={innerRefArr[i]}
+                    />
+                  </div>
+
+                  <div id={`${project.id}`} className={style.projectCardInfo}>
+                    <p>{project.role}</p>
+                    <p>{project.date}</p>
+                  </div>
+
+                  <p id={`${project.id}`} className={style.projectCardTitle}>
+                    {project.title}
+                  </p>
+                </div>
               </li>
             );
           })}

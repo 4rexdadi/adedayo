@@ -10,7 +10,8 @@ import {
   useRef,
   useState,
 } from "react";
-import { useAppSelector } from "../../../hooks/storeHook";
+import { useAppDispatch, useAppSelector } from "../../../hooks/storeHook";
+import { setLenis } from "../../../redux/features/scrollSlice";
 
 interface ScrollContainerProps {
   children: ReactNode;
@@ -47,6 +48,7 @@ const ScrollContainer: FC<ScrollContainerProps> = ({
   root = true,
   options,
 }) => {
+  const dispatch = useAppDispatch();
   const [lenis, setLenisScroll] = useState<Lenis | null>(null);
   const wrapperRef = useRef<HTMLDivElement>(null);
   const contentRef = useRef<HTMLDivElement>(null);
@@ -64,14 +66,16 @@ const ScrollContainer: FC<ScrollContainerProps> = ({
 
     lenis.start();
     setLenisScroll(lenis);
-    // dispatch(setLenis(lenis));
+    if (!root) {
+      dispatch(setLenis(lenis));
+    }
 
     return () => {
       lenis.destroy();
     };
 
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [options, root]);
+  }, []);
 
   useEffect(() => {
     if (reset) {

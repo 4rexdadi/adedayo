@@ -6,7 +6,7 @@ import Image from "next/image";
 import { FC, useEffect, useState } from "react";
 import { GitHub, RightArrow } from "../../../../public/assets/svg/Svg";
 import { Project } from "../../../data/constant";
-import { useAppDispatch } from "../../../hooks/storeHook";
+import { useAppDispatch, useAppSelector } from "../../../hooks/storeHook";
 import { setOverflow } from "../../../redux/features/scrollSlice";
 import cx from "../../../utils";
 import ScrollContainer from "../scrollContainer/ScrollContainer";
@@ -23,8 +23,11 @@ const SingleProject: FC<SingleProjectProps> = ({
 }): JSX.Element => {
   const [close, setClose] = useState(true);
   const dispatch = useAppDispatch();
+  const lenis = useAppSelector((state) => state.scrollSlice.lenis);
 
   useEffect(() => {
+    lenis?.scrollTo(0, { immediate: true });
+
     if (clickedProject?.id || clickedProject?.id === 0) {
       setClose(false);
       dispatch(setOverflow(false));
@@ -43,6 +46,15 @@ const SingleProject: FC<SingleProjectProps> = ({
       className={cx(style.singleProjectContainer)}
     >
       <div className={style.singleProjectHeader}>
+        <a
+          rel="noreferrer"
+          target="_blank"
+          href={clickedProject?.liveSite}
+          className={style.headerTitle}
+        >
+          {clickedProject?.title}
+        </a>
+
         <button
           className="btn"
           onClick={() => {
@@ -53,12 +65,6 @@ const SingleProject: FC<SingleProjectProps> = ({
         >
           Close
         </button>
-
-        <p className={style.headerTitle}>{clickedProject?.title}</p>
-
-        <a target="_black" href={clickedProject?.liveSite}>
-          Live site
-        </a>
       </div>
 
       <ScrollContainer

@@ -31,18 +31,6 @@
       font-size: var(--fs-300);
       font-weight: 600;
     }
-
-    a {
-      font-weight: 600;
-      text-transform: uppercase;
-      text-decoration: underline;
-      cursor: pointer;
-      transition: color 250ms ease;
-
-      &:hover {
-        color: var(--secondary);
-      }
-    }
   }
 
   .scrollContainer {
