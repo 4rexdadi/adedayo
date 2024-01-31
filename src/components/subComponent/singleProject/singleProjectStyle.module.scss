@@ -38,10 +38,10 @@
       transition: color 250ms ease;
 
       svg {
-        width: 10px;
-        height: 10px;
+        width: 15px;
+        height: 15px;
         fill: var(--white);
-        rotate: -45deg;
+        
         transition:
           fill 250ms ease,
           transform 250ms ease;
