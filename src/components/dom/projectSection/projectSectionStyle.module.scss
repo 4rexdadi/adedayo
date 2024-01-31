@@ -64,13 +64,14 @@
       font-family: var(--ff-secondary);
       margin-top: 0.7rem;
       margin-bottom: 0.5rem;
-      text-transform: capitalize;
+      text-transform: uppercase;
       font-size: var(--fs-200);
     }
 
     .projectCardTitle {
       font-weight: 600;
       font-size: var(--fs-300);
+      text-transform: uppercase;
     }
 
     @media (min-width: 1025px) {
