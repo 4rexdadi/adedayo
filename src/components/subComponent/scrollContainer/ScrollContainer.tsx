@@ -66,7 +66,6 @@ const ScrollContainer: FC<ScrollContainerProps> = ({
 
     lenis.start();
     setLenisScroll(lenis);
-    lenis.scrollTo(0, { immediate: true });
     if (!root) {
       dispatch(setLenis(lenis));
     }
