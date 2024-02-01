@@ -108,22 +108,25 @@ const ContactMe: FC<ContactMeProps> = ({
         >
           <textarea
             onChange={(e) => setMessage(e.target.value)}
-            spellCheck="false"
+            spellCheck
             name="textarea"
             id="textarea"
             value={message}
             placeholder="Type your message here."
-            // required
+            required
+            autoComplete="on"
           />
 
           <input
             type="text"
             id="name"
             name="name"
+            spellCheck={false}
             value={fullName}
             onChange={(e) => setFullName(e.target.value)}
             placeholder="Name here."
-            // required
+            autoComplete="on"
+            required
           />
 
           <input
@@ -131,9 +134,11 @@ const ContactMe: FC<ContactMeProps> = ({
             id="email"
             name="email"
             value={email}
+            spellCheck={false}
             onChange={(e) => setEmail(e.target.value)}
             placeholder="Email here."
-            // required
+            autoComplete="on"
+            required
           />
           <div className={cx(style.action)}>
             <div className={cx(style.socials)}>
