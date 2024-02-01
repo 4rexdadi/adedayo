@@ -14,7 +14,7 @@ import style from "./contactSectionStyle.module.scss";
 interface ContactSectionProps {}
 
 const ContactSection: FC<ContactSectionProps> = (): JSX.Element => {
-  const [currentTime, setCurrentTime] = useState<Date>();
+  const [currentTime, setCurrentTime] = useState("");
   // const [formattedTime, setFormattedTime] = useState();
   const { spaceBoy } = useAppSelector(
     (state: { refsSlice: RefsSliceProps }) => state.refsSlice
@@ -140,9 +140,20 @@ const ContactSection: FC<ContactSectionProps> = (): JSX.Element => {
   }, [spaceBoy]);
 
   useEffect(() => {
-    const intervalId = setInterval(() => {
-      setCurrentTime(new Date());
-    }, 1000);
+   const getNigeriaTime = () => {
+      const options = {
+        timeZone: 'Africa/Lagos',
+        hour: 'numeric',
+        minute: 'numeric',
+        second: 'numeric',
+        hour12: true,
+      };
+
+      const nigeriaTime = new Date().toLocaleTimeString('en-US', options);
+      setCurrentTime(nigeriaTime);
+    };
+
+    const intervalId = setInterval(getNigeriaTime, 60000); // Update every 1min
 
     // Cleanup the interval on component unmount
     return () => clearInterval(intervalId);
@@ -152,7 +163,7 @@ const ContactSection: FC<ContactSectionProps> = (): JSX.Element => {
     <section className={cx(style.contactContainer, "contactContainer")}>
       <div className={cx(style.textContainer, "textContainer")}>
         <div className={cx(style.blackPage, "blackPage")}>
-          <p className="">{currentTime?.toLocaleTimeString()}</p>
+          <p className="">LAGOS, NG {currentTime}</p>
         </div>
         <div className={cx(style.whitePage, "whitePage")}>
           <p className="moveText moveText2">
