@@ -75,7 +75,7 @@ textarea:-webkit-autofill:focus,
 select:-webkit-autofill,
 select:-webkit-autofill:hover,
 select:-webkit-autofill:focus {
-  -webkit-text-fill-color: var(-white);
+  -webkit-text-fill-color: white;
   transition: background-color 1000s ease-in-out 1000s;
 }
 
