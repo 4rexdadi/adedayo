@@ -141,12 +141,12 @@ const ContactSection: FC<ContactSectionProps> = (): JSX.Element => {
 
   useEffect(() => {
    const getNigeriaTime = () => {
-      const options = {
+     const options: Intl.DateTimeFormatOptions = {
         timeZone: 'Africa/Lagos',
         hour: 'numeric',
         minute: 'numeric',
         second: 'numeric',
-        hour12: true,
+        hour12: false,
       };
 
       const nigeriaTime = new Date().toLocaleTimeString('en-US', options);
