@@ -146,14 +146,14 @@ const ContactSection: FC<ContactSectionProps> = (): JSX.Element => {
         hour: 'numeric',
         minute: 'numeric',
         second: 'numeric',
-        hour12: false,
+        hour12: true,
       };
 
       const nigeriaTime = new Date().toLocaleTimeString('en-US', options);
       setCurrentTime(nigeriaTime);
     };
 
-    const intervalId = setInterval(getNigeriaTime, 60000); // Update every 1min
+    const intervalId = setInterval(getNigeriaTime, 1000); // Update every second
 
     // Cleanup the interval on component unmount
     return () => clearInterval(intervalId);
