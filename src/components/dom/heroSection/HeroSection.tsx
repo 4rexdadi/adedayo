@@ -19,8 +19,7 @@ const HeroSection: FC<HeroSectionProps> = () => {
             <a target="_black" href="https://g.co/kgs/QAiaiFz">
               Lagos, Nigeria
             </a>
-            , focused on creating and occasionally designing exceptional and
-            engaging digital experiences.
+            , focused on building software solutions for entrepreneurs using modern technologies.
             <br />
             Check out my{" "}
             <a target="_black" href="/assets/resume.pdf">
