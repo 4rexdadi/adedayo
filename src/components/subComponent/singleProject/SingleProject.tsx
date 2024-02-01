@@ -86,9 +86,9 @@ const SingleProject: FC<SingleProjectProps> = ({
             <div className={style.singleProjectMainScreen}>
               <Image
                 alt={clickedProject.title}
-                width={window.innerWidth}
-                height={window.innerHeight}
                 src={clickedProject.mainImage}
+                // width={window.innerWidth}
+                // height={window.innerHeight}
               />
             </div>
           )}
@@ -164,8 +164,8 @@ const SingleProject: FC<SingleProjectProps> = ({
                     <Image
                       src={img.url}
                       alt={img.caption}
-                      width={window.innerWidth}
-                      height={window.innerHeight}
+                      // width={window.innerWidth}
+                      // height={window.innerHeight}
                     />
                     <p>{img.caption}</p>
                   </div>

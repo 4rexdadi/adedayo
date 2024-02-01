@@ -20,8 +20,6 @@ const ContactSection: FC<ContactSectionProps> = (): JSX.Element => {
     (state: { refsSlice: RefsSliceProps }) => state.refsSlice
   );
 
-  // const camera = useThree((state) => state.camera);
-
   useEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
     const width = document.querySelector(".moveText2")?.clientWidth;

@@ -8,10 +8,14 @@
   place-items: center;
   z-index: 1500;
   font-size: 1rem;
-  background: rgba( 0, 0, 0, 1 );
-  box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
-  backdrop-filter: blur( 20px );
-  -webkit-backdrop-filter: blur( 20px );
+  background: rgba(0, 0, 0, 0.85);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(13.5px);
+  -webkit-backdrop-filter: blur(13.5px);
+
+  @supports not ((-webkit-backdrop-filter: none) or (backdrop-filter: none)) {
+    background: rgba(0, 0, 0, 0.97);
+  }
 
   .contactMe {
     width: min(600px, 98%);

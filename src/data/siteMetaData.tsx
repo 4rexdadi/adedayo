@@ -4,7 +4,7 @@ const siteMetadata = {
   description: "This is adedayo portfolio website",
   headerTitle: "ADEDAYO ATURU",
   author: "This is adedayo portfolio website",
-  theme: "dark", // system, dark or light
+  theme: "#000000",
   siteUrl: "http://localhost:3000/",
   siteLogo: "",
   socialBanner: "",

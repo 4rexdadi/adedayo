@@ -18,6 +18,7 @@ interface ContactMeProps {
 const ContactMe: FC<ContactMeProps> = ({
   className = "contactMeContainer",
 }): JSX.Element => {
+  const [loading, setLoading] = useState<null | string>(null);
   const [fullName, setFullName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
@@ -40,29 +41,40 @@ const ContactMe: FC<ContactMeProps> = ({
 
   const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+    setLoading("loading...");
     const data = {
       name: fullName,
       email,
       message,
     };
 
-    const res = await handleSubmitMail(data);
+    setFullName("");
+    setEmail("");
+    setMessage("");
 
-    if (res === 1) {
-      setFullName("");
-      setEmail("");
-      setMessage("");
+    const response = await handleSubmitMail(data);
+
+    if (response === 1) {
+      setLoading("Successful");
+    } else if (response === 0) {
+      setLoading("an error occurred pls reach out via email");
     }
+
+    setTimeout(() => {
+      setLoading(null);
+    }, 5000);
   };
 
   return (
     <div className={cx(style.contactMeContainer, className)}>
       <div className={cx(style.contactMe, "contactMe")}>
         <p className={style.contactTitle}>
-          Having experience in building complex interfaces means that I am happy to deliver anything from single-page apps to scalable design systems.
+          Having experience in building complex interfaces means that I am happy
+          to deliver anything from single-page apps to scalable design systems.
           <br />
           <br />
-          If this sounds like something you&apos;re interested in, drop me a line{" "}
+          If this sounds like something you&apos;re interested in, drop me a
+          line{" "}
           <span className={style.email}>
             <a
               target="_blank"
@@ -74,7 +86,21 @@ const ContactMe: FC<ContactMeProps> = ({
           </span>
           <br />
           <br />
-          <span>or</span>
+          {loading ? (
+            <span
+              style={{
+                padding: "0 0.5rem",
+                background:
+                  loading === "an error occurred pls reach out via email"
+                    ? "rgba(90, 1, 1, 0.305)"
+                    : "rgba(1, 90, 90, 0.305)",
+              }}
+            >
+              {loading}
+            </span>
+          ) : (
+            <span>or</span>
+          )}
         </p>
         <form
           className={cx(style.inputControls, "inputControls")}
@@ -87,7 +113,7 @@ const ContactMe: FC<ContactMeProps> = ({
             id="textarea"
             value={message}
             placeholder="Type your message here."
-            required
+            // required
           />
 
           <input
@@ -97,7 +123,7 @@ const ContactMe: FC<ContactMeProps> = ({
             value={fullName}
             onChange={(e) => setFullName(e.target.value)}
             placeholder="Name here."
-            required
+            // required
           />
 
           <input
@@ -107,7 +133,7 @@ const ContactMe: FC<ContactMeProps> = ({
             value={email}
             onChange={(e) => setEmail(e.target.value)}
             placeholder="Email here."
-            required
+            // required
           />
           <div className={cx(style.action)}>
             <div className={cx(style.socials)}>

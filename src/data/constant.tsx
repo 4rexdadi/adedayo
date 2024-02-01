@@ -1,3 +1,6 @@
+import { StaticImageData } from "next/image";
+import Img from "../../public/assets/images/1.png";
+
 export type Work = {
   id: number;
   company: string;
@@ -23,10 +26,10 @@ export type Project = {
   role: string;
   gitHub: string;
   technologies: string[];
-  video: string;
-  mainImage: string;
+  video: StaticImageData | string;
+  mainImage: StaticImageData | string;
   images: {
-    url: string;
+    url: StaticImageData | string;
     caption: string;
   }[];
   description: string[];
@@ -44,18 +47,18 @@ export const projectData: Project[] = [
     gitHub: "",
     technologies: ["react", "css", "next", "python"],
     video: "/",
-    mainImage: "/assets/images/1.png",
+    mainImage: Img,
     images: [
       {
-        url: "/assets/images/1.png",
+        url: Img,
         caption: "Demo caption",
       },
       {
-        url: "/assets/images/1.png",
+        url: Img,
         caption: "Demo caption",
       },
       {
-        url: "/assets/images/1.png",
+        url: Img,
         caption: "Demo caption",
       },
     ],
@@ -76,18 +79,18 @@ export const projectData: Project[] = [
     gitHub: "",
     technologies: ["react", "css", "next", "python"],
     video: "/",
-    mainImage: "/assets/images/1.png",
+    mainImage: Img,
     images: [
       {
-        url: "/assets/images/1.png",
+        url: Img,
         caption: "Demo caption",
       },
       {
-        url: "/assets/images/1.png",
+        url: Img,
         caption: "Demo caption",
       },
       {
-        url: "/assets/images/1.png",
+        url: Img,
         caption: "Demo caption",
       },
     ],
@@ -108,18 +111,18 @@ export const projectData: Project[] = [
     gitHub: "",
     technologies: ["react", "css", "next", "python"],
     video: "/",
-    mainImage: "/assets/images/1.png",
+    mainImage: Img,
     images: [
       {
-        url: "/assets/images/1.png",
+        url: Img,
         caption: "Demo caption",
       },
       {
-        url: "/assets/images/1.png",
+        url: Img,
         caption: "Demo caption",
       },
       {
-        url: "/assets/images/1.png",
+        url: Img,
         caption: "Demo caption",
       },
     ],
@@ -140,18 +143,18 @@ export const projectData: Project[] = [
     gitHub: "",
     technologies: ["react", "css", "next", "python"],
     video: "/",
-    mainImage: "/assets/images/1.png",
+    mainImage: Img,
     images: [
       {
-        url: "/assets/images/1.png",
+        url: Img,
         caption: "Demo caption",
       },
       {
-        url: "/assets/images/1.png",
+        url: Img,
         caption: "Demo caption",
       },
       {
-        url: "/assets/images/1.png",
+        url: Img,
         caption: "Demo caption",
       },
     ],
@@ -172,18 +175,18 @@ export const projectData: Project[] = [
     gitHub: "",
     technologies: ["react", "css", "next", "python"],
     video: "/",
-    mainImage: "/assets/images/1.png",
+    mainImage: Img,
     images: [
       {
-        url: "/assets/images/1.png",
+        url: Img,
         caption: "Demo caption",
       },
       {
-        url: "/assets/images/1.png",
+        url: Img,
         caption: "Demo caption",
       },
       {
-        url: "/assets/images/1.png",
+        url: Img,
         caption: "Demo caption",
       },
     ],

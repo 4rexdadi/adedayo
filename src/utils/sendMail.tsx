@@ -2,9 +2,15 @@
 import emailjs from "@emailjs/browser";
 
 // rename .env.example to .env.local and get all variables from emailJS
-const SERVICE_ID = String(process.env.SERVICE_ID);
-const TEMPLATE_ID = String(process.env.TEMPLATE_ID);
-const PUBLIC_KEY = String(process.env.PUBLICID_KEY);
+const SERVICE_ID = String(
+  process.env.NEXT_PUBLIC_YOUR_SERVICE_ID || process.env.SERVICE_ID
+);
+const TEMPLATE_ID = String(
+  process.env.NEXT_PUBLIC_YOUR_TEMPLATE_ID || process.env.TEMPLATE_ID
+);
+const PUBLIC_KEY = String(
+  process.env.NEXT_PUBLIC_YOUR_PUBLIC_KEY || process.env.PUB_KEY
+);
 
 interface HandleSubmitMailProps {
   name: string;
@@ -18,13 +24,17 @@ interface HandleSubmitMailProps {
 const handleSubmitMail = async (
   data: HandleSubmitMailProps
 ): Promise<0 | 1> => {
-  const res = await emailjs.send(SERVICE_ID, TEMPLATE_ID, data, PUBLIC_KEY);
+  try {
+    const res = await emailjs.send(SERVICE_ID, TEMPLATE_ID, data, PUBLIC_KEY);
 
-  if (res.status === 200) {
-    return 1;
+    if (res.status === 200) {
+      return 1;
+    }
+
+    return 0;
+  } catch (error) {
+    return 0;
   }
-
-  return 0;
 };
 
 export default handleSubmitMail;

@@ -8,11 +8,11 @@ const sitemap = (): MetadataRoute.Sitemap => {
       changeFrequency: "weekly",
       priority: 1,
     },
-    {
-      url: `${siteMetadata.siteUrl}/project`,
-      changeFrequency: "weekly",
-      priority: 0.5,
-    },
+    // {
+    //   url: `${siteMetadata.siteUrl}/project`,
+    //   changeFrequency: "weekly",
+    //   priority: 0.5,
+    // },
   ];
 
   const pageRoutes = routes.map(({ changeFrequency, priority, url }) => ({

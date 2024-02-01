@@ -69,11 +69,11 @@ const ProjectSection: FC<ProjectSectionProps> = () => {
                   >
                     <Image
                       alt={project.title}
-                      width={350}
-                      height={250}
                       src={project.mainImage}
                       draggable={false}
                       ref={innerRefArr[i]}
+                      // width={350}
+                      // height={250}
                     />
                   </div>
 

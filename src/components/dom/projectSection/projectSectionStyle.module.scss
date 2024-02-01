@@ -37,6 +37,12 @@
     transition: transform 250ms ease;
     overflow: hidden;
 
+    @media (min-width: 1025px) {
+      &:hover {
+        transform: translate3d(0px, -1.5%, 0px);
+      }
+    }
+
     .projectCardImgContainer {
       border-radius: 1rem;
       position: relative;
@@ -72,12 +78,6 @@
       font-weight: 600;
       font-size: var(--fs-300);
       text-transform: uppercase;
-    }
-
-    @media (min-width: 1025px) {
-      .projectCard:hover {
-        transform: translate3d(0px, -2.5%, 0px);
-      }
     }
   }
 }
