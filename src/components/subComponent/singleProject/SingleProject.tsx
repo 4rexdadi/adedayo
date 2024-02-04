@@ -80,7 +80,7 @@ const SingleProject: FC<SingleProjectProps> = ({
         }}
       >
         <div className={cx(style.singleProjectContent, "singleProjectContent")}>
-          <h3>{clickedProject?.title}</h3>
+          <p className={style.mainProjectTitle}>{clickedProject?.title}</p>
 
           {clickedProject && (
             <div className={style.singleProjectMainScreen}>
@@ -95,9 +95,9 @@ const SingleProject: FC<SingleProjectProps> = ({
 
           <div className={style.singleProjectInfo}>
             <p className={style.projectInfoHeader}>About the project</p>
-            <h4 className={style.projectIntroTitle}>
+            <p className={style.projectIntroTitle}>
               {clickedProject?.introTitle}
-            </h4>
+            </p>
 
             <div className={style.projectInfoContainer}>
               <div className={style.projectLeft}>

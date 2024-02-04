@@ -19,7 +19,8 @@ const HeroSection: FC<HeroSectionProps> = () => {
             <a target="_black" href="https://g.co/kgs/QAiaiFz">
               Lagos, Nigeria
             </a>
-            , focused on building software solutions for entrepreneurs using modern technologies.
+            , focused on building software solutions for entrepreneurs using
+            modern technologies.
             <br />
             Check out my{" "}
             <a target="_black" href="/assets/resume.pdf">
@@ -29,10 +30,10 @@ const HeroSection: FC<HeroSectionProps> = () => {
           </span>
 
           <span>
-            I don&#39;t identify myself with a specific technology; I use
-            the best one for the job. Whether it&#39;s JavaScript,
-            TypeScript, Python, or C#, I adapt to the needs of the task at
-            hand.
+            I don&#39;t identify myself with a specific technology; <br /> I use
+            the best one for the job. <br /> Whether it&#39;s JavaScript,
+            TypeScript, Python, or C#, <br /> I adapt to the needs of the task
+            at hand.
           </span>
         </p>
       </h1>
