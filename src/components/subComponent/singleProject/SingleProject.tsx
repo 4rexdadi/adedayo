@@ -50,7 +50,7 @@ const SingleProject: FC<SingleProjectProps> = ({
           rel="noreferrer"
           target="_blank"
           href={clickedProject?.liveSite}
-          className={style.headerTitle}
+          className={cx(style.headerTitle, "heading")}
         >
           <p>{clickedProject?.title}</p>
 
