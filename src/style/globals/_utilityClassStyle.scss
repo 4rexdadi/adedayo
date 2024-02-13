@@ -7,6 +7,10 @@
   position: relative;
 }
 
+.swiper-wrapper {
+  box-sizing: border-box !important;
+}
+
 .btn {
   display: flex;
   align-items: center;

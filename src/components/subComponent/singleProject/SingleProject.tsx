@@ -36,7 +36,7 @@ const SingleProject: FC<SingleProjectProps> = ({
       setClose(true);
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [clickedProject, isClicked]);
+  }, [clickedProject, isClicked, lenis]);
 
   return (
     <div
@@ -80,7 +80,9 @@ const SingleProject: FC<SingleProjectProps> = ({
         }}
       >
         <div className={cx(style.singleProjectContent, "singleProjectContent")}>
-          <p className={cx(style.mainProjectTitle, "heading")}>{clickedProject?.title}</p>
+          <p className={cx(style.mainProjectTitle, "heading")}>
+            {clickedProject?.title}
+          </p>
 
           {clickedProject && (
             <div className={style.singleProjectMainScreen}>
@@ -132,7 +134,7 @@ const SingleProject: FC<SingleProjectProps> = ({
               <div className={style.projectRight}>
                 <div>
                   <p className={style.projectSubHeader}>role</p>
-                  <p>{clickedProject?.role}</p>
+                  <p>{clickedProject?.roles}</p>
                 </div>
 
                 {clickedProject?.technologies && (

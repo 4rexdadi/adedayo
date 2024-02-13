@@ -1,9 +1,8 @@
-.projectContainer {
+.projectSection {
   margin-top: 6rem;
   position: relative;
 
   .projectHeader {
-    margin-bottom: 1.5rem;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -21,63 +20,62 @@
     }
   }
 
-  .projects {
-    display: grid;
-    grid-template-columns: repeat(
-      5,
-      clamp(21.875rem, 17.527rem + 21.739vi, 34.375rem)
-    );
-    padding-top: 10px;
-    gap: clamp(1.5rem, 0.63rem + 4.348vi, 4rem);
+  .projectContainer {
     width: 100%;
-    overflow: hidden;
-  }
+    height: 100%;
 
-  .projectCard {
-    transition: transform 250ms ease;
-    overflow: hidden;
-
-    @media (min-width: 1025px) {
-      &:hover {
-        transform: translate3d(0px, -1.5%, 0px);
-      }
-    }
-
-    .projectCardImgContainer {
-      border-radius: 1rem;
-      position: relative;
-      height: clamp(18.75rem, 16.576rem + 10.869vi, 25rem);
-      border: 2px solid hsl(0 0% 20%);
+    .projectCard {
+      margin-top: 1.5rem;
+      // margin-right: clamp(1.5rem, 0.63rem + 4.348vi, 4rem) !important;
+      width: clamp(21.875rem, 17.527rem + 21.739vi, 34.375rem) !important;
+      transition: transform 250ms ease;
       overflow: hidden;
+      cursor: pointer;
 
-      img {
-        border-radius: 1rem;
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        pointer-events: none;
-        position: absolute;
-        left: 0;
-        top: 0;
-        scale: 1.46 1 1;
+      @media (min-width: 1025px) {
+        &:hover {
+          transform: translate3d(0px, -1.5%, 0px);
+        }
       }
-    }
 
-    .projectCardInfo {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      font-family: var(--ff-secondary);
-      margin-top: 0.7rem;
-      margin-bottom: 0.5rem;
-      text-transform: uppercase;
-      font-size: var(--fs-200);
-    }
+      .projectCardImg {
+        border-radius: 1rem;
+        height: clamp(18.75rem, 16.576rem + 10.869vi, 25rem);
+        border: 2px solid hsl(0 0% 20%);
 
-    .projectCardTitle {
-      font-weight: 600;
-      font-size: var(--fs-300);
-      text-transform: uppercase;
+        img {
+          border-radius: 1rem;
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+
+      .projectCardInfo {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        font-family: var(--ff-secondary);
+        margin-top: 0.7rem;
+        margin-bottom: 0.5rem;
+        text-transform: capitalize;
+        font-size: var(--fs-200b);
+        flex-wrap: nowrap;
+
+        p:nth-child(1) {
+          text-wrap: wrap;
+        }
+
+        p:nth-child(2) {
+          width: max-content;
+        }
+      }
+
+      .projectCardTitle {
+        font-weight: 600;
+        font-size: var(--fs-300);
+        text-transform: uppercase;
+      }
     }
   }
 }

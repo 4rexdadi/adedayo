@@ -23,7 +23,8 @@ export type Project = {
   introTitle: string;
   liveSite: string;
   linkName: string;
-  role: string;
+  roles: string;
+  mainRole: string;
   gitHub: string;
   technologies: string[];
   video: StaticImageData | string;
@@ -43,9 +44,17 @@ export const projectData: Project[] = [
     introTitle: "Illuminating Africa - The AfroTada Journey",
     liveSite: "https://www.afrotada.com",
     linkName: "check out the website",
-    role: "Software Developer - Frontend Developerr",
+    roles: "Software Developer - Frontend Developer",
+    mainRole: "Frontend Developer",
     gitHub: "",
-    technologies: ["React", "Tailwind CSS", "Redux", "Framer Motion", "Axios", "Quill js"],
+    technologies: [
+      "React",
+      "Tailwind CSS",
+      "Redux",
+      "Framer Motion",
+      "Axios",
+      "Quill js",
+    ],
     video: "google.com",
     mainImage: Img,
     images: [
@@ -73,12 +82,23 @@ export const projectData: Project[] = [
     id: 1,
     date: "Sep 2022 - Present",
     title: "Forex Dashboard",
-    introTitle: "Navigating Markets with Precision through the Forex Dashboard Experience",
+    introTitle:
+      "Navigating Markets with Precision through the Forex Dashboard Experience",
     liveSite: "https://forexdash.netlify.app",
     linkName: "try out the demo",
-    role: "Software Developer - Full Stack Web Application",
+    roles: "Software Developer - Full Stack Web Application",
+    mainRole: "Full Stack Web Application",
     gitHub: "https://github.com/4rexdadi/ForexDash",
-    technologies: ["React", "Node", "Express", "SASS", "Redux", "Framer Motion", "Apex Charts", "Mongo DB"],
+    technologies: [
+      "React",
+      "Node",
+      "Express",
+      "SASS",
+      "Redux",
+      "Framer Motion",
+      "Apex Charts",
+      "Mongo DB",
+    ],
     video: "google.com",
     mainImage: Img,
     images: [
@@ -108,9 +128,11 @@ export const projectData: Project[] = [
     date: "Mar 2022",
     title: "Code Dadi Theme",
     introTitle: "Immerse yourself in a sleek and efficient coding environment",
-    liveSite: "https://marketplace.visualstudio.com/items?itemName=CodeDadi.code-dadi-dark",
+    liveSite:
+      "https://marketplace.visualstudio.com/items?itemName=CodeDadi.code-dadi-dark",
     linkName: "try it out",
-    role: "Software Developer - Microsoft VSCode Extension",
+    roles: "Software Developer - Microsoft VSCode Extension",
+    mainRole: "Microsoft VSCode Extension",
     gitHub: "",
     technologies: ["JSON", "VSCode Extension"],
     video: "google.com",
@@ -130,14 +152,14 @@ export const projectData: Project[] = [
       },
     ],
     description: [
-     "Overview: This theme offers a harmonious blend of colors and syntax highlighting, enhancing readability and reducing eye strain during long coding sessions. Whether you're a seasoned developer or just starting your coding journey, the Code Dadi Theme provides a visually pleasing and distraction-free workspace, allowing you to focus on what matters most - writing clean and efficient code.",
-     "Installation:",
-     "1. Open the extensions sidebar on Visual Studio Code",
-     "2. Search for Code Dadi Theme",
-     "3. Click Install",
-     "4. Click Reload to reload your editor",
-     "5. Select the Manage Cog (bottom left) > Color Theme > Code Dadi Dark Theme",
-     "6. 🌟🌟🌟🌟🌟 Rate five-stars 😃",
+      "Overview: This theme offers a harmonious blend of colors and syntax highlighting, enhancing readability and reducing eye strain during long coding sessions. Whether you're a seasoned developer or just starting your coding journey, the Code Dadi Theme provides a visually pleasing and distraction-free workspace, allowing you to focus on what matters most - writing clean and efficient code.",
+      "Installation:",
+      "1. Open the extensions sidebar on Visual Studio Code",
+      "2. Search for Code Dadi Theme",
+      "3. Click Install",
+      "4. Click Reload to reload your editor",
+      "5. Select the Manage Cog (bottom left) > Color Theme > Code Dadi Dark Theme",
+      "6. 🌟🌟🌟🌟🌟 Rate five-stars 😃",
     ],
   },
   {
@@ -147,7 +169,8 @@ export const projectData: Project[] = [
     introTitle: "Enhancing Memory Skills - The Photo Match Experience",
     liveSite: "https://photo-match.netlify.app",
     linkName: "check out the website",
-    role: "Software Developer - Web Game",
+    roles: "Software Developer - Web Game",
+    mainRole: "Web Game",
     gitHub: "",
     technologies: ["React", "Rest API"],
     video: "google.com",
@@ -169,38 +192,6 @@ export const projectData: Project[] = [
     description: [
       "Overview: Dive into the world of memory enhancement with Photo Match, an interactive game designed to challenge and improve memory skills. Players must swiftly find all matching images before time runs out, fostering cognitive abilities while providing an enjoyable gaming experience.",
       "Learning: I honed my skills in React, mastering the creation of interactive user interfaces. Working with the Rest API deepened my understanding of data management and API integration within web applications. ",
-    ],
-  },
-  {
-    id: 4,
-    date: 2021,
-    title: "Forex dashboard",
-    introTitle: "demo project",
-    liveSite: "google.com",
-    linkName: "check out the website",
-    role: "software developer",
-    gitHub: "github.com",
-    technologies: ["react", "css", "next", "python"],
-    video: "google.com",
-    mainImage: Img,
-    images: [
-      {
-        url: Img,
-        caption: "Demo caption",
-      },
-      {
-        url: Img,
-        caption: "Demo caption",
-      },
-      {
-        url: Img,
-        caption: "Demo caption",
-      },
-    ],
-    description: [
-      "would be the kind of project I take on: challenging, new, and, of course, fun. The initial pitch was simple: let's build a video-only dating app (Tinder meets TikTok)",
-      "Our collaboration was nothing like I had ever experienced before. They pushed me hard to explore uncharted paths that usually led to a better solution to the problem we were trying to solve",
-      "This remains one of the best projects I've been lucky enough to participate in. I've learned a lot, experienced a lot, failed a lot, and had some of the best product design thinking with Farb and Brian. 10/10 would recommend it 😄",
     ],
   },
 ];
