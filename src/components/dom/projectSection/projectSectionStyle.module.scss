@@ -59,6 +59,8 @@
         text-transform: capitalize;
         font-size: clamp(0.6875rem, 0.644rem + 0.2174vi, 0.8125rem);
         flex-wrap: nowrap;
+        margin-top: 0.7rem;
+        margin-bottom: 0.5rem;
 
         p:nth-child(1) {
           text-wrap: wrap;
@@ -73,8 +75,6 @@
         font-weight: 600;
         font-size: var(--fs-400);
         text-transform: capitalize;
-        margin-top: 0.7rem;
-        margin-bottom: 0.5rem;
       }
     }
   }
