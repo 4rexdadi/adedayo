@@ -94,6 +94,7 @@
 
     .projectInfoHeader {
       font-family: var(--ff-secondary);
+      font-size: clamp(0.78rem, calc(0.73rem + 0.26vw), 0.93rem);
       font-weight: 400;
       text-transform: capitalize;
     }
@@ -226,7 +227,7 @@
       p {
         font-family: var(--ff-secondary);
         font-weight: 400;
-        font-size: var(--fs-200);
+        font-size: clamp(0.78rem, calc(0.73rem + 0.26vw), 0.93rem);
         text-align: center;
         margin-top: 1rem;
       }
