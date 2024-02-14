@@ -39,7 +39,7 @@ const SingleProject: FC<SingleProjectProps> = ({
   }, [clickedProject, isClicked, lenis]);
 
   return (
-    <span
+    <div
       style={{
         transform: close ? "translate(-50%, 150%)" : "translate(-50%, 0)",
       }}
@@ -177,7 +177,7 @@ const SingleProject: FC<SingleProjectProps> = ({
           </div>
         </div>
       </ScrollContainer>
-    </span>
+    </div>
   );
 };
 
