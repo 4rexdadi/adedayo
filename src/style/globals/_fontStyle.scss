@@ -132,43 +132,14 @@
 
 :root {
   // fonts sizes
-  --fs-100: clamp(0.45rem, calc(0.65rem + 0.01vw), 0.5rem); // 7.2px → 8px
-  --fs-200: clamp(
-    0.9063rem,
-    calc(0.73rem + 0.26vw),
-    1.0563rem
-  ); // 14.50px → 16.90px
-  --fs-200b: clamp(
-    0.78rem,
-    calc(0.73rem + 0.26vw),
-    0.93rem
-  ); // 12.50px → 14.90px
-  --fs-300: clamp(
-    0.94rem,
-    calc(0.81rem + 0.66vw),
-    1.32rem
-  ); // 15.00px → 21.07px
-  --fs-400: clamp(
-    1.13rem,
-    calc(0.87rem + 1.28vw),
-    1.86rem
-  ); // 18.00px → 29.79px
-  --fs-500: clamp(1.35rem, calc(0.9rem + 2.23vw), 2.63rem); // 21.60px → 42.12px
-  --fs-600: clamp(
-    1.62rem,
-    calc(0.89rem + 3.66vw),
-    3.72rem
-  ); // 25.92px → 59.56px
-  --fs-700: clamp(
-    1.94rem,
-    calc(0.79rem + 5.77vw),
-    5.26rem
-  ); // 31.10px → 84.22px
-  --fs-800: clamp(
-    2.33rem,
-    calc(0.55rem + 8.89vw),
-    7.44rem
-  ); // 37.32px → 119.09px
+  --fs-100: clamp(0.4722rem, 0.7132rem + -0.311vi, 0.651rem); // 10.4167px → 7.5556px
+  --fs-200: clamp(0.7083rem, 0.8066rem + -0.1268vi, 0.7813rem); // 12.5px → 11.3333px
+  --fs-300: clamp(0.9375rem, 0.894rem + 0.2174vi, 1.0625rem); // 15px → 17px 
+  --fs-400: clamp(1.125rem, 0.962rem + 0.8152vi, 1.5938rem); // 18px → 25.5px
+  --fs-500: clamp(1.35rem, 0.988rem + 1.8098vi, 2.3906rem); // 21.6px → 38.25px
+  --fs-600: clamp(1.62rem, 0.9362rem + 3.419vi, 3.5859rem); // 25.92px → 57.375px
+  --fs-700: clamp(1.944rem, 0.7493rem + 5.9738vi, 5.3789rem); // 31.104px → 86.0625px
+  --fs-800: clamp(2.3328rem, 0.3378rem + 9.9749vi, 8.0684rem); // 37.3248px → 129.0938p
 
   //fonts family
   --ff-secondary: "SF Mono", sans-serif;
@@ -184,7 +155,7 @@ html {
 body {
   line-height: 1.6;
   font-family: var(--ff-base);
-  font-size: var(--fs-200);
+  font-size: var(--fs-300);
   font-weight: 400;
 }
 
