@@ -25,7 +25,7 @@
     button {
       padding: 1.2rem 2rem;
       font-family: var(--ff-secondary);
-      font-size: var(--fs-200b);
+      font-size: clamp(0.78rem, calc(0.73rem + 0.26vw), 0.93rem);
       font-weight: 400;
       text-transform: capitalize;
       border-left: 1px solid transparent;
@@ -65,7 +65,7 @@
 
   .experiencesDate {
     font-family: var(--ff-secondary);
-    font-size: var(--fs-200b);
+    font-size: clamp(0.78rem, calc(0.73rem + 0.26vw), 0.93rem);
     font-weight: 400;
     display: flex;
     gap: 1rem;
