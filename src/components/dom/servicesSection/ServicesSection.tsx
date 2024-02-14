@@ -20,7 +20,7 @@ const ServicesSection: FC<ServicesSectionProps> = (): JSX.Element => {
 
       <div className={style.serviceDetailsContainer}>
         <div className={style.serviceDetails}>
-          <p className={style.serviceDetailsHeader}>Considered development.</p>
+          <p className={style.serviceDetailsHeader}>Considered development</p>
 
           <p>
             <span>Project Scoping & Data Visualization: </span> Prioritize and
@@ -43,7 +43,7 @@ const ServicesSection: FC<ServicesSectionProps> = (): JSX.Element => {
 
       <div className={cx(style.serviceDetailsContainer, style.reverse)}>
         <div className={style.serviceDetails}>
-          <p className={style.serviceDetailsHeader}>Code Choreography.</p>
+          <p className={style.serviceDetailsHeader}>Code Choreography</p>
 
           <p>
             <span>Creating User Experience: </span> I pay attention to the
