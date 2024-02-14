@@ -53,13 +53,12 @@ const ProjectSection: FC<ProjectSectionProps> = () => {
                   // height={250}
                 />
               </div>
+              <p className={style.projectCardTitle}>{project.title}</p>
 
               <div className={style.projectCardInfo}>
                 <p>{project.mainRole}</p>
                 <p>{project.date}</p>
               </div>
-
-              <p className={style.projectCardTitle}>{project.title}</p>
             </SwiperSlide>
           );
         })}
