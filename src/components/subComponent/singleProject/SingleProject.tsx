@@ -40,6 +40,7 @@ const SingleProject: FC<SingleProjectProps> = ({
 
   return (
     <div
+
       style={{
         transform: close ? "translate(-50%, 150%)" : "translate(-50%, 0)",
       }}
