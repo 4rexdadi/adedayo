@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { FC, useCallback, useRef, useState } from "react";
+import { FC, useCallback, useEffect, useRef, useState } from "react";
 import { projectData } from "../../../data/constant";
 import Dragger, { OnFrameType } from "../../subComponent/dragger/Dragger";
 import SingleProject from "../../subComponent/singleProject/SingleProject";
@@ -21,6 +21,17 @@ const ProjectSection: FC<ProjectSectionProps> = () => {
     useRef<HTMLLIElement>(null)
   );
 
+  const projectRef = useRef<HTMLElement>(null);
+
+  useEffect(
+    () =>
+      projectRef.current?.style.setProperty(
+        "--projectNum",
+        `${projectData.length}`
+      ),
+    [projectRef]
+  );
+
   const onFrame = useCallback(
     (frame: OnFrameType) => {
       // bypass Reacts render method to perform frequent style updates, similar concept to React Spring
@@ -37,7 +48,7 @@ const ProjectSection: FC<ProjectSectionProps> = () => {
   );
 
   return (
-    <section className={style.projectSection}>
+    <section className={style.projectSection} ref={projectRef}>
       <div className={style.projectHeader}>
         <p>Selected works</p>
       </div>

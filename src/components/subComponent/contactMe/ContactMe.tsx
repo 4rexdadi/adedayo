@@ -74,7 +74,8 @@ const ContactMe: FC<ContactMeProps> = ({
           <br />
           <br />
           If this sounds like something you&apos;re interested in, drop me a
-          line{" "}
+          line
+          <br />
           <span className={style.email}>
             <a
               target="_blank"
@@ -84,7 +85,6 @@ const ContactMe: FC<ContactMeProps> = ({
               adedayoaturu@gmail.com
             </a>
           </span>
-          <br />
           <br />
           {loading ? (
             <span
