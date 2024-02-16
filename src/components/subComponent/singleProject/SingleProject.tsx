@@ -41,11 +41,11 @@ const SingleProject: FC<SingleProjectProps> = ({
   return (
     <div
       style={{
-        transform: close ? "translate(-50%, 150%)" : "translate(-50%, 0)",
+        transform: close ? "translate(-50%, 130%)" : "translate(-50%, 0)",
       }}
       className={cx(style.singleProjectContainer)}
     >
-      <div className={style.singleProjectHeader}>
+      <div className={cx(style.singleProjectHeader, "mainContainer")}>
         <a
           target="_blank"
           rel="noreferrer"

@@ -3,12 +3,8 @@
 import Image from "next/image";
 import { FC, useCallback, useRef, useState } from "react";
 import { projectData } from "../../../data/constant";
-import SingleProject from "../../subComponent/singleProject/SingleProject";
-
-// Import styles
-import "swiper/css";
-import "swiper/css/free-mode";
 import Dragger, { OnFrameType } from "../../subComponent/dragger/Dragger";
+import SingleProject from "../../subComponent/singleProject/SingleProject";
 import style from "./projectSectionStyle.module.scss";
 
 interface ProjectSectionProps {}
@@ -93,46 +89,6 @@ const ProjectSection: FC<ProjectSectionProps> = () => {
           })}
         </ul>
       </Dragger>
-
-      {/* <Swiper
-        slidesPerView="auto"
-        spaceBetween={30}
-        freeMode
-        // pagination={{
-        //   clickable: true,
-        // }}
-        modules={[FreeMode]}
-        className={style.projectContainer}
-      >
-        {projectData.map((project) => {
-          return (
-            <SwiperSlide
-              onClick={() => {
-                setClickedProject(project.id);
-                setIsClicked((prev) => prev + 1);
-              }}
-              key={project.id}
-              className={style.projectCard}
-            >
-              <div className={style.projectCardImg}>
-                <Image
-                  alt={project.title}
-                  src={project.mainImage}
-                  draggable={false}
-                  // width={350}
-                  // height={250}
-                />
-              </div>
-              <div className={style.projectCardInfo}>
-                <p>{project.mainRole}</p>
-                <p>{project.date}</p>
-              </div>
-
-              <p className={style.projectCardTitle}>{project.title}</p>
-            </SwiperSlide>
-          );
-        })}
-      </Swiper> */}
 
       <SingleProject
         isClicked={isClicked}

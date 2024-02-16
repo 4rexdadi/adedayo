@@ -30,7 +30,7 @@
     font-weight: 400;
 
     span {
-      max-width: 300px;
+      width: min(100%, 450px);
 
       span {
         color: var(--secondary);
