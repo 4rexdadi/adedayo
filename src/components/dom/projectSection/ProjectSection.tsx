@@ -74,7 +74,11 @@ const ProjectSection: FC<ProjectSectionProps> = () => {
                 ref={outerRefArr[i]}
               >
                 <div id={`${project.id}`}>
-                  <div id={`${project.id}`} className={style.projectCardImg}>
+                  <div
+                    id={`${project.id}`}
+                    className={style.projectCardImg}
+                    style={{ backgroundColor: project.backgroundColor }}
+                  >
                     <Image
                       alt={project.title}
                       src={project.mainImage}

@@ -78,9 +78,10 @@
       width: 100%;
       height: min(200px, 100%);
 
-      img {
+      video {
         object-fit: cover;
         height: 100%;
+        width: 100%;
       }
     }
   }
@@ -222,6 +223,7 @@
       img {
         object-fit: cover;
         height: 100%;
+        width: 100%;
       }
 
       p {

@@ -86,12 +86,10 @@ const SingleProject: FC<SingleProjectProps> = ({
 
           {clickedProject && (
             <div className={style.singleProjectMainScreen}>
-              <Image
-                alt={clickedProject.title}
-                src={clickedProject.mainImage}
-                // width={window.innerWidth}
-                // height={window.innerHeight}
-              />
+              <video muted loop controls={false} preload="none" autoPlay>
+                <source src={clickedProject.video} type="video/mp4" />
+                <track label="English" />
+              </video>
             </div>
           )}
 

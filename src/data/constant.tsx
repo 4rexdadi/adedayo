@@ -1,5 +1,9 @@
 import { StaticImageData } from "next/image";
 import Img from "../../public/assets/images/1.png";
+import Theme0 from "../../public/assets/images/projects/Themes/0.png";
+import Theme1 from "../../public/assets/images/projects/Themes/1.png";
+import Theme3 from "../../public/assets/images/projects/Themes/3.png";
+import Theme4 from "../../public/assets/images/projects/Themes/4.png";
 
 export type Work = {
   id: number;
@@ -21,14 +25,16 @@ export type Project = {
   date: number | string;
   title: string;
   introTitle: string;
+  backgroundColor: string;
   liveSite: string;
   linkName: string;
   roles: string;
   mainRole: string;
   gitHub: string;
   technologies: string[];
-  video: StaticImageData | string;
+  video: string;
   mainImage: StaticImageData | string;
+  mainImage2: StaticImageData | string;
   images: {
     url: StaticImageData | string;
     caption: string;
@@ -42,6 +48,7 @@ export const projectData: Project[] = [
     date: "Jul 2023 - Present",
     title: "AfroTada",
     introTitle: "Illuminating Africa - The AfroTada Journey",
+    backgroundColor: "blue",
     liveSite: "https://www.afrotada.com",
     linkName: "check out the website",
     roles: "Software Developer - Frontend Developer",
@@ -55,8 +62,9 @@ export const projectData: Project[] = [
       "Axios",
       "Quill js",
     ],
-    video: "google.com",
-    mainImage: Img,
+    video: "/assets/videos/vid1.mp4",
+    mainImage: Theme0,
+    mainImage2: "",
     images: [
       {
         url: Img,
@@ -84,6 +92,7 @@ export const projectData: Project[] = [
     title: "Forex Dashboard",
     introTitle:
       "Navigating Markets with Precision through the Forex Dashboard Experience",
+    backgroundColor: "pink",
     liveSite: "https://forexdash.netlify.app",
     linkName: "try out the demo",
     roles: "Software Developer - Full Stack Web Application",
@@ -99,8 +108,9 @@ export const projectData: Project[] = [
       "Apex Charts",
       "Mongo DB",
     ],
-    video: "google.com",
-    mainImage: Img,
+    video: "/assets/videos/vid1.mp4",
+    mainImage: Theme0,
+    mainImage2: "",
     images: [
       {
         url: Img,
@@ -128,6 +138,7 @@ export const projectData: Project[] = [
     date: "Mar 2022",
     title: "Code Dadi Theme",
     introTitle: "Immerse yourself in a sleek and efficient coding environment",
+    backgroundColor: "green",
     liveSite:
       "https://marketplace.visualstudio.com/items?itemName=CodeDadi.code-dadi-dark",
     linkName: "try it out",
@@ -135,19 +146,16 @@ export const projectData: Project[] = [
     mainRole: "Microsoft VSCode Extension",
     gitHub: "",
     technologies: ["JSON", "VSCode Extension"],
-    video: "google.com",
-    mainImage: Img,
+    video: "/assets/videos/vid1.mp4",
+    mainImage: Theme0,
+    mainImage2: Theme4,
     images: [
       {
-        url: Img,
+        url: Theme1,
         caption: "Demo caption",
       },
       {
-        url: Img,
-        caption: "Demo caption",
-      },
-      {
-        url: Img,
+        url: Theme3,
         caption: "Demo caption",
       },
     ],
@@ -167,14 +175,16 @@ export const projectData: Project[] = [
     date: "Mar 2022 - Apr 2022",
     title: "Photo Match",
     introTitle: "Enhancing Memory Skills - The Photo Match Experience",
+    backgroundColor: "yellow",
     liveSite: "https://photo-match.netlify.app",
     linkName: "check out the website",
     roles: "Software Developer - Web Game",
     mainRole: "Web Game",
     gitHub: "",
     technologies: ["React", "Rest API"],
-    video: "google.com",
-    mainImage: Img,
+    video: "/assets/videos/vid1.mp4",
+    mainImage: Theme0,
+    mainImage2: "",
     images: [
       {
         url: Img,
