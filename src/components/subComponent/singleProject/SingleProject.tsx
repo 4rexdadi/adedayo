@@ -86,7 +86,7 @@ const SingleProject: FC<SingleProjectProps> = ({
 
           {clickedProject && (
             <div className={style.singleProjectMainScreen}>
-              <video  controls="false" loop preload="none" autoPlay>
+              <video  controls={false} loop preload="none" autoPlay>
                 <source src={clickedProject.video} type="video/mp4" />
                 <track label="English" />
               </video>
