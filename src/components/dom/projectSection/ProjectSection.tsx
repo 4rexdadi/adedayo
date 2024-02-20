@@ -33,19 +33,27 @@ const ProjectSection: FC<ProjectSectionProps> = () => {
   );
 
   const onFrame = useCallback(
-    (frame: OnFrameType) => {
-      // bypass Reacts render method to perform frequent style updates, similar concept to React Spring
-      const parallaxFactor = -10;
-      innerRefArr.forEach((ref, i) => {
-        if (outerRefArr.length === i + 1) return;
+  (frame: OnFrameType) => {
+    const parallaxFactor = -10;
+    innerRefArr.forEach((ref, i) => {
+      if (outerRefArr.length === i + 1) return;
 
-        const transformX =
-          (frame.x + outerRefArr[i].current!.offsetLeft) / parallaxFactor;
-        ref.current!.style.transform = `translateX(${transformX}px)`;
-      });
-    },
-    [innerRefArr, outerRefArr]
-  );
+      const outerRef = outerRefArr[i].current!;
+      const innerRef = ref.current!;
+      const rect = outerRef.getBoundingClientRect();
+      
+      // Check if element is partially visible
+      if (rect.top < window.innerHeight && rect.bottom >= 0) {
+        const transformX = (frame.x + outerRef.offsetLeft) / parallaxFactor;
+        innerRef.style.transform = `translateX(${transformX}px)`;
+      } else {
+        // Element is not visible, reset position
+        innerRef.style.transform = 'translateX(0)';
+      }
+    });
+  },
+  [innerRefArr, outerRefArr]
+);
 
   return (
     <section className={style.projectSection} ref={projectRef}>
