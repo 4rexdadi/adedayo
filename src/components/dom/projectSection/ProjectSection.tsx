@@ -42,14 +42,6 @@ const ProjectSection: FC<ProjectSectionProps> = () => {
         const transformX =
           (frame.x + outerRefArr[i].current!.offsetLeft) / parallaxFactor;
         ref.current!.style.transform = `translateX(${transformX}px)`;
-
-      // Check if element is completely visible within viewport
-      const rect = ref.current!.getBoundingClientRect();
-      const isVisible = rect.top >= 0 && rect.bottom <= window.innerHeight;
-      if (isVisible) {
-        // Reset element position to default
-        ref.current!.style.transform = 'translateX(0)';
-      }
       });
     },
     [innerRefArr, outerRefArr]
