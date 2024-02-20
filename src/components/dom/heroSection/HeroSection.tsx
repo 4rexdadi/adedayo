@@ -31,8 +31,8 @@ const HeroSection: FC<HeroSectionProps> = () => {
 
           <span>
             I don&#39;t identify myself with a specific technology; I use the
-            best one for the job. Whether it&#39;s JavaScript, TypeScript,
-            Python, or C#, I adapt to the needs of the task at hand.
+            best for the job. Whether it&#39;s JavaScript, TypeScript, Python,
+            or C#, I adapt to the needs of the task at hand.
           </span>
         </p>
       </h1>
