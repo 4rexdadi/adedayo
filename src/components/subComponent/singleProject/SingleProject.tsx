@@ -87,8 +87,8 @@ const SingleProject: FC<SingleProjectProps> = ({
           {clickedProject && (
             <div className={style.singleProjectMainScreen}>
               <video
-                muted
                 loop
+                muted
                 controls={false}
                 preload="none"
                 autoPlay
