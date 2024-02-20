@@ -2,7 +2,7 @@ import { StaticImageData } from "next/image";
 
 import PhotoMatch0 from "../../public/assets/images/projects/photo-match/mainImage.png";
 
-import ForexDadh0 from "../../public/assets/images/projects/forex-dash/mainImage1.png";
+import ForexDadh0 from "../../public/assets/images/projects/forex-dash/mainImage2.png";
 
 import VsCodeTheme0 from "../../public/assets/images/projects/theme/mainImage.png";
 
