@@ -1,6 +1,14 @@
 import { StaticImageData } from "next/image";
+
+import PhotoMatch0 from "../../public/assets/images/projects/photo-match/mainImage.png";
+
+import ForexDadh0 from "../../public/assets/images/projects/forex-dash/mainImage.png";
+
+import VsCodeTheme0 from "../../public/assets/images/projects/theme/mainImage.png";
+
+import Afrotada0 from "../../public/assets/images/projects/afrotada/mainImage.png";
+
 import Img from "../../public/assets/images/1.png";
-import Theme0 from "../../public/assets/images/projects/Themes/10.png";
 import Theme1 from "../../public/assets/images/projects/Themes/1.png";
 import Theme3 from "../../public/assets/images/projects/Themes/3.png";
 import Theme4 from "../../public/assets/images/projects/Themes/4.png";
@@ -61,7 +69,7 @@ export const projectData: Project[] = [
       "Quill js",
     ],
     video: "/assets/videos/vid1.mp4",
-    mainImage: Theme0,
+    mainImage: Afrotada0,
     mainImage2: "",
     images: [
       {
@@ -106,7 +114,7 @@ export const projectData: Project[] = [
       "Mongo DB",
     ],
     video: "/assets/videos/vid1.mp4",
-    mainImage: Theme0,
+    mainImage: ForexDadh0,
     mainImage2: "",
     images: [
       {
@@ -143,7 +151,7 @@ export const projectData: Project[] = [
     gitHub: "",
     technologies: ["JSON", "VSCode Extension"],
     video: "/assets/videos/vid1.mp4",
-    mainImage: Theme0,
+    mainImage: VsCodeTheme0,
     mainImage2: Theme4,
     images: [
       {
@@ -178,7 +186,7 @@ export const projectData: Project[] = [
     gitHub: "",
     technologies: ["React", "Rest API"],
     video: "/assets/videos/vid1.mp4",
-    mainImage: Theme0,
+    mainImage: PhotoMatch0,
     mainImage2: "",
     images: [
       {
