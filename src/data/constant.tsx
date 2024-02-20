@@ -1,6 +1,6 @@
 import { StaticImageData } from "next/image";
 import Img from "../../public/assets/images/1.png";
-import Theme0 from "../../public/assets/images/projects/Themes/10.png";
+import Theme0 from "../../public/assets/images/projects/Themes/10.PNG";
 import Theme1 from "../../public/assets/images/projects/Themes/1.png";
 import Theme3 from "../../public/assets/images/projects/Themes/3.png";
 import Theme4 from "../../public/assets/images/projects/Themes/4.png";
