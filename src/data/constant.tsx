@@ -1,17 +1,18 @@
 import { StaticImageData } from "next/image";
 
-import PhotoMatch0 from "../../public/assets/images/projects/photo-match/mainImage.png";
+import PhotoMatch from "../../public/assets/images/projects/photo-match/mainImage.png";
 
-import ForexDadh0 from "../../public/assets/images/projects/forex-dash/mainImage1.png";
+import ForexDash from "../../public/assets/images/projects/forex-dash/mainImage1.png";
 
-import VsCodeTheme0 from "../../public/assets/images/projects/theme/mainImage.png";
+import VsCodeTheme0 from "../../public/assets/images/projects/theme/0.png";
+import VsCodeTheme1 from "../../public/assets/images/projects/theme/1.jpeg";
+import VsCodeTheme2 from "../../public/assets/images/projects/theme/2.jpeg";
+import VsCodeTheme3 from "../../public/assets/images/projects/theme/3.jpeg";
+import VsCodeTheme from "../../public/assets/images/projects/theme/mainImage.png";
 
-import Afrotada0 from "../../public/assets/images/projects/afrotada/mainImage.png";
+import AfroTada from "../../public/assets/images/projects/afrotada/mainImage.png";
 
 import Img from "../../public/assets/images/1.png";
-import Theme1 from "../../public/assets/images/projects/Themes/1.png";
-import Theme3 from "../../public/assets/images/projects/Themes/3.png";
-import Theme4 from "../../public/assets/images/projects/Themes/4.png";
 
 export type Work = {
   id: number;
@@ -40,8 +41,8 @@ export type Project = {
   gitHub: string;
   technologies: string[];
   video: string;
+  videoALT: StaticImageData | string;
   mainImage: StaticImageData | string;
-  mainImage2: StaticImageData | string;
   images: {
     url: StaticImageData | string;
     caption: string;
@@ -69,8 +70,8 @@ export const projectData: Project[] = [
       "Quill js",
     ],
     video: "/assets/videos/vid1.mp4",
-    mainImage: Afrotada0,
-    mainImage2: "",
+    videoALT: "",
+    mainImage: AfroTada,
     images: [
       {
         url: Img,
@@ -87,7 +88,7 @@ export const projectData: Project[] = [
     ],
     description: [
       "Overview: AfroTada is more than just a platform; it’s a movement aimed at preserving and celebrating the rich tapestry of African culture, history, and knowledge. By providing a digital space for authentic stories, traditions, and information, AfroTada serves as a beacon of African consciousness, bridging the gap between the past, present, and future.",
-      "Challenges: Building AfroTada from the ground up presented numerous challenges, particularly as the sole frontend developer tasked with creating dynamic features such as the interactive map and dashboard system, which weren’t too hard. The tricky part was developing the custom text editor, which initially I suggested outsourcing. However, our lead engineer, who handles the backend, encouraged me to tackle it myself, and I embraced the challenge. The journey to find the right tool for the text editor led to the discovery of Quill.js, which, despite its steep learning curve, my easy adaptability to new technologies made the integration unnoticed. Quill.js was like the base, so I built the extra features needed for our platform and styled accordingly to match the design.",
+      "Challenges: Building AfroTada presented numerous challenges, particularly as the sole frontend developer tasked with creating dynamic features such as the interactive map and dashboard system, which weren’t too hard. The tricky part was developing the custom text editor, which initially I suggested outsourcing. However, our lead engineer, who handles the backend, encouraged me to tackle it myself, and I embraced the challenge. The journey to find the right tool for the text editor led to the discovery of Quill.js, which, despite its steep learning curve, my easy adaptability to new technologies made the integration unnoticed. Quill.js was like the base, so I built the extra features needed for our platform and styled accordingly to match the design.",
       "Learning: Throughout the AfroTada journey, I acquired proficiency in Tailwind CSS and mastered the art of crafting a sophisticated text editor enriched with custom interactions. Moreover, this project sparked my curiosity in C#, driven by the fast performance of our backend built with ASP.Net Core. This project also expanded my knowledge beyond just tech stuff, also granting me insights into business strategies and the entrepreneurial ecosystem.",
       "This experience not only enhanced technical skills but also fostered a deeper understanding of the importance of perseverance and adaptability in software development.",
     ],
@@ -114,8 +115,8 @@ export const projectData: Project[] = [
       "Mongo DB",
     ],
     video: "/assets/videos/vid1.mp4",
-    mainImage: ForexDadh0,
-    mainImage2: "",
+    videoALT: "",
+    mainImage: ForexDash,
     images: [
       {
         url: Img,
@@ -150,16 +151,20 @@ export const projectData: Project[] = [
     mainRole: "Microsoft VSCode Extension",
     gitHub: "",
     technologies: ["JSON", "VSCode Extension"],
-    video: "/assets/videos/vid1.mp4",
-    mainImage: VsCodeTheme0,
-    mainImage2: Theme4,
+    video: "",
+    videoALT: VsCodeTheme0,
+    mainImage: VsCodeTheme,
     images: [
       {
-        url: Theme1,
+        url: VsCodeTheme1,
         caption: "Demo caption",
       },
       {
-        url: Theme3,
+        url: VsCodeTheme2,
+        caption: "Demo caption",
+      },
+      {
+        url: VsCodeTheme3,
         caption: "Demo caption",
       },
     ],
@@ -186,8 +191,8 @@ export const projectData: Project[] = [
     gitHub: "",
     technologies: ["React", "Rest API"],
     video: "/assets/videos/vid1.mp4",
-    mainImage: PhotoMatch0,
-    mainImage2: "",
+    videoALT: "",
+    mainImage: PhotoMatch,
     images: [
       {
         url: Img,
