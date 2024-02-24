@@ -1,18 +1,33 @@
 import { StaticImageData } from "next/image";
 
+import PhotoMatch0 from "../../public/assets/images/projects/photo-match/0.png";
+import PhotoMatch1 from "../../public/assets/images/projects/photo-match/1.png";
+import PhotoMatch2 from "../../public/assets/images/projects/photo-match/2.png";
 import PhotoMatch from "../../public/assets/images/projects/photo-match/mainImage.png";
 
-import ForexDash from "../../public/assets/images/projects/forex-dash/mainImage1.png";
+import ForexDash0 from "../../public/assets/images/projects/forex-dash/0.png";
+import ForexDash1 from "../../public/assets/images/projects/forex-dash/1.png";
+import ForexDash2 from "../../public/assets/images/projects/forex-dash/2.png";
+import ForexDash3 from "../../public/assets/images/projects/forex-dash/3.png";
+import ForexDash4 from "../../public/assets/images/projects/forex-dash/4.png";
+import ForexDash5 from "../../public/assets/images/projects/forex-dash/5.png";
+import ForexDash6 from "../../public/assets/images/projects/forex-dash/6.png";
+import ForexDash7 from "../../public/assets/images/projects/forex-dash/7.png";
+import ForexDash8 from "../../public/assets/images/projects/forex-dash/8.png";
+import ForexDash9 from "../../public/assets/images/projects/forex-dash/9.png";
+import ForexDash from "../../public/assets/images/projects/forex-dash/mainImage.png";
 
-import VsCodeTheme0 from "../../public/assets/images/projects/theme/0.png";
-import VsCodeTheme1 from "../../public/assets/images/projects/theme/1.jpeg";
-import VsCodeTheme2 from "../../public/assets/images/projects/theme/2.jpeg";
-import VsCodeTheme3 from "../../public/assets/images/projects/theme/3.jpeg";
+import VsCodeTheme0 from "../../public/assets/images/projects/theme/1.jpeg";
+import VsCodeTheme1 from "../../public/assets/images/projects/theme/2.jpeg";
+import VsCodeTheme2 from "../../public/assets/images/projects/theme/3.jpeg";
 import VsCodeTheme from "../../public/assets/images/projects/theme/mainImage.png";
 
+import AfroTada0 from "../../public/assets/images/projects/afrotada/0.png";
+import AfroTada1 from "../../public/assets/images/projects/afrotada/1.png";
+import AfroTada2 from "../../public/assets/images/projects/afrotada/2.png";
+import AfroTada3 from "../../public/assets/images/projects/afrotada/3.png";
+import AfroTada4 from "../../public/assets/images/projects/afrotada/4.png";
 import AfroTada from "../../public/assets/images/projects/afrotada/mainImage.png";
-
-import Img from "../../public/assets/images/1.png";
 
 export type Work = {
   id: number;
@@ -74,15 +89,23 @@ export const projectData: Project[] = [
     mainImage: AfroTada,
     images: [
       {
-        url: Img,
+        url: AfroTada0,
         caption: "Demo caption",
       },
       {
-        url: Img,
+        url: AfroTada1,
         caption: "Demo caption",
       },
       {
-        url: Img,
+        url: AfroTada2,
+        caption: "Demo caption",
+      },
+      {
+        url: AfroTada3,
+        caption: "Demo caption",
+      },
+      {
+        url: AfroTada4,
         caption: "Demo caption",
       },
     ],
@@ -119,15 +142,43 @@ export const projectData: Project[] = [
     mainImage: ForexDash,
     images: [
       {
-        url: Img,
+        url: ForexDash0,
         caption: "Demo caption",
       },
       {
-        url: Img,
+        url: ForexDash1,
         caption: "Demo caption",
       },
       {
-        url: Img,
+        url: ForexDash2,
+        caption: "Demo caption",
+      },
+      {
+        url: ForexDash3,
+        caption: "Demo caption",
+      },
+      {
+        url: ForexDash4,
+        caption: "Demo caption",
+      },
+      {
+        url: ForexDash5,
+        caption: "Demo caption",
+      },
+      {
+        url: ForexDash6,
+        caption: "Demo caption",
+      },
+      {
+        url: ForexDash7,
+        caption: "Demo caption",
+      },
+      {
+        url: ForexDash8,
+        caption: "Demo caption",
+      },
+      {
+        url: ForexDash9,
         caption: "Demo caption",
       },
     ],
@@ -152,19 +203,19 @@ export const projectData: Project[] = [
     gitHub: "",
     technologies: ["JSON", "VSCode Extension"],
     video: "",
-    videoALT: VsCodeTheme0,
+    videoALT: VsCodeTheme,
     mainImage: VsCodeTheme,
     images: [
+      {
+        url: VsCodeTheme0,
+        caption: "Demo caption",
+      },
       {
         url: VsCodeTheme1,
         caption: "Demo caption",
       },
       {
         url: VsCodeTheme2,
-        caption: "Demo caption",
-      },
-      {
-        url: VsCodeTheme3,
         caption: "Demo caption",
       },
     ],
@@ -195,15 +246,15 @@ export const projectData: Project[] = [
     mainImage: PhotoMatch,
     images: [
       {
-        url: Img,
+        url: PhotoMatch0,
         caption: "Demo caption",
       },
       {
-        url: Img,
+        url: PhotoMatch1,
         caption: "Demo caption",
       },
       {
-        url: Img,
+        url: PhotoMatch2,
         caption: "Demo caption",
       },
     ],
