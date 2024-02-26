@@ -1,33 +1,33 @@
 import { StaticImageData } from "next/image";
 
-import PhotoMatch0 from "../../public/assets/images/projects/photo-match/0.png";
-import PhotoMatch1 from "../../public/assets/images/projects/photo-match/1.png";
-import PhotoMatch2 from "../../public/assets/images/projects/photo-match/2.png";
-import PhotoMatch from "../../public/assets/images/projects/photo-match/mainImage.png";
+import PhotoMatch0 from "../../public/assets/images/projects/photo-match/0.webp";
+import PhotoMatch1 from "../../public/assets/images/projects/photo-match/1.webp";
+import PhotoMatch2 from "../../public/assets/images/projects/photo-match/2.webp";
+import PhotoMatch from "../../public/assets/images/projects/photo-match/mainImage.webp";
 
-import ForexDash0 from "../../public/assets/images/projects/forex-dash/0.png";
-import ForexDash1 from "../../public/assets/images/projects/forex-dash/1.png";
-import ForexDash2 from "../../public/assets/images/projects/forex-dash/2.png";
-import ForexDash3 from "../../public/assets/images/projects/forex-dash/3.png";
-import ForexDash4 from "../../public/assets/images/projects/forex-dash/4.png";
-import ForexDash5 from "../../public/assets/images/projects/forex-dash/5.png";
-import ForexDash6 from "../../public/assets/images/projects/forex-dash/6.png";
-import ForexDash7 from "../../public/assets/images/projects/forex-dash/7.png";
-import ForexDash8 from "../../public/assets/images/projects/forex-dash/8.png";
-import ForexDash9 from "../../public/assets/images/projects/forex-dash/9.png";
-import ForexDash from "../../public/assets/images/projects/forex-dash/mainImage.png";
+import ForexDash0 from "../../public/assets/images/projects/forex-dash/0.webp";
+import ForexDash1 from "../../public/assets/images/projects/forex-dash/1.webp";
+import ForexDash2 from "../../public/assets/images/projects/forex-dash/2.webp";
+import ForexDash3 from "../../public/assets/images/projects/forex-dash/3.webp";
+import ForexDash4 from "../../public/assets/images/projects/forex-dash/4.webp";
+import ForexDash5 from "../../public/assets/images/projects/forex-dash/5.webp";
+import ForexDash6 from "../../public/assets/images/projects/forex-dash/6.webp";
+import ForexDash7 from "../../public/assets/images/projects/forex-dash/7.webp";
+import ForexDash8 from "../../public/assets/images/projects/forex-dash/8.webp";
+import ForexDash9 from "../../public/assets/images/projects/forex-dash/9.webp";
+import ForexDash from "../../public/assets/images/projects/forex-dash/mainImage.webp";
 
-import VsCodeTheme0 from "../../public/assets/images/projects/theme/1.jpeg";
-import VsCodeTheme1 from "../../public/assets/images/projects/theme/2.jpeg";
-import VsCodeTheme2 from "../../public/assets/images/projects/theme/3.jpeg";
-import VsCodeTheme from "../../public/assets/images/projects/theme/mainImage.png";
+import VsCodeTheme0 from "../../public/assets/images/projects/theme/1.webp";
+import VsCodeTheme1 from "../../public/assets/images/projects/theme/2.webp";
+import VsCodeTheme2 from "../../public/assets/images/projects/theme/3.webp";
+import VsCodeTheme from "../../public/assets/images/projects/theme/mainImage.webp";
 
-import AfroTada0 from "../../public/assets/images/projects/afrotada/0.png";
-import AfroTada1 from "../../public/assets/images/projects/afrotada/1.png";
-import AfroTada2 from "../../public/assets/images/projects/afrotada/2.png";
-import AfroTada3 from "../../public/assets/images/projects/afrotada/3.png";
-import AfroTada4 from "../../public/assets/images/projects/afrotada/4.png";
-import AfroTada from "../../public/assets/images/projects/afrotada/mainImage.png";
+import AfroTada0 from "../../public/assets/images/projects/afrotada/0.webp";
+import AfroTada1 from "../../public/assets/images/projects/afrotada/1.webp";
+import AfroTada2 from "../../public/assets/images/projects/afrotada/2.webp";
+import AfroTada3 from "../../public/assets/images/projects/afrotada/3.webp";
+import AfroTada4 from "../../public/assets/images/projects/afrotada/4.webp";
+import AfroTada from "../../public/assets/images/projects/afrotada/mainImage.webp
 
 export type Work = {
   id: number;
