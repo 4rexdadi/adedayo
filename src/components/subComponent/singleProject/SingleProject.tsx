@@ -48,7 +48,7 @@ const SingleProject: FC<SingleProjectProps> = ({
       <div className={cx(style.singleProjectHeader, "mainContainer")}>
         <a
           target="_blank"
-          rel="noreferrer"
+          rel="external"
           href={clickedProject?.liveSite}
           className={cx(style.headerTitle, "heading")}
         >
@@ -127,7 +127,7 @@ const SingleProject: FC<SingleProjectProps> = ({
                 <div className={style.projectLinks}>
                   <a
                     href={clickedProject?.liveSite}
-                    rel="noreferrer"
+                    rel="external"
                     target="_blank"
                   >
                     <span>{clickedProject?.linkName}</span>
