@@ -46,15 +46,6 @@ const SingleProject: FC<SingleProjectProps> = ({
       className={cx(style.singleProjectContainer)}
     >
       <div className={cx(style.singleProjectHeader, "mainContainer")}>
-        <a
-         // target="_blank"
-          href={clickedProject?.liveSite}
-          className={cx(style.headerTitle, "heading")}
-        >
-          <p>{clickedProject?.title}</p>
-
-          <RightArrow className={style.liveSiteRightArrowSvg} />
-        </a>
 
         <button
           className="btn"
