@@ -84,8 +84,8 @@ export const projectData: Project[] = [
       "Axios",
       "Quill js",
     ],
-    video: "/assets/videos/vid1.mp4",
-    videoALT: "",
+    video: "",
+    videoALT: AfroTada,
     mainImage: AfroTada,
     images: [
       {
@@ -137,7 +137,7 @@ export const projectData: Project[] = [
       "Apex Charts",
       "Mongo DB",
     ],
-    video: "/assets/videos/vid1.mp4",
+    video: "/assets/videos/forex-dash/vid.mp4",
     videoALT: "",
     mainImage: ForexDash,
     images: [
@@ -241,7 +241,7 @@ export const projectData: Project[] = [
     mainRole: "Web Game",
     gitHub: "",
     technologies: ["React", "Rest API"],
-    video: "/assets/videos/vid1.mp4",
+    video: "/assets/videos/photo-match/vid.mp4",
     videoALT: "",
     mainImage: PhotoMatch,
     images: [
