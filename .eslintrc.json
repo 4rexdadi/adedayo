@@ -45,6 +45,7 @@
     "react/react-in-jsx-scope": "off",
     "no-param-reassign": 0,
     "react/jsx-props-no-spreading": "off",
+    "react/jsx-no-target-blank": "off",
     "react/no-unknown-property": [
       "off",
       {
