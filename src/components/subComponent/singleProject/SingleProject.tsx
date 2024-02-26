@@ -48,7 +48,6 @@ const SingleProject: FC<SingleProjectProps> = ({
       <div className={cx(style.singleProjectHeader, "mainContainer")}>
         <a
           target="_blank"
-          rel="noopener"
           href={clickedProject?.liveSite}
           className={cx(style.headerTitle, "heading")}
         >
@@ -127,7 +126,6 @@ const SingleProject: FC<SingleProjectProps> = ({
                 <div className={style.projectLinks}>
                   <a
                     href={clickedProject?.liveSite}
-                    rel="noopener"
                     target="_blank"
                   >
                     <span>{clickedProject?.linkName}</span>
@@ -137,7 +135,6 @@ const SingleProject: FC<SingleProjectProps> = ({
                   {clickedProject?.gitHub && (
                     <a
                       href={clickedProject?.gitHub}
-                      rel="noopener"
                       target="_blank"
                     >
                       <GitHub className={style.gitHubSvg} />
