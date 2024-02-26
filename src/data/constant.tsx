@@ -27,7 +27,7 @@ import AfroTada1 from "../../public/assets/images/projects/afrotada/1.webp";
 import AfroTada2 from "../../public/assets/images/projects/afrotada/2.webp";
 import AfroTada3 from "../../public/assets/images/projects/afrotada/3.webp";
 import AfroTada4 from "../../public/assets/images/projects/afrotada/4.webp";
-import AfroTada from "../../public/assets/images/projects/afrotada/mainImage.webp
+import AfroTada from "../../public/assets/images/projects/afrotada/mainImage.webp";
 
 export type Work = {
   id: number;
