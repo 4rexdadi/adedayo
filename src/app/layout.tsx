@@ -42,6 +42,7 @@ export const metadata: Metadata = {
     images: [siteMetadata.socialBanner],
   },
   themeColor: siteMetadata.theme,
+  keywords: siteMetadata.keywords,
 };
 
 const RootLayout = ({ children }: { children: React.ReactNode }) => {
