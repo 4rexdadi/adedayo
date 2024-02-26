@@ -1,8 +1,8 @@
 // please update required information
 const siteMetadata = {
-  title: "Adedayo Aturu - Nigerian Software Developer | Financial Trader: Welcome to My Portfolio Website, Built with Next Js",
-  description: "Adedayo Aturu is a skilled Software Developer and forex trader based in Lagos, Nigeria. He is dedicated to crafting cutting-edge software solutions tailored for entrepreneurs and businesses using modern technologies. His dedication stems from a passion for leveraging technology to drive positive change.",
-  headerTitle: "Adedayo Aturu - Nigerian Software Developer | Financial Trader: Welcome to My Portfolio Website, Built with Next Js",
+  title: "Adedayo Aturu - Software Developer | Forex Trader: Portfolio",
+  description: "Adedayo is a Software Developer and Financial Trader from Lagos, Nigeria. Focused on building software solutions for entrepreneurs using modern technologies.",
+  headerTitle: "Adedayo Aturu - Software Developer | Forex Trader: Portfolio",
   author: "Adedayo Aturu",
   theme: "#000000",
   siteUrl: "https://adedayo-omega.vercel.app/",
