@@ -5,7 +5,7 @@ const siteMetadata = {
   headerTitle: "Adedayo Aturu",
   author: "Adedayo Aturu",
   theme: "#000000",
-  siteUrl: "http://localhost:3000/",
+  siteUrl: "https://adedayo-omega.vercel.app/",
   siteLogo: "/assets/images/adedayo.jpg",
   socialBanner: "/assets/images/adedayo.jpg",
   email: "adedayoaturu@gmail.com",
