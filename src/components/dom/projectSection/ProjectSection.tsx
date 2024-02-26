@@ -85,7 +85,8 @@ const ProjectSection: FC<ProjectSectionProps> = () => {
                       draggable={false}
                       ref={innerRefArr[i]}
                       id={`${project.id}`}
-                      priority
+                      placeholder="blur"
+                      priority={i === 0}
                       // width={350}
                       // height={250}
                     />
