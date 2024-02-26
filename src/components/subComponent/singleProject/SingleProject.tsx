@@ -102,6 +102,7 @@ const SingleProject: FC<SingleProjectProps> = ({
                 <Image
                   src={clickedProject.videoALT}
                   alt={clickedProject.introTitle}
+                  placeholder="blur"
                   // width={window.innerWidth}
                   // height={window.innerHeight}
                 />
@@ -180,6 +181,7 @@ const SingleProject: FC<SingleProjectProps> = ({
                     <Image
                       src={img.url}
                       alt={img.caption}
+                      placeholder="blur"
                       // width={window.innerWidth}
                       // height={window.innerHeight}
                     />
