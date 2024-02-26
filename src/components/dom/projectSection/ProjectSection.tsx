@@ -2,7 +2,6 @@
 
 import Image from "next/image";
 import { FC, useCallback, useEffect, useRef, useState } from "react";
-import ResizeObserver from "resize-observer-polyfill";
 import { projectData } from "../../../data/constant";
 import useWindowSize from "../../../hooks/useWindowSize";
 import Dragger, { OnFrameType } from "../../subComponent/dragger/Dragger";
@@ -57,7 +56,6 @@ const ProjectSection: FC<ProjectSectionProps> = () => {
       </div>
 
       <Dragger
-        ResizeObserverPolyfill={ResizeObserver}
         onFrame={onFrame}
         onStaticClick={(e) => {
           setClickedProject(e.id);
