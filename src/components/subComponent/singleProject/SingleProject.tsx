@@ -47,7 +47,7 @@ const SingleProject: FC<SingleProjectProps> = ({
     >
       <div className={cx(style.singleProjectHeader, "mainContainer")}>
         <a
-          target="_blank"
+         // target="_blank"
           href={clickedProject?.liveSite}
           className={cx(style.headerTitle, "heading")}
         >
