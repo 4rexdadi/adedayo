@@ -19,9 +19,9 @@ const siteMetadata = {
   locale: "en-US",
   keywords: [
   "Lagos software developer",
-  “Self taught software developer”,
-  “Front end developer”,
-  “Nigerian full stack developer”,
+  "Self taught software developer",
+  "Front end developer",
+  "Nigerian full stack developer",
   "Nigeria tech entrepreneur",
   "JavaScript TypeScript”,
   “Python Django”, 
