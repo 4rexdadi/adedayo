@@ -140,16 +140,16 @@ const ContactSection: FC<ContactSectionProps> = (): JSX.Element => {
   }, [spaceBoy]);
 
   useEffect(() => {
-   const getNigeriaTime = () => {
-     const options: Intl.DateTimeFormatOptions = {
-        timeZone: 'Africa/Lagos',
-        hour: 'numeric',
-        minute: 'numeric',
-        second: 'numeric',
+    const getNigeriaTime = () => {
+      const options: Intl.DateTimeFormatOptions = {
+        timeZone: "Africa/Lagos",
+        hour: "numeric",
+        minute: "numeric",
+        second: "numeric",
         hour12: true,
       };
 
-      const nigeriaTime = new Date().toLocaleTimeString('en-US', options);
+      const nigeriaTime = new Date().toLocaleTimeString("en-US", options);
       setCurrentTime(nigeriaTime);
     };
 

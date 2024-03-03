@@ -1,9 +1,10 @@
- "use client";
+"use client";
 
 /* eslint-disable react/no-array-index-key */
 
+import { gsap } from "gsap";
 import Image from "next/image";
-import { FC, useEffect, useState } from "react";
+import { FC, useEffect, useRef, useState } from "react";
 import { GitHub, RightArrow } from "../../../../public/assets/svg/Svg";
 import { Project } from "../../../data/constant";
 import { useAppDispatch, useAppSelector } from "../../../hooks/storeHook";
@@ -21,175 +22,180 @@ const SingleProject: FC<SingleProjectProps> = ({
   clickedProject,
   isClicked,
 }): JSX.Element => {
-  const [close, setClose] = useState(true);
+  const [projectClicked, setProjectClicked] = useState<
+    Project | null | undefined
+  >(null);
   const dispatch = useAppDispatch();
+  const projectRef = useRef<HTMLDivElement>(null);
   const lenis = useAppSelector((state) => state.scrollSlice.lenis);
+
+  const close = (close: boolean, project: Project | null | undefined) => {
+    gsap.to(projectRef.current, {
+      y: close ? "105%" : 0,
+      duration: 1,
+      onComplete: () => {
+        setProjectClicked(project);
+      },
+    });
+
+    dispatch(setOverflow(close));
+  };
 
   useEffect(() => {
     lenis?.scrollTo(0, { immediate: true });
 
     if (clickedProject?.id || clickedProject?.id === 0) {
-      setClose(false);
-      dispatch(setOverflow(false));
-    } else {
-      dispatch(setOverflow(true));
-      setClose(true);
-    }
+      setProjectClicked(clickedProject);
+      close(false, clickedProject);
+    } else close(true, null);
+
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [clickedProject, isClicked, lenis]);
 
   return (
-    <div
-      style={{
-        transform: close ? "translate(-50%, 130%)" : "translate(-50%, 0)",
-      }}
-      className={cx(style.singleProjectContainer)}
-    >
-      <div className={cx(style.singleProjectHeader, "mainContainer")}>
-       <a
-          target="_blank"
-          href={clickedProject?.liveSite || "https://www.google.com"}
-          className={cx(style.headerTitle, "heading")}
-        >
-          <p>{clickedProject?.title}</p>
+    <div className={cx(style.singleProjectContainer)} ref={projectRef}>
+      {projectClicked && (
+        <>
+          <div className={cx(style.singleProjectHeader, "mainContainer")}>
+            <a
+              target="_blank"
+              href={projectClicked?.liveSite}
+              className={cx(style.headerTitle, "heading")}
+            >
+              <p>{projectClicked?.title}</p>
 
-          <RightArrow className={style.liveSiteRightArrowSvg} />
-        </a>
+              <RightArrow className={style.liveSiteRightArrowSvg} />
+            </a>
 
-        <button
-          className="btn"
-          onClick={() => {
-            dispatch(setOverflow(true));
-            setClose(true);
-          }}
-          type="button"
-        >
-          Close
-        </button>
-      </div>
+            <button
+              className="btn"
+              onClick={() => {
+                close(true, null);
+              }}
+              type="button"
+            >
+              Close
+            </button>
+          </div>
 
-      <ScrollContainer
-        root={false}
-        className={cx(style.scrollContainer, "mainContainer")}
-        options={{
-          lerp: 0.1,
-          duration: 1.2,
-          smoothTouch: false,
-          wheelMultiplier: 0.7,
-        }}
-      >
-        <div className={cx(style.singleProjectContent, "singleProjectContent")}>
-          <p className={cx(style.mainProjectTitle, "heading")}>
-            {clickedProject?.title}
-          </p>
+          <ScrollContainer
+            root={false}
+            className={cx(style.scrollContainer, "mainContainer")}
+            options={{
+              lerp: 0.1,
+              duration: 1.2,
+              smoothTouch: false,
+              wheelMultiplier: 0.7,
+            }}
+          >
+            <div
+              className={cx(style.singleProjectContent, "singleProjectContent")}
+            >
+              <p className={cx(style.mainProjectTitle, "heading")}>
+                {projectClicked?.title}
+              </p>
 
-          {clickedProject && (
-            <div className={style.singleProjectMainScreen}>
-              {clickedProject.video ? (
-                <video
-                  loop
-                  muted
-                  controls={false}
-                  preload="none"
-                  autoPlay
-                  playsInline
-                >
-                  <source src={clickedProject.video} type="video/mp4" />
-                  <track label="English" />
-                </video>
-              ) : (
-                <Image
-                  src={clickedProject.videoALT}
-                  alt={clickedProject.introTitle}
-                  placeholder="blur"
-                  // width={window.innerWidth}
-                  // height={window.innerHeight}
-                />
-              )}
-            </div>
-          )}
+              <div className={style.singleProjectMainScreen}>
+                {projectClicked.video ? (
+                  <video
+                    loop
+                    muted
+                    controls={false}
+                    preload="none"
+                    autoPlay
+                    playsInline
+                  >
+                    <source src={projectClicked.video} type="video/mp4" />
+                    <track label="English" />
+                  </video>
+                ) : (
+                  <Image
+                    src={projectClicked.videoALT}
+                    alt={projectClicked.introTitle}
+                    placeholder="blur"
+                    // width={window.innerWidth}
+                    // height={window.innerHeight}
+                  />
+                )}
+              </div>
 
-          <div className={style.singleProjectInfo}>
-            <p className={style.projectInfoHeader}>About the project</p>
-            <p className={cx(style.projectIntroTitle, "heading")}>
-              {clickedProject?.introTitle}
-            </p>
+              <div className={style.singleProjectInfo}>
+                <p className={style.projectInfoHeader}>About the project</p>
+                <p className={cx(style.projectIntroTitle, "heading")}>
+                  {projectClicked?.introTitle}
+                </p>
 
-            <div className={style.projectInfoContainer}>
-              <div className={style.projectLeft}>
-                <div className={style.projectDescription}>
-                  {clickedProject?.description.map((desc, index) => {
-                    return <p key={index}>{desc}</p>;
+                <div className={style.projectInfoContainer}>
+                  <div className={style.projectLeft}>
+                    <div className={style.projectDescription}>
+                      {projectClicked?.description.map((desc, index) => {
+                        return <p key={index}>{desc}</p>;
+                      })}
+                    </div>
+
+                    <div className={style.projectLinks}>
+                      <a href={projectClicked?.liveSite} target="_blank">
+                        <span>{projectClicked?.linkName}</span>
+                        <RightArrow className={style.rightArrowSvg} />
+                      </a>
+
+                      {projectClicked?.gitHub && (
+                        <a href={projectClicked?.gitHub} target="_blank">
+                          <GitHub className={style.gitHubSvg} />
+                        </a>
+                      )}
+                    </div>
+                  </div>
+
+                  <div className={style.projectRight}>
+                    <div>
+                      <p className={style.projectSubHeader}>role</p>
+                      <p>{projectClicked?.roles}</p>
+                    </div>
+
+                    {projectClicked?.technologies && (
+                      <div>
+                        <p className={style.projectSubHeader}>technologies</p>
+                        <p className={style.projectTechs}>
+                          {projectClicked?.technologies.map((tech, index) => {
+                            return <span key={index}>{tech}</span>;
+                          })}
+                        </p>
+                      </div>
+                    )}
+
+                    <div>
+                      <p className={style.projectSubHeader}>date</p>
+                      <p>{projectClicked?.date}</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div className={style.projectSnapshots}>
+                <p className={style.projectSubHeader}>Snapshots 📸</p>
+
+                <div className={style.snapshotContainer}>
+                  {projectClicked?.images.map((img, index) => {
+                    return (
+                      <div className={style.snapshotContent} key={index}>
+                        <Image
+                          src={img.url}
+                          alt={img.caption}
+                          placeholder="blur"
+                          // width={window.innerWidth}
+                          // height={window.innerHeight}
+                        />
+                        <p>{img.caption}</p>
+                      </div>
+                    );
                   })}
                 </div>
-
-                <div className={style.projectLinks}>
-                  <a
-                    href={clickedProject?.liveSite || "https://www.google.com"}
-                    target="_blank"
-                  >
-                    <span>{clickedProject?.linkName}</span>
-                    <RightArrow className={style.rightArrowSvg} />
-                  </a>
-
-                  {clickedProject?.gitHub && (
-                    <a
-                      href={clickedProject?.gitHub || "https://www.google.com"}
-                      target="_blank"
-                    >
-                      <GitHub className={style.gitHubSvg} />
-                    </a>
-                  )}
-                </div>
-              </div>
-
-              <div className={style.projectRight}>
-                <div>
-                  <p className={style.projectSubHeader}>role</p>
-                  <p>{clickedProject?.roles}</p>
-                </div>
-
-                {clickedProject?.technologies && (
-                  <div>
-                    <p className={style.projectSubHeader}>technologies</p>
-                    <p className={style.projectTechs}>
-                      {clickedProject?.technologies.map((tech, index) => {
-                        return <span key={index}>{tech}</span>;
-                      })}
-                    </p>
-                  </div>
-                )}
-
-                <div>
-                  <p className={style.projectSubHeader}>date</p>
-                  <p>{clickedProject?.date}</p>
-                </div>
               </div>
             </div>
-          </div>
-
-          <div className={style.projectSnapshots}>
-            <p className={style.projectSubHeader}>Snapshots 📸</p>
-
-            <div className={style.snapshotContainer}>
-              {clickedProject?.images.map((img, index) => {
-                return (
-                  <div className={style.snapshotContent} key={index}>
-                    <Image
-                      src={img.url}
-                      alt={img.caption}
-                      placeholder="blur"
-                      // width={window.innerWidth}
-                      // height={window.innerHeight}
-                    />
-                    <p>{img.caption}</p>
-                  </div>
-                );
-              })}
-            </div>
-          </div>
-        </div>
-      </ScrollContainer>
+          </ScrollContainer>
+        </>
+      )}
     </div>
   );
 };
