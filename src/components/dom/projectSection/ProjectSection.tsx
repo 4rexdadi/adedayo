@@ -3,7 +3,6 @@
 import Image from "next/image";
 import { FC, useEffect, useRef, useState } from "react";
 import { projectData } from "../../../data/constant";
-import useWindowSize from "../../../hooks/useWindowSize";
 import Dragger from "../../subComponent/dragger/Dragger";
 import SingleProject from "../../subComponent/singleProject/SingleProject";
 import style from "./projectSectionStyle.module.scss";
@@ -12,7 +11,6 @@ interface ProjectSectionProps {}
 
 const ProjectSection: FC<ProjectSectionProps> = () => {
   const [clickedProject, setClickedProject] = useState("");
-  const { width } = useWindowSize();
   const [isClicked, setIsClicked] = useState(0);
   const innerRefArr = Array.from({ length: projectData.length }, () =>
     // eslint-disable-next-line react-hooks/rules-of-hooks
