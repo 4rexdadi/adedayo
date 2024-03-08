@@ -34,14 +34,7 @@ const ProjectSection: FC<ProjectSectionProps> = () => {
     [projectRef]
   );
 
-  const onFrame = useCallback(
-    (frame: OnFrameType) => {
-      // bypass Reacts render method to perform frequent style updates, similar concept to React Spring
-      const parallaxFactor = -10;
-      
-    },
-    [innerRefArr, outerRefArr, width]
-  );
+  
 
   return (
     <section className={style.projectSection} ref={projectRef}>
@@ -50,7 +43,7 @@ const ProjectSection: FC<ProjectSectionProps> = () => {
       </div>
 
       <Dragger
-        onFrame={onFrame}
+        // onFrame={onFrame}
         onStaticClick={(e) => {
           setClickedProject(e.id);
           if (e.id) {
