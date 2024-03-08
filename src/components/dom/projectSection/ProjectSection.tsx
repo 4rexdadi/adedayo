@@ -56,7 +56,7 @@ const ProjectSection: FC<ProjectSectionProps> = () => {
       </div>
 
       <Dragger
-        onFrame={onFrame}
+        // onFrame={onFrame}
         onStaticClick={(e) => {
           setClickedProject(e.id);
           if (e.id) {
