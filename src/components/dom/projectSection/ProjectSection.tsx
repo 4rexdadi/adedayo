@@ -1,9 +1,10 @@
 "use client";
 
 import Image from "next/image";
-import { FC, useEffect, useRef, useState } from "react";
+import { FC, useCallback, useEffect, useRef, useState } from "react";
 import { projectData } from "../../../data/constant";
-import Dragger from "../../subComponent/dragger/Dragger";
+import useWindowSize from "../../../hooks/useWindowSize";
+import Dragger, { OnFrameType } from "../../subComponent/dragger/Dragger";
 import SingleProject from "../../subComponent/singleProject/SingleProject";
 import style from "./projectSectionStyle.module.scss";
 
@@ -11,6 +12,7 @@ interface ProjectSectionProps {}
 
 const ProjectSection: FC<ProjectSectionProps> = () => {
   const [clickedProject, setClickedProject] = useState("");
+  const { width } = useWindowSize();
   const [isClicked, setIsClicked] = useState(0);
   const innerRefArr = Array.from({ length: projectData.length }, () =>
     // eslint-disable-next-line react-hooks/rules-of-hooks
@@ -32,6 +34,21 @@ const ProjectSection: FC<ProjectSectionProps> = () => {
     [projectRef]
   );
 
+  const onFrame = useCallback(
+    (frame: OnFrameType) => {
+      // bypass Reacts render method to perform frequent style updates, similar concept to React Spring
+      const parallaxFactor = -10;
+      innerRefArr.forEach((ref, i) => {
+        if (outerRefArr.length === i + 1 && width > 650) return;
+
+        const transformX =
+          (frame.x + outerRefArr[i].current!.offsetLeft) / parallaxFactor;
+        ref.current!.style.transform = `translateX(${transformX}px)`;
+      });
+    },
+    [innerRefArr, outerRefArr, width]
+  );
+
   return (
     <section className={style.projectSection} ref={projectRef}>
       <div className={style.projectHeader}>
@@ -39,6 +56,7 @@ const ProjectSection: FC<ProjectSectionProps> = () => {
       </div>
 
       <Dragger
+        onFrame={onFrame}
         onStaticClick={(e) => {
           setClickedProject(e.id);
           if (e.id) {
