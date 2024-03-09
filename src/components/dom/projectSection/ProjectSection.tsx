@@ -1,28 +1,42 @@
 "use client";
 
+/* eslint-disable jsx-a11y/no-noninteractive-element-interactions */
+/* eslint-disable jsx-a11y/click-events-have-key-events */
+
+import "keen-slider/keen-slider.min.css";
+import { useKeenSlider } from "keen-slider/react";
 import Image from "next/image";
-import { FC, useCallback, useEffect, useRef, useState } from "react";
-import { projectData } from "../../../data/constant";
-import useWindowSize from "../../../hooks/useWindowSize";
-import Dragger, { OnFrameType } from "../../subComponent/dragger/Dragger";
+import { FC, useEffect, useRef, useState } from "react";
+import { Project, projectData } from "../../../data/constant";
+import cx from "../../../utils";
 import SingleProject from "../../subComponent/singleProject/SingleProject";
 import style from "./projectSectionStyle.module.scss";
 
 interface ProjectSectionProps {}
 
 const ProjectSection: FC<ProjectSectionProps> = () => {
-  const [clickedProject, setClickedProject] = useState("");
-  const { width } = useWindowSize();
+  const [clickedProject, setClickedProject] = useState<Project | null>(null);
   const [isClicked, setIsClicked] = useState(0);
-  const innerRefArr = Array.from({ length: projectData.length }, () =>
-    // eslint-disable-next-line react-hooks/rules-of-hooks
-    useRef<HTMLImageElement>(null)
-  );
-  const outerRefArr = Array.from({ length: projectData.length }, () =>
-    // eslint-disable-next-line react-hooks/rules-of-hooks
-    useRef<HTMLLIElement>(null)
-  );
+  const animation = { duration: 60000, easing: (t: number) => t };
 
+  const [sliderRef] = useKeenSlider({
+    loop: true,
+    mode: "free",
+    renderMode: "performance",
+    slides: {
+      perView: "auto",
+      spacing: 60,
+    },
+    created: (s) => {
+      s.moveToIdx(projectData.length, true, animation);
+    },
+    updated: (s) => {
+      s.moveToIdx(s.track.details.abs + projectData.length, true, animation);
+    },
+    animationEnded: (s) => {
+      s.moveToIdx(s.track.details.abs + projectData.length, true, animation);
+    },
+  });
   const projectRef = useRef<HTMLElement>(null);
 
   useEffect(
@@ -34,86 +48,45 @@ const ProjectSection: FC<ProjectSectionProps> = () => {
     [projectRef]
   );
 
-  const onFrame = useCallback(
-    (frame: OnFrameType) => {
-      // bypass Reacts render method to perform frequent style updates, similar concept to React Spring
-      const parallaxFactor = -10;
-      innerRefArr.forEach((ref, i) => {
-        if (outerRefArr.length === i + 1 && width > 650) return;
-
-        const transformX =
-          (frame.x + outerRefArr[i].current!.offsetLeft) / parallaxFactor;
-        ref.current!.style.transform = `translateX(${transformX}px)`;
-      });
-    },
-    [innerRefArr, outerRefArr, width]
-  );
-
   return (
     <section className={style.projectSection} ref={projectRef}>
       <div className={style.projectHeader}>
         <p>Selected works</p>
       </div>
 
-      <Dragger
-        onFrame={onFrame}
-        onStaticClick={(e) => {
-          setClickedProject(e.id);
-          if (e.id) {
-            setIsClicked((prev) => prev + 1);
-          }
-        }}
-        className="dragger"
-        friction={0.95}
-      >
-        <ul className={style.projectContainer}>
-          {projectData.map((project, i) => {
-            return (
-              <li
-                key={project.id}
-                id={`${project.id}`}
-                className={style.projectCard}
-                ref={outerRefArr[i]}
-              >
-                <div id={`${project.id}`}>
-                  <div id={`${project.id}`} className={style.projectCardImg}>
-                    <Image
-                      alt={project.title}
-                      src={project.mainImage}
-                      draggable={false}
-                      ref={innerRefArr[i]}
-                      id={`${project.id}`}
-                      placeholder="blur"
-                      priority={i === 0}
-                      // width={350}
-                      // height={250}
-                      sizes="(min-width: 1280px) 278px, (min-width: 1040px) calc(12.73vw + 118px), (min-width: 800px) 33.18vw, (min-width: 540px) 50vw, calc(100vw - 16px)"
-                    />
-                  </div>
+      <ul ref={sliderRef} className={cx(style.projectContainer, "keen-slider")}>
+        {projectData.map((project, i) => {
+          return (
+            <li
+              onClick={() => {
+                setClickedProject(project);
+                setIsClicked((prev) => prev + 1);
+              }}
+              key={project.id}
+              className={cx(style.projectCard, "keen-slider__slide")}
+            >
+              <div className={style.projectCardImg}>
+                <Image
+                  alt={project.title}
+                  src={project.mainImage}
+                  draggable={false}
+                  placeholder="blur"
+                  priority={i === 0}
+                />
+              </div>
 
-                  <div id={`${project.id}`} className={style.projectCardInfo}>
-                    <p>{project.mainRole}</p>
-                    <p>{project.date}</p>
-                  </div>
+              <div className={style.projectCardInfo}>
+                <p>{project.mainRole}</p>
+                <p>{project.date}</p>
+              </div>
 
-                  <p id={`${project.id}`} className={style.projectCardTitle}>
-                    {project.title}
-                  </p>
-                </div>
-              </li>
-            );
-          })}
-        </ul>
-      </Dragger>
+              <p className={style.projectCardTitle}>{project.title}</p>
+            </li>
+          );
+        })}
+      </ul>
 
-      <SingleProject
-        isClicked={isClicked}
-        clickedProject={
-          projectData.filter(
-            (projects) => projects.id.toString() === clickedProject
-          )[0]
-        }
-      />
+      <SingleProject isClicked={isClicked} clickedProject={clickedProject} />
     </section>
   );
 };

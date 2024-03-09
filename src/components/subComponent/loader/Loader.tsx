@@ -24,9 +24,7 @@ const Loader: FC<LoaderProps> = () => {
 
   return progress === 100 ? null : (
     <div className={`${style.loaderContainer} loaderContainer`}>
-      <div className={style.loader}>
-        <p>Loading</p>
-      </div>
+      <div className={style.loader}>{/* <p>Loading</p> */}</div>
     </div>
   );
 };

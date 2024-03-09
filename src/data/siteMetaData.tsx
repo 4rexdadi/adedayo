@@ -1,7 +1,8 @@
 // please update required information
 const siteMetadata = {
   title: "Adedayo Aturu - Software Developer | Forex Trader: Portfolio",
-  description: "Adedayo is a Software Developer and Financial Trader from Lagos, Nigeria. Focused on building software solutions for entrepreneurs using modern technologies.",
+  description:
+    "Adedayo is a Software Developer and Financial Trader from Lagos, Nigeria. Focused on building software solutions for entrepreneurs using modern technologies.",
   headerTitle: "Adedayo Aturu - Software Developer | Forex Trader: Portfolio",
   author: "Adedayo Aturu",
   theme: "#000000",
@@ -18,24 +19,24 @@ const siteMetadata = {
   language: "en-us",
   locale: "en-US",
   keywords: [
-  "Lagos software developer",
-  "Self taught software developer",
-  "Front end developer",
-  "Nigerian full stack developer",
-  "Nigeria tech entrepreneur",
-  "JavaScript TypeScript",
-  "Python Django",
-  "C# ASP.NET Core",
-  "React Next.js",
-  "Node Express.js",
-  "Three.js React Three Fiber",
-  "HTML CSS SASS",
-  "Rest API",
-  "MySQL MongoDB",
-  "Git GitHub",
-  "Figma",
-  "Modern technology solutions",
- ]
+    "Lagos software developer",
+    "Self taught software developer",
+    "Front end developer",
+    "Nigerian full stack developer",
+    "Nigeria tech entrepreneur",
+    "JavaScript TypeScript",
+    "Python Django",
+    "C# ASP.NET Core",
+    "React Next.js",
+    "Node Express.js",
+    "Three.js React Three Fiber",
+    "HTML CSS SASS",
+    "Rest API",
+    "MySQL MongoDB",
+    "Git GitHub",
+    "Figma",
+    "Modern technology solutions",
+  ],
 };
 
 export default siteMetadata;

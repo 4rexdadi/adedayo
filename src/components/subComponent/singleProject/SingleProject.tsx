@@ -14,7 +14,7 @@ import ScrollContainer from "../scrollContainer/ScrollContainer";
 import style from "./singleProjectStyle.module.scss";
 
 interface SingleProjectProps {
-  clickedProject: Project | undefined;
+  clickedProject: Project | null;
   isClicked: number;
 }
 
@@ -22,14 +22,12 @@ const SingleProject: FC<SingleProjectProps> = ({
   clickedProject,
   isClicked,
 }): JSX.Element => {
-  const [projectClicked, setProjectClicked] = useState<
-    Project | null | undefined
-  >(null);
+  const [projectClicked, setProjectClicked] = useState<Project | null>(null);
   const dispatch = useAppDispatch();
   const projectRef = useRef<HTMLDivElement>(null);
   const lenis = useAppSelector((state) => state.scrollSlice.lenis);
 
-  const close = (close: boolean, project: Project | null | undefined) => {
+  const close = (close: boolean, project: Project | null) => {
     gsap.to(projectRef.current, {
       y: close ? "105%" : 0,
       duration: 1,
@@ -44,13 +42,13 @@ const SingleProject: FC<SingleProjectProps> = ({
   useEffect(() => {
     lenis?.scrollTo(0, { immediate: true });
 
-    if (clickedProject?.id || clickedProject?.id === 0) {
+    if (clickedProject) {
       setProjectClicked(clickedProject);
       close(false, clickedProject);
     } else close(true, null);
 
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [clickedProject, isClicked, lenis]);
+  }, [clickedProject, lenis, isClicked]);
 
   return (
     <div className={cx(style.singleProjectContainer)} ref={projectRef}>
@@ -85,7 +83,7 @@ const SingleProject: FC<SingleProjectProps> = ({
               lerp: 0.1,
               duration: 1.2,
               smoothTouch: false,
-              wheelMultiplier: 0.7,
+              wheelMultiplier: 0.9,
             }}
           >
             <div
