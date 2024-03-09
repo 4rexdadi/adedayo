@@ -1,6 +1,5 @@
 .projectSection {
   margin-top: 6rem;
-  height: 100%;
   position: relative;
 
   .projectHeader {
@@ -23,6 +22,7 @@
 
   .projectContainer {
     width: 100%;
+    height: max-content;
     display: grid;
     grid-template-columns: repeat(var(--projectNum, 4), min(100%, 550px));
     cursor: grab;
