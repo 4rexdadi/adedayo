@@ -22,7 +22,6 @@
 
   .projectContainer {
     width: 100%;
-    height: 100%;
     display: grid;
     grid-template-columns: repeat(var(--projectNum, 4), min(100%, 550px));
     cursor: grab;
