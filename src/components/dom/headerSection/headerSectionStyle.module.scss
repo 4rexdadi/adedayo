@@ -20,5 +20,63 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+
+    .myImgContainer {
+      border-radius: 50%;
+      height: clamp(2.5rem, 2.2826rem + 1.087vi, 3.125rem);
+      width: clamp(2.5rem, 2.2826rem + 1.087vi, 3.125rem);
+      border: 2px solid hsl(0 0% 20%);
+      transition: border-color 250ms ease;
+
+      &:hover {
+        border-color: var(--secondary);
+      }
+
+      img {
+        border-radius: 50%;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+  }
+}
+
+.myInfoContainer {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1000;
+  width: 100%;
+  height: 100dvh;
+  display: grid;
+  place-items: center;
+}
+
+.myInfo {
+  background-color: var(--black);
+  width: min(600px, 98%);
+  height: min(500px, 80dvh);
+  border: 2px solid hsl(0 0% 20%);
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  text-align: center;
+  flex-direction: column;
+  gap: 1.5rem;
+  padding: 1.5rem;
+  text-transform: none;
+
+  div {
+    height: 70%;
+
+    img {
+      border-radius: 50%;
+      border: 2px solid hsl(0 0% 20%);
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
   }
 }

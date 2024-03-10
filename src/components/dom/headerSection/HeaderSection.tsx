@@ -1,13 +1,16 @@
 "use client";
 
 // imports
-import { FC, useEffect, useRef } from "react";
+import Image from "next/image";
+import { FC, useEffect, useRef, useState } from "react";
+import adedayo from "../../../../public/assets/images/adedayo.webp";
 import cx from "../../../utils";
 import style from "./headerSectionStyle.module.scss";
 
 interface HeaderSectionProps {}
 
 const HeaderSection: FC<HeaderSectionProps> = () => {
+  const [seeFullImg, setSeeFullImg] = useState(false);
   const headerContainerRef = useRef<HTMLElement>(null);
 
   useEffect(() => {
@@ -33,23 +36,56 @@ const HeaderSection: FC<HeaderSectionProps> = () => {
   }, []);
 
   return (
-    <nav ref={headerContainerRef} className={cx(style.headerContainer)}>
-      <div className={cx(style.header, "mainContainer")}>
-        <h2>
-          <span>Software</span>
-          <br />
-          <span>Dev</span>
-        </h2>
-
+    <>
+      {seeFullImg && (
         <button
           type="button"
-          className="btn"
-          onClick={() => window.scrollTo(0, document.body.scrollHeight)}
+          onClick={() => setSeeFullImg(false)}
+          className={style.myInfoContainer}
         >
-          contact
+          <div className={style.myInfo}>
+            <div>
+              <Image
+                alt="Adedayo Aturu"
+                src={adedayo}
+                draggable={false}
+                placeholder="blur"
+                priority
+              />
+            </div>
+
+            <p>
+              Adedayo is a Software Developer and Financial Trader from Lagos,
+              Nigeria. Focused on building software solutions for entrepreneurs
+              using modern technologies.
+            </p>
+          </div>
         </button>
-      </div>
-    </nav>
+      )}
+
+      <nav ref={headerContainerRef} className={cx(style.headerContainer)}>
+        <div className={cx(style.header, "mainContainer")}>
+          <button type="button" className={style.myImgContainer}>
+            <Image
+              onClick={() => setSeeFullImg((prev) => !prev)}
+              alt="Adedayo Aturu"
+              src={adedayo}
+              draggable={false}
+              placeholder="blur"
+              priority
+            />
+          </button>
+
+          <button
+            type="button"
+            className="btn"
+            onClick={() => window.scrollTo(0, document.body.scrollHeight)}
+          >
+            contact
+          </button>
+        </div>
+      </nav>
+    </>
   );
 };
 
