@@ -37,14 +37,6 @@ export const ArrowDown = ({ className }: { className: string }) => (
   </svg>
 );
 
-export const LeftArrow = ({ className }: { className: string }) => (
-  <svg className={className} height="800px" width="800px" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
-    viewBox="0 0 476.213 476.213" >
-    <polygon points="476.213,223.107 76.212,223.107 76.212,161.893 0,238.108 76.212,314.32 76.212,253.107 476.213,253.107 " />
-  </svg>
-);
-
-
 export const RightArrow = ({ className }: { className: string }) => (
   <svg className={className} height="800px" width="800px" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
     viewBox="0 0 476.213 476.213" >
