@@ -72,7 +72,7 @@ const ProjectSection: FC<ProjectSectionProps> = () => {
                   draggable={false}
                   placeholder="blur"
                   priority={i === 0}
-                  sizes="(max-width: 550px), 90vw, (max-width: 700px), 50vw, (max-width: 1000px), 35vw, 30vw"
+                  sizes="(max-width: 550px) 90vw, (max-width: 700px) 50vw, (max-width: 1000px) 35vw, 30vw"
                 />
               </div>
 
