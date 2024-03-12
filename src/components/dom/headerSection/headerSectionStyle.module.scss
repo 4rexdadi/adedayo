@@ -26,11 +26,11 @@
       height: clamp(2.5rem, 2.2826rem + 1.087vi, 3.125rem);
       width: clamp(2.5rem, 2.2826rem + 1.087vi, 3.125rem);
       border: 2px solid hsl(0 0% 20%);
-      transition: border-color 250ms ease;
+      // transition: border-color 250ms ease;
 
-      &:hover {
-        border-color: var(--secondary);
-      }
+      // &:hover {
+      //   border-color: var(--secondary);
+      // }
 
       img {
         border-radius: 50%;
@@ -52,6 +52,13 @@
   height: 100dvh;
   display: grid;
   place-items: center;
+  background: rgba(0, 0, 0, 0.65);
+  backdrop-filter: blur(13.5px);
+  -webkit-backdrop-filter: blur(13.5px);
+
+  @supports not ((-webkit-backdrop-filter: none) or (backdrop-filter: none)) {
+    background: rgba(0, 0, 0, 0.68);
+  }
 }
 
 .myInfo {
@@ -69,7 +76,10 @@
   text-transform: none;
 
   div {
-    height: 70%;
+    width: clamp(15.6225rem, 13.4511rem + 10.869vi, 21.875rem);
+    height: clamp(15.6225rem, 13.4511rem + 10.869vi, 21.875rem);
+    border-radius: 50%;
+    overflow: hidden;
 
     img {
       border-radius: 50%;
