@@ -90,23 +90,23 @@ export const projectData: Project[] = [
     images: [
       {
         url: AfroTada0,
-        caption: "Demo caption",
+        caption: "Mobile screens 📱",
       },
       {
         url: AfroTada1,
-        caption: "Demo caption",
+        caption: "Interactive map of Africa page for desktop",
       },
       {
         url: AfroTada2,
-        caption: "Demo caption",
+        caption: "Dashboard page - more features will be shown, depending of who's logged in.",
       },
       {
         url: AfroTada3,
-        caption: "Demo caption",
+        caption: "Minimal rich text editor with professional writing tools",
       },
       {
         url: AfroTada4,
-        caption: "Demo caption",
+        caption: "Single country page - when a country is clicked on the map, you get beautiful screen with information and articles for that country",
       },
     ],
     description: [
@@ -143,43 +143,43 @@ export const projectData: Project[] = [
     images: [
       {
         url: ForexDash0,
-        caption: "Demo caption",
+        caption: "Main screen - newly logged In account with no historical data.",
       },
       {
         url: ForexDash1,
-        caption: "Demo caption",
+        caption: "Login page",
       },
       {
         url: ForexDash2,
-        caption: "Demo caption",
+        caption: "Main screen with few trades. Note, this is a demo trading account, so dont judge me 😜",
       },
       {
         url: ForexDash3,
-        caption: "Demo caption",
+        caption: "You can see data statistics for the last 5 trading days",
       },
       {
         url: ForexDash4,
-        caption: "Demo caption",
+        caption: "You can visually monitor your daily growth",
       },
       {
         url: ForexDash5,
-        caption: "Demo caption",
+        caption: "Trade histories",
       },
       {
         url: ForexDash6,
-        caption: "Demo caption",
+        caption: "Live charts directly from TradingView - you can make your analysis here",
       },
       {
         url: ForexDash7,
-        caption: "Demo caption",
+        caption: "Monitor crypto assets",
       },
       {
         url: ForexDash8,
-        caption: "Demo caption",
+        caption: "Visualize profits gained and losses",
       },
       {
         url: ForexDash9,
-        caption: "Demo caption",
+        caption: "Track your lot sizes and monitore watchlist accounts",
       },
     ],
     description: [
