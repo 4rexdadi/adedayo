@@ -2,7 +2,6 @@ import { StaticImageData } from "next/image";
 
 import PhotoMatch0 from "../../public/assets/images/projects/photo-match/0.webp";
 import PhotoMatch1 from "../../public/assets/images/projects/photo-match/1.webp";
-import PhotoMatch2 from "../../public/assets/images/projects/photo-match/2.webp";
 import PhotoMatch from "../../public/assets/images/projects/photo-match/mainImage.webp";
 
 import ForexDash0 from "../../public/assets/images/projects/forex-dash/0.webp";
@@ -208,15 +207,15 @@ export const projectData: Project[] = [
     images: [
       {
         url: VsCodeTheme0,
-        caption: "Demo caption",
+        caption: "Navy blue verision - get my themes now and save your eyes from pains, just a friendly advice",
       },
       {
         url: VsCodeTheme1,
-        caption: "Demo caption",
+        caption: "The terminal looks even more better",
       },
       {
         url: VsCodeTheme2,
-        caption: "Demo caption",
+        caption: "Dark version. This is my favorite 👍",
       },
     ],
     description: [
@@ -247,15 +246,11 @@ export const projectData: Project[] = [
     images: [
       {
         url: PhotoMatch0,
-        caption: "Demo caption",
+        caption: "Type in here what every comes to your mind and get picture results.",
       },
       {
         url: PhotoMatch1,
-        caption: "Demo caption",
-      },
-      {
-        url: PhotoMatch2,
-        caption: "Demo caption",
+        caption: "You have limited time to find all matching photos",
       },
     ],
     description: [
