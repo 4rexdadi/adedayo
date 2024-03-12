@@ -50,6 +50,7 @@ const HeaderSection: FC<HeaderSectionProps> = () => {
                 src={adedayo}
                 draggable={false}
                 placeholder="blur"
+                sizes="20vw"
                 priority
               />
             </div>
@@ -72,6 +73,7 @@ const HeaderSection: FC<HeaderSectionProps> = () => {
               src={adedayo}
               draggable={false}
               placeholder="blur"
+              sizes="50vw"
               priority
             />
           </button>

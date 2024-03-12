@@ -30,8 +30,8 @@
 
     .projectCard {
       margin-top: 1.5rem;
-      overflow: hidden;
       cursor: pointer;
+      min-height: auto;
 
       @media (min-width: 1025px) {
         &:hover {
