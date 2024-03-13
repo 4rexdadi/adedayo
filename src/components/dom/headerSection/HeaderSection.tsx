@@ -56,9 +56,7 @@ const HeaderSection: FC<HeaderSectionProps> = () => {
             </div>
 
             <p>
-              Adedayo is a Software Developer and Financial Trader from Lagos,
-              Nigeria. Focused on building software solutions for entrepreneurs
-              using modern technologies.
+              I’m on a mission to turbocharge the product I’m working on, making it lightning-fast and super easy to use. Picture this: micro-animations sprinkled throughout, interactions that feel like a dance with physics, and a whole lot of fun packed into every click and swipe. It’s not just about accessibility; it’s about turning every user experience into a delightful adventure!
             </p>
           </div>
         </button>
