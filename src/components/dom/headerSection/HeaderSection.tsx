@@ -56,7 +56,12 @@ const HeaderSection: FC<HeaderSectionProps> = () => {
             </div>
 
             <p>
-              I’m on a mission to turbocharge the product I’m working on, making it lightning-fast and super easy to use. Picture this: micro-animations sprinkled throughout, interactions that feel like a dance with physics, and a whole lot of fun packed into every click and swipe. It’s not just about accessibility; it’s about turning every user experience into a delightful adventure!
+              I&#39;m on a mission to turbocharge the product I&#39;m working
+              on, making it lightning-fast and super easy to use. Picture this:
+              micro-animations sprinkled throughout, interactions that feel like
+              a dance with physics, and a whole lot of fun packed into every
+              click and swipe. It&#39;s not just about accessibility; it&#39;s
+              about turning every user experience into a delightful adventure!
             </p>
           </div>
         </button>

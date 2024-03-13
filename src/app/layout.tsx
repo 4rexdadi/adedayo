@@ -22,9 +22,9 @@ export const metadata: Metadata = {
     url: siteMetadata.siteUrl,
     siteName: siteMetadata.title,
     images: [
-       {
-         url: siteMetadata.socialBanner,
-      }
+      {
+        url: siteMetadata.socialBanner,
+      },
     ],
     locale: "en_US",
     type: "website",
