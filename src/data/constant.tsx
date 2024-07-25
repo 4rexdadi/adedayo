@@ -263,6 +263,33 @@ export const projectData: Project[] = [
 export const jobData: Work[] = [
   {
     id: 0,
+    company: "PointXY",
+    companyWebsite: "https://www.pointxy.com",
+    role: "Lead Mobile Developer",
+    date: {
+      start: "Apr 2024",
+      end: "Present",
+    },
+    accomplishments: [
+      {
+        id: 1,
+        point:
+          "Led frontend development for PointXY’s logistics applications across Customer, Vendor, and Business platforms, integrating advanced solutions such as geolocation services to enable accurate tracking and streamlined operations, ultimately enhancing user experience.",
+      },
+      {
+        id: 2,
+        point:
+          "Developed and implemented real-time package tracking feature, enhancing transparency and customer satisfaction with intuitive map interface for delivery accuracy.",
+      },
+      {
+        id: 3,
+        point:
+          "Ensured seamless integration of frontend and backend functionalities while developing scalable mobile applications using React Native for iOS and Android platforms, meeting Product Manager specifications.",
+      },
+    ],
+  },
+  {
+    id: 1,
     company: "AfroTada",
     companyWebsite: "https://www.afrotada.com",
     role: "Software Developer",
@@ -274,17 +301,17 @@ export const jobData: Work[] = [
       {
         id: 1,
         point:
-          "Spearheaded the development of AfroTada’s major features, including the dashboard system and rich text editor. Adhering to layout principles and utilising modern technologies such as JavaScript, React, and CSS/Tailwind to enhance functionality and aesthetics, I effectively managed frontend features and conducted code refactoring.",
+          "Managed 100% of the front-end codebase, driving over a 5X increase in monthly website traffic and earning recognition from the Mastercard Foundation. Additionally, received a service award at the University of Pretoria, South Africa.",
       },
       {
         id: 2,
         point:
-          "Played a pivotal role in optimising the web application, focusing on performance enhancements to achieve a superior user experience with swift loading times. I accomplished this by implementing code splitting, utilising React Lazy Loading, and employing Redux for effective state management, among other techniques.",
+          "Led development of key features such as the dashboard system, interactive map, and rich text editor using JavaScript, React, and CSS/Tailwind, collaborating with a cross-functional team, including backend engineers and designers, for cohesive project outcomes.",
       },
       {
         id: 3,
         point:
-          "Collaborated seamlessly with a cross-functional team, including a backend engineer and designer, to achieve cohesive project outcomes.",
+          "Optimized web app performance using techniques like code splitting, React Lazy Loading, and Redux for effective state management, resulting in a superior user experience with swift loading times.",
       },
     ],
   },
