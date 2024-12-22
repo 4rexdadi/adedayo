@@ -1,4 +1,38 @@
-// please update required information
+import {
+  Icon,
+  Icons,
+  IconURL,
+} from "next/dist/lib/metadata/types/metadata-types";
+
+const icons: IconURL | Icon[] | Icons | null | undefined = [
+  {
+    url: "/icons/apple-touch-icon.png",
+    rel: "apple-touch-icon",
+    sizes: "180x180",
+    href: "/icons/apple-touch-icon.png",
+  },
+  {
+    url: "/icons/favicon-16x16.png",
+    href: "/icons/favicon-16x16.png",
+    rel: "icon",
+    type: "image/png",
+    sizes: "16x16",
+  },
+  {
+    url: "/icons/favicon-32x32.png",
+    href: "/icons/favicon-32x32.png",
+    rel: "icon",
+    type: "image/png",
+    sizes: "32x32",
+  },
+  {
+    rel: "mask-icon",
+    url: "/icons/safari-pinned-tab.svg",
+    href: "/icons/safari-pinned-tab.svg",
+    color: "#5bbad5",
+  },
+];
+
 const siteMetadata = {
   title: "Adedayo Aturu - Software Developer | Forex Trader: Portfolio",
   description:
@@ -18,6 +52,7 @@ const siteMetadata = {
   linkedin: "https://www.linkedin.com/in/adedayoaturu/",
   language: "en-us",
   locale: "en-US",
+  icons,
   keywords: [
     "Lagos software developer",
     "Self taught software developer",

@@ -6,7 +6,7 @@ import style from "./servicesSectionStyle.module.scss";
 
 interface ServicesSectionProps {}
 
-const ServicesSection: FC<ServicesSectionProps> = (): JSX.Element => {
+const ServicesSection: FC<ServicesSectionProps> = () => {
   return (
     <section className={style.serviceContainer}>
       <p className={style.serviceHeader}>Let&apos;s work together</p>

@@ -1,8 +1,8 @@
 // import
-@import "./globals/functions";
-@import "./globals/variableStyle";
-@import "./globals/boilerplateStyle";
-@import "./globals/colorStyle";
-@import "./globals/fontStyle";
-@import "./globals/scrollBar";
-@import "./globals/utilityClassStyle";
+@use "globals/functions";
+@use "globals/variableStyle";
+@use "globals/boilerplateStyle";
+@use "globals/colorStyle";
+@use "globals/fontStyle";
+@use "globals/scrollBar";
+@use "globals/utilityClassStyle";

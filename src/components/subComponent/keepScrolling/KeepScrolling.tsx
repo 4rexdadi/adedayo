@@ -6,7 +6,7 @@ import style from "./keepScrollingStyle.module.scss";
 
 interface KeepScrollingProps {}
 
-const KeepScrolling: FC<KeepScrollingProps> = (): JSX.Element => {
+const KeepScrolling: FC<KeepScrollingProps> = () => {
   const [scrollPercent, setScrollPercent] = useState(0);
 
   const handleScroll = () => {

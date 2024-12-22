@@ -17,7 +17,7 @@ interface ContactMeProps {
 
 const ContactMe: FC<ContactMeProps> = ({
   className = "contactMeContainer",
-}): JSX.Element => {
+}) => {
   const [loading, setLoading] = useState<null | string>(null);
   const [fullName, setFullName] = useState("");
   const [email, setEmail] = useState("");

@@ -1,3 +1,5 @@
+@use "functions";
+
 .mainContainer {
   /* 12.00px → 48.00px left and right */
   --wrapper-margin: clamp(1.5rem, calc(-1.3rem + 14.01vw), 6rem);
@@ -19,9 +21,9 @@
   font-weight: 600;
   background: transparent;
   color: var(--white);
-  border: solid rem(1) var(--white);
-  border-radius: rem(16);
-  padding: rem(4) rem(16);
+  border: solid functions.rem(1) var(--white);
+  border-radius: functions.rem(16);
+  padding: functions.rem(4) functions.rem(16);
   transition:
     border-color 0.2s ease,
     color 0.2s ease;
@@ -48,10 +50,10 @@
 
 .sr-only {
   position: absolute;
-  width: rem(1);
-  height: rem(1);
+  width: functions.rem(1);
+  height: functions.rem(1);
   padding: 0;
-  margin: rem(-1);
+  margin: functions.rem(-1);
   overflow: hidden;
   clip: rect(0, 0, 0, 0);
   white-space: nowrap; /* added line */
@@ -99,7 +101,7 @@
     bottom: 0;
     left: 0;
     width: 100%;
-    height: rem(1.1);
+    height: functions.rem(1.1);
     background: var(--white);
     transition: all 0.2s ease;
   }

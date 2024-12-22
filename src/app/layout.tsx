@@ -47,7 +47,7 @@ export const metadata: Metadata = {
     description: siteMetadata.description,
     images: [siteMetadata.socialBanner],
   },
-  icons: ["/icons/favicon.ico"],
+  icons: siteMetadata.icons,
   keywords: siteMetadata.keywords,
 };
 

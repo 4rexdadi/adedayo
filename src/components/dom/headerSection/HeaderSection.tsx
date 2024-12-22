@@ -51,7 +51,6 @@ const HeaderSection: FC<HeaderSectionProps> = () => {
                 draggable={false}
                 placeholder="blur"
                 sizes="40vw"
-                priority
               />
             </div>
 
@@ -77,7 +76,6 @@ const HeaderSection: FC<HeaderSectionProps> = () => {
               draggable={false}
               placeholder="blur"
               sizes="15vw"
-              priority
             />
           </button>
 

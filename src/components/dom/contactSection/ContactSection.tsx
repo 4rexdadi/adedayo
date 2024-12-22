@@ -13,7 +13,7 @@ import style from "./contactSectionStyle.module.scss";
 
 interface ContactSectionProps {}
 
-const ContactSection: FC<ContactSectionProps> = (): JSX.Element => {
+const ContactSection: FC<ContactSectionProps> = () => {
   const [currentTime, setCurrentTime] = useState("");
   // const [formattedTime, setFormattedTime] = useState();
   const { spaceBoy } = useAppSelector(

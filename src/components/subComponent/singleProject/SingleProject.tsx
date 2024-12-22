@@ -21,7 +21,7 @@ interface SingleProjectProps {
 const SingleProject: FC<SingleProjectProps> = ({
   clickedProject,
   isClicked,
-}): JSX.Element => {
+}) => {
   const [projectClicked, setProjectClicked] = useState<Project | null>(null);
   const dispatch = useAppDispatch();
   const projectRef = useRef<HTMLDivElement>(null);

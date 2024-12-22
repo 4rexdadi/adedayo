@@ -6,7 +6,7 @@ import style from "./experienceSectionStyle.module.scss";
 
 interface ExperienceSectionProps {}
 
-const ExperienceSection: FC<ExperienceSectionProps> = (): JSX.Element => {
+const ExperienceSection: FC<ExperienceSectionProps> = () => {
   const [activeTab, setActiveTab] = useState(0);
 
   return (
