@@ -55,7 +55,7 @@ const ProjectSection: FC<ProjectSectionProps> = () => {
       </div>
 
       <ul ref={sliderRef} className={cx(style.projectContainer, "keen-slider")}>
-        {projectData.map((project, i) => {
+        {projectData.map((project) => {
           return (
             <li
               onClick={() => {
