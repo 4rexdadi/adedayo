@@ -1,3 +1,5 @@
+// https://www.favicon-generator.org/
+
 import {
   Icon,
   Icons,
@@ -30,6 +32,84 @@ const icons: IconURL | Icon[] | Icons | null | undefined = [
     url: "/icons/safari-pinned-tab.svg",
     href: "/icons/safari-pinned-tab.svg",
     color: "#5bbad5",
+  },
+  {
+    rel: "apple-touch-icon",
+    sizes: "57x57",
+    url: "/icons/apple-icon-57x57.png",
+    href: "/icons/apple-icon-57x57.png",
+  },
+  {
+    rel: "apple-touch-icon",
+    sizes: "60x60",
+    href: "/icons/apple-icon-60x60.png",
+    url: "/icons/apple-icon-60x60.png",
+  },
+  {
+    rel: "apple-touch-icon",
+    sizes: "72x72",
+    href: "/icons/apple-icon-72x72.png",
+    url: "/icons/apple-icon-72x72.png",
+  },
+  {
+    rel: "apple-touch-icon",
+    sizes: "76x76",
+    href: "/icons/apple-icon-76x76.png",
+    url: "/icons/apple-icon-76x76.png",
+  },
+  {
+    rel: "apple-touch-icon",
+    sizes: "114x114",
+    href: "/icons/apple-icon-114x114.png",
+    url: "/icons/apple-icon-114x114.png",
+  },
+  {
+    rel: "apple-touch-icon",
+    sizes: "120x120",
+    href: "/icons/apple-icon-120x120.png",
+    url: "/icons/apple-icon-120x120.png",
+  },
+  {
+    rel: "apple-touch-icon",
+    sizes: "144x144",
+    href: "/icons/apple-icon-144x144.png",
+    url: "/icons/apple-icon-144x144.png",
+  },
+  {
+    rel: "apple-touch-icon",
+    sizes: "152x152",
+    href: "/icons/apple-icon-152x152.png",
+    url: "/icons/apple-icon-152x152.png",
+  },
+  {
+    rel: "apple-touch-icon",
+    sizes: "180x180",
+    href: "/icons/apple-icon-180x180.png",
+    url: "/icons/apple-icon-180x180.png",
+  },
+  {
+    rel: "icon",
+    type: "image/png",
+    sizes: "192x192",
+    href: "/icons/android-icon-192x192.png",
+    url: "/icons/android-icon-192x192.png",
+  },
+  {
+    rel: "icon",
+    type: "image/png",
+    sizes: "96x96",
+    href: "/icons/favicon-96x96.png",
+    url: "/icons/favicon-96x96.png",
+  },
+  {
+    rel: "msapplication-TileColor",
+    url: "/icons/ms-icon-144x144.png",
+    color: "#ffffff",
+  },
+  {
+    rel: "msapplication-TileImage",
+    href: "/icons/ms-icon-144x144.png",
+    url: "/icons/ms-icon-144x144.png",
   },
 ];
 

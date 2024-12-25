@@ -13,19 +13,33 @@ const manifest = (): MetadataRoute.Manifest => {
     background_color: "#ffffff",
     icons: [
       {
-        src: "/icons/favicon.ico",
-        sizes: "64x64 32x32 24x24 16x16",
-        type: "image/x-icon",
-        purpose: "maskable",
-      },
-      {
-        src: "/icons/android-chrome-192x192.png",
-        sizes: "192x192",
+        src: "/icons/android-icon-36x36.png",
+        sizes: "36x36",
         type: "image/png",
       },
       {
-        src: "/icons/android-chrome-512x512.png",
-        sizes: "512x512",
+        src: "/icons/android-icon-48x48.png",
+        sizes: "48x48",
+        type: "image/png",
+      },
+      {
+        src: "/icons/android-icon-72x72.png",
+        sizes: "72x72",
+        type: "image/png",
+      },
+      {
+        src: "/icons/android-icon-96x96.png",
+        sizes: "96x96",
+        type: "image/png",
+      },
+      {
+        src: "/icons/android-icon-144x144.png",
+        sizes: "144x144",
+        type: "image/png",
+      },
+      {
+        src: "/icons/android-icon-192x192.png",
+        sizes: "192x192",
         type: "image/png",
       },
     ],
