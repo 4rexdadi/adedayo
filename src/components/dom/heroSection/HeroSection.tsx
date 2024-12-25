@@ -15,24 +15,23 @@ const HeroSection: FC<HeroSectionProps> = () => {
 
         <p className={style.heroAbout}>
           <span>
-            A <span>software developer</span> from{" "}
+            Experienced <span>Software Developer</span> from{" "}
             <a target="_black" href="https://g.co/kgs/QAiaiFz">
               Lagos, Nigeria
             </a>
-            , focused on building software solutions for entrepreneurs using
-            modern technologies.
+            , skilled in building large-scale, object-oriented solutions with a
+            focus on software design, implementation, and optimization.
+          </span>
+
+          <span>
+            Proven track record of leading successful projects and improving
+            system performance.
             <br />
             Check out my{" "}
             <a target="_black" href="/assets/resume.pdf">
               résumé
             </a>{" "}
             for relevant experience.
-          </span>
-
-          <span>
-            I don&#39;t identify myself with a specific technology; I use the
-            best for the job. Whether it&#39;s JavaScript, TypeScript, Python,
-            or C#, I adapt to the needs of the task at hand.
           </span>
         </p>
       </h1>

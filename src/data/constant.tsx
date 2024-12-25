@@ -97,7 +97,8 @@ export const projectData: Project[] = [
       },
       {
         url: AfroTada2,
-        caption: "Dashboard page - more features will be shown, depending of who's logged in.",
+        caption:
+          "Dashboard page - more features will be shown, depending of who's logged in.",
       },
       {
         url: AfroTada3,
@@ -105,7 +106,8 @@ export const projectData: Project[] = [
       },
       {
         url: AfroTada4,
-        caption: "Single country page - when a country is clicked on the map, you get beautiful screen with information and articles for that country",
+        caption:
+          "Single country page - when a country is clicked on the map, you get beautiful screen with information and articles for that country",
       },
     ],
     description: [
@@ -117,7 +119,7 @@ export const projectData: Project[] = [
   },
   {
     id: 1,
-    date: "Sep 2022 - Present",
+    date: "Sep 2022 - Continuous Update",
     title: "Forex Dashboard",
     introTitle:
       "Navigating Markets with Precision through the Forex Dashboard Experience",
@@ -142,7 +144,8 @@ export const projectData: Project[] = [
     images: [
       {
         url: ForexDash0,
-        caption: "Main screen - newly logged In account with no historical data.",
+        caption:
+          "Main screen - newly logged In account with no historical data.",
       },
       {
         url: ForexDash1,
@@ -150,7 +153,8 @@ export const projectData: Project[] = [
       },
       {
         url: ForexDash2,
-        caption: "Main screen with few trades. Note, this is a demo trading account, so dont judge me 😜",
+        caption:
+          "Main screen with few trades. Note, this is a demo trading account, so dont judge me 😜",
       },
       {
         url: ForexDash3,
@@ -166,7 +170,8 @@ export const projectData: Project[] = [
       },
       {
         url: ForexDash6,
-        caption: "Live charts directly from TradingView - you can make your analysis here",
+        caption:
+          "Live charts directly from TradingView - you can make your analysis here",
       },
       {
         url: ForexDash7,
@@ -184,7 +189,7 @@ export const projectData: Project[] = [
     description: [
       "Overview: The Forex Dashboard provides a visual representation of your trading accounts using complex statistical formulas. It implements chart types like pie charts, bar charts, tables, trend lines, etc., to help users identify historical patterns from trade activities, enabling more informed trading/investment decisions.",
       "Challenges: The original idea was to create a system where users could use their investor login credentials from MT4/MT5 to onboard directly, allowing the dashboard access to users' trading histories and data. However, it turned out to be too expensive. So, I switched gears to a more pragmatic approach, opting to use a free third-party API provided by MyFxbook, which came with its own set of issues and limitations. The solution works, but there's a bit of regret in not having the ideal setup 😞.",
-      "Learning: This project marked my foray into full-stack development. As mentioned, I don't identify with a particular tool. This is a typical example because I had to learn Node.js and Express.js within a short period to use them as a backend solution for this project.",
+      "Learning: This project marked my foray into full-stack development. I don't identify with a particular tool. This is a typical example because I had to learn Node.js and Express.js within a short period to use them as a backend solution for this project.",
       "Despite the hiccups, the project has grown and become a reliable tool for my trading community. It's used almost daily by a few of my forex trading friends. It serves as a reminder that progress often involves overcoming bumps in the road.",
       "Open Source: The project is openly accessible on GitHub, fostering collaboration and encouraging others to contribute to its evolution.",
     ],
@@ -207,7 +212,8 @@ export const projectData: Project[] = [
     images: [
       {
         url: VsCodeTheme0,
-        caption: "Navy blue verision - get my themes now and save your eyes from pains, just a friendly advice",
+        caption:
+          "Navy blue verision - get my themes now and save your eyes from pains, just a friendly advice",
       },
       {
         url: VsCodeTheme1,
@@ -246,7 +252,8 @@ export const projectData: Project[] = [
     images: [
       {
         url: PhotoMatch0,
-        caption: "Type in here what every comes to your mind and get picture results.",
+        caption:
+          "Type in here what every comes to your mind and get picture results.",
       },
       {
         url: PhotoMatch1,
@@ -264,8 +271,8 @@ export const jobData: Work[] = [
   {
     id: 0,
     company: "PointXY",
-    companyWebsite: "https://www.pointxy.com",
-    role: "Lead Mobile Developer",
+    companyWebsite: "https://www.pointxy.app/",
+    role: "Lead Software Developer",
     date: {
       start: "Apr 2024",
       end: "Present",
@@ -274,17 +281,17 @@ export const jobData: Work[] = [
       {
         id: 1,
         point:
-          "Led frontend development for PointXY’s logistics applications across Customer, Vendor, and Business platforms, integrating advanced solutions such as geolocation services to enable accurate tracking and streamlined operations, ultimately enhancing user experience.",
+          "Leading the development of PointXY’s logistics applications across Customer, Vendor, Rider, and Business platforms, integrating advanced Google services such as geolocation, Places API for address autocomplete, Directions API for optimized routing, and Maps SDK for real-time tracking. These integrations streamlined operations and improved delivery accuracy.",
       },
       {
         id: 2,
         point:
-          "Developed and implemented real-time package tracking feature, enhancing transparency and customer satisfaction with intuitive map interface for delivery accuracy.",
+          "Spearheaded the migration of legacy JavaScript codebase to TypeScript, reducing bugs by 50% and improving code maintainability.",
       },
       {
         id: 3,
         point:
-          "Ensured seamless integration of frontend and backend functionalities while developing scalable mobile applications using React Native for iOS and Android platforms, meeting Product Manager specifications.",
+          "Collaborated with product, UI/UX, and development teams to implement new designs for mobile apps, the website, and the admin dashboard, resulting in a 30% boost in user engagement and an enhanced overall user experience.",
       },
     ],
   },
@@ -301,17 +308,17 @@ export const jobData: Work[] = [
       {
         id: 1,
         point:
-          "Managed 100% of the front-end codebase, driving over a 5X increase in monthly website traffic and earning recognition from the Mastercard Foundation. Additionally, received a service award at the University of Pretoria, South Africa.",
+          "Managed the entire front-end codebase, achieving a 5X increase in monthly website traffic and earning recognition from the Mastercard Foundation. Additionally, received a service award at the University of Pretoria, South Africa",
       },
       {
         id: 2,
         point:
-          "Led development of key features such as the dashboard system, interactive map, and rich text editor using JavaScript, React, and CSS/Tailwind, collaborating with a cross-functional team, including backend engineers and designers, for cohesive project outcomes.",
+          "Led the development of key features such as the dashboard system, interactive map, and rich text editor using JavaScript, React, and CSS/Tailwind, collaborating with a cross-functional team, including backend engineers and designers, for cohesive project outcomes.",
       },
       {
         id: 3,
         point:
-          "Optimized web app performance using techniques like code splitting, React Lazy Loading, and Redux for effective state management, resulting in a superior user experience with swift loading times.",
+          "Optimized web app performance by implementing code splitting, React Lazy Loading, and Redux for state management, reducing load times by 40% and significantly enhancing user experience.",
       },
     ],
   },
