@@ -77,11 +77,8 @@ const ProjectSection: FC<ProjectSectionProps> = () => {
               </div>
 
               <div className={style.projectCardInfo}>
-                <p>{project.mainRole}</p>
-                <p>{project.date}</p>
+                <p>{project.title}</p>
               </div>
-
-              <p className={style.projectCardTitle}>{project.title}</p>
             </li>
           );
         })}

@@ -21,5 +21,15 @@ module.exports = withPWA({
   compiler: {
     removeConsole: process.env.NODE_ENV !== 'development',
   },
+  images: {
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: '*',
+        port: '',
+        pathname: '/**',
+      },
+    ],
+  },
 });
 

@@ -16,6 +16,12 @@ import ForexDash8 from "../../public/assets/images/projects/forex-dash/8.webp";
 import ForexDash9 from "../../public/assets/images/projects/forex-dash/9.webp";
 import ForexDash from "../../public/assets/images/projects/forex-dash/mainImage.webp";
 
+import PointXY0 from "../../public/assets/images/projects/pointxy/0.png";
+import PointXY1 from "../../public/assets/images/projects/pointxy/1.png";
+import PointXY2 from "../../public/assets/images/projects/pointxy/2.png";
+import PointXY3 from "../../public/assets/images/projects/pointxy/3.png";
+import PointXY4 from "../../public/assets/images/projects/pointxy/4.png";
+
 import VsCodeTheme0 from "../../public/assets/images/projects/theme/1.webp";
 import VsCodeTheme1 from "../../public/assets/images/projects/theme/2.webp";
 import VsCodeTheme2 from "../../public/assets/images/projects/theme/3.webp";
@@ -65,6 +71,66 @@ export type Project = {
 };
 
 export const projectData: Project[] = [
+  {
+    id: 4,
+    date: "Apr 2024 - Present",
+    title: "Point XY",
+    introTitle: "Revolutionizing Logistics with Point XY",
+    liveSite: "https://www.pointxy.app/",
+    linkName: "explore the website",
+    roles: "Lead Software Developer - Web and Mobile Applications",
+    mainRole: "Lead Software Developer - Web and Mobile Applications",
+    gitHub: "",
+    technologies: [
+      "React Native",
+      "TypeScript",
+      "Expo",
+      "Google Maps SDK",
+      "Google Places API",
+      "Google Directions API",
+      "React.js",
+      "Tailwind CSS",
+      "Next.js",
+      "Apex Charts",
+      "Superbase",
+    ],
+    video: "",
+    videoALT: PointXY0,
+    mainImage: PointXY0,
+    images: [
+      {
+        url: PointXY1,
+        caption: "",
+      },
+      {
+        url: "/assets/videos/pointxy/0.mp4",
+        caption: "",
+      },
+      {
+        url: PointXY2,
+        caption: "",
+      },
+      {
+        url: PointXY3,
+        caption: "",
+      },
+      {
+        url: PointXY4,
+        caption: "",
+      },
+    ],
+    description: [
+      "Overview: Point XY represents a comprehensive logistics platform designed to connect customers, riders, and vendors seamlessly. The project encompasses three mobile applications—Customer, Vendor, and Rider—each tailored to the unique needs of its target users, along with a professional website and a robust admin dashboard.",
+      "Challenges: Developing three distinct mobile applications required implementing advanced features such as geolocation for real-time tracking, address autocomplete via the Google Places API, and optimized routing through the Directions API. Spearheading the migration of legacy JavaScript codebases to TypeScript further streamlined operations by improving maintainability and reducing bugs by 50%.",
+      "Key Contributions:",
+      "- **Rider App:** Designed for optimal navigation and live delivery updates, ensuring timely and accurate services.",
+      "- **Customer App:** Focused on user-friendly booking experiences and real-time tracking for improved customer satisfaction.",
+      "- **Vendor App:** Empowered vendors with tools for order management and seamless communication with riders and customers.",
+      "- **Website:** Single-handedly developed the official website, creating a sleek, responsive, and engaging platform that enhances the brand's online presence.",
+      "- **Admin Dashboard:** Collaborated on the development of the admin dashboard, integrating analytics and management tools to streamline business operations.",
+      "Learning: The project allowed me to deepen my expertise in React Native, TypeScript, and Expo while mastering advanced Google services integrations. Collaborating on UI/UX design implementation and backend operations broadened my perspective on delivering holistic software solutions.",
+    ],
+  },
   {
     id: 0,
     date: "Jul 2023 - Present",
@@ -237,7 +303,7 @@ export const projectData: Project[] = [
   },
   {
     id: 3,
-    date: "Mar 2022 - Apr 2022",
+    date: "Apr 2022",
     title: "Photo Match",
     introTitle: "Enhancing Memory Skills - The Photo Match Experience",
     liveSite: "https://photo-match.netlify.app",

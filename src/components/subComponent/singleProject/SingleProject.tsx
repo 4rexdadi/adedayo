@@ -176,6 +176,20 @@ const SingleProject: FC<SingleProjectProps> = ({
 
                 <div className={style.snapshotContainer}>
                   {projectClicked?.images.map((img, index) => {
+                    if (img.url.toString().includes(".mp4"))
+                      return (
+                        <video
+                          loop
+                          muted
+                          controls={false}
+                          preload="none"
+                          autoPlay
+                          playsInline
+                        >
+                          <source src={img.url.toString()} type="video/mp4" />
+                          <track label="English" />
+                        </video>
+                      );
                     return (
                       <div className={style.snapshotContent} key={index}>
                         <Image
