@@ -1,4 +1,5 @@
 // Imports
+import { Analytics } from "@vercel/analytics/next";
 import type { Metadata, Viewport } from "next";
 import Cursor from "../components/subComponent/cursor/Cursor";
 import KeepScrolling from "../components/subComponent/keepScrolling/KeepScrolling";
@@ -54,6 +55,8 @@ export const metadata: Metadata = {
 const RootLayout = ({ children }: { children: React.ReactNode }) => {
   return (
     <html lang="en">
+      <Analytics />
+
       <Providers>
         <body>
           <ScrollContainer

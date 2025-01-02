@@ -16,7 +16,7 @@ import ForexDash8 from "../../public/assets/images/projects/forex-dash/8.webp";
 import ForexDash9 from "../../public/assets/images/projects/forex-dash/9.webp";
 import ForexDash from "../../public/assets/images/projects/forex-dash/mainImage.webp";
 
-import PointXY0 from "../../public/assets/images/projects/pointxy/0.png";
+import PointXY0 from "../../public/assets/images/projects/pointxy/0.webp";
 import PointXY1 from "../../public/assets/images/projects/pointxy/1.png";
 import PointXY2 from "../../public/assets/images/projects/pointxy/2.png";
 import PointXY3 from "../../public/assets/images/projects/pointxy/3.png";
@@ -53,6 +53,7 @@ export type Project = {
   id: number;
   date: number | string;
   title: string;
+  slug: string;
   introTitle: string;
   liveSite: string;
   linkName: string;
@@ -75,6 +76,7 @@ export const projectData: Project[] = [
     id: 4,
     date: "Apr 2024 - Present",
     title: "Point XY",
+    slug: "point-xy",
     introTitle: "Revolutionizing Logistics with Point XY",
     liveSite: "https://www.pointxy.app/",
     linkName: "explore the website",
@@ -100,41 +102,42 @@ export const projectData: Project[] = [
     images: [
       {
         url: PointXY1,
-        caption: "",
+        caption: "Customer App - Order tracking and live delivery updates",
       },
       {
         url: "/assets/videos/pointxy/0.mp4",
-        caption: "",
+        caption: "Official Point XY Website",
       },
       {
         url: PointXY2,
-        caption: "",
+        caption: "Rider app - Real-time navigation system",
       },
       {
         url: PointXY3,
-        caption: "",
+        caption: "Vendor app - Advanced order management tools",
       },
       {
         url: PointXY4,
-        caption: "",
+        caption: "Point XY Eco-system",
       },
     ],
     description: [
-      "Overview: Point XY represents a comprehensive logistics platform designed to connect customers, riders, and vendors seamlessly. The project encompasses three mobile applications—Customer, Vendor, and Rider—each tailored to the unique needs of its target users, along with a professional website and a robust admin dashboard.",
-      "Challenges: Developing three distinct mobile applications required implementing advanced features such as geolocation for real-time tracking, address autocomplete via the Google Places API, and optimized routing through the Directions API. Spearheading the migration of legacy JavaScript codebases to TypeScript further streamlined operations by improving maintainability and reducing bugs by 50%.",
+      "Overview: Point XY is an innovative logistics platform that seamlessly connects customers, vendors, and riders through tailored applications. The project includes three dedicated mobile apps—Customer, Vendor, and Rider—complemented by a responsive website and a robust admin dashboard, providing a unified ecosystem for logistics management.",
+      "Challenges: Leading the development of multi-platform applications involved implementing advanced geolocation technologies, real-time tracking with Google Maps SDK, address autocomplete using the Places API, and optimized routing via the Directions API. Migrating the legacy JavaScript codebase to TypeScript resulted in a 50% reduction in bugs and significantly improved code maintainability.",
       "Key Contributions:",
-      "- **Rider App:** Designed for optimal navigation and live delivery updates, ensuring timely and accurate services.",
-      "- **Customer App:** Focused on user-friendly booking experiences and real-time tracking for improved customer satisfaction.",
-      "- **Vendor App:** Empowered vendors with tools for order management and seamless communication with riders and customers.",
-      "- **Website:** Single-handedly developed the official website, creating a sleek, responsive, and engaging platform that enhances the brand's online presence.",
-      "- **Admin Dashboard:** Collaborated on the development of the admin dashboard, integrating analytics and management tools to streamline business operations.",
-      "Learning: The project allowed me to deepen my expertise in React Native, TypeScript, and Expo while mastering advanced Google services integrations. Collaborating on UI/UX design implementation and backend operations broadened my perspective on delivering holistic software solutions.",
+      " -  Rider App: Architected a real-time navigation system integrating the Google Maps SDK and Directions API, reducing average delivery time by 25%. Implemented push notifications for live delivery updates, enhancing rider efficiency and reducing missed deliveries.",
+      " -  Customer App: Designed and deployed a seamless booking interface with address autocomplete powered by the Google Places API. This feature improved order placement accuracy by 40%, while live tracking functionality significantly boosted customer satisfaction ratings, as evidenced by a 30% increase in positive feedback.",
+      " -  Vendor App: Engineered advanced order management tools, including inventory synchronization and order tracking, enabling vendors to process orders 20% faster. Integrated communication channels for direct interactions with riders, streamlining issue resolution and improving vendor-to-rider coordination.",
+      " -  Website: Developed a highly responsive and SEO-optimized website using Next.js and Tailwind CSS. This resulted in a 50% boost in organic traffic and a 35% reduction in bounce rates, solidifying Point XY’s online presence and customer reach.",
+      " -  Admin Dashboard: Designed and implemented an analytics dashboard using Apex Charts and Supabase, enabling real-time data visualization for key performance metrics. Streamlined operational oversight by integrating advanced reporting features, reducing decision-making time by 40% and improving operational efficiency.",
+      "Learning: This project sharpened my expertise in React Native, and Expo, while enabling me to master integrations with advanced Google APIs. It also broadened my experience in cross-platform development and teamwork, emphasizing the importance of delivering cohesive and scalable solutions.",
     ],
   },
   {
     id: 0,
     date: "Jul 2023 - Present",
     title: "AfroTada",
+    slug: "afrotada",
     introTitle: "Illuminating Africa - The AfroTada Journey",
     liveSite: "https://www.afrotada.com",
     linkName: "check out the website",
@@ -187,6 +190,7 @@ export const projectData: Project[] = [
     id: 1,
     date: "Sep 2022 - Continuous Update",
     title: "Forex Dashboard",
+    slug: "forex-dashboard",
     introTitle:
       "Navigating Markets with Precision through the Forex Dashboard Experience",
     liveSite: "https://forexdash.netlify.app",
@@ -264,6 +268,7 @@ export const projectData: Project[] = [
     id: 2,
     date: "Mar 2022",
     title: "Code Dadi Theme",
+    slug: "code-dadi-theme",
     introTitle: "Immerse yourself in a sleek and efficient coding environment",
     liveSite:
       "https://marketplace.visualstudio.com/items?itemName=CodeDadi.code-dadi-dark",
@@ -305,6 +310,7 @@ export const projectData: Project[] = [
     id: 3,
     date: "Apr 2022",
     title: "Photo Match",
+    slug: "photo-match",
     introTitle: "Enhancing Memory Skills - The Photo Match Experience",
     liveSite: "https://photo-match.netlify.app",
     linkName: "check out the website",

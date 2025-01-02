@@ -16,6 +16,7 @@
     "@studio-freight/hamo": "^0.6.28",
     "@studio-freight/lenis": "^1.0.34",
     "@studio-freight/react-lenis": "^0.0.38",
+    "@vercel/analytics": "^1.4.1",
     "gsap": "^3.12.4",
     "keen-slider": "^6.8.6",
     "next": "14.0.4",

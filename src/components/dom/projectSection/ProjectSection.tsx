@@ -6,6 +6,7 @@
 import "keen-slider/keen-slider.min.css";
 import { useKeenSlider } from "keen-slider/react";
 import Image from "next/image";
+import { useRouter, useSearchParams } from "next/navigation";
 import { FC, useEffect, useRef, useState } from "react";
 import { Project, projectData } from "../../../data/constant";
 import cx from "../../../utils";
@@ -18,6 +19,25 @@ const ProjectSection: FC<ProjectSectionProps> = () => {
   const [clickedProject, setClickedProject] = useState<Project | null>(null);
   const [isClicked, setIsClicked] = useState(0);
   const animation = { duration: 60000, easing: (t: number) => t };
+  const router = useRouter();
+  const searchParams = useSearchParams();
+  const currentProject = searchParams.get("project");
+
+  const handleProjectChange = (slug: string) => {
+    const newUrl = `${window.location.pathname}?project=${slug}`;
+
+    router.push(newUrl, { scroll: false });
+  };
+
+  useEffect(() => {
+    if (currentProject) {
+      setClickedProject(
+        projectData.find((project) => project.slug === currentProject) || null
+      );
+
+      setIsClicked((prev) => prev + 1);
+    }
+  }, [currentProject]);
 
   const [sliderRef] = useKeenSlider({
     loop: true,
@@ -59,6 +79,7 @@ const ProjectSection: FC<ProjectSectionProps> = () => {
           return (
             <li
               onClick={() => {
+                handleProjectChange(project.slug);
                 setClickedProject(project);
                 setIsClicked((prev) => prev + 1);
               }}
@@ -72,12 +93,13 @@ const ProjectSection: FC<ProjectSectionProps> = () => {
                   draggable={false}
                   placeholder="blur"
                   // priority={i === 0}
-                  sizes="(max-width: 550px) 90vw, (max-width: 700px) 45vw, (max-width: 1000px) 30vw, 25vw"
+                  sizes="60vw"
                 />
               </div>
 
               <div className={style.projectCardInfo}>
                 <p>{project.title}</p>
+                <p>{project.mainRole}</p>
               </div>
             </li>
           );

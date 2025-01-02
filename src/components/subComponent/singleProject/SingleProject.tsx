@@ -4,6 +4,7 @@
 
 import { gsap } from "gsap";
 import Image from "next/image";
+import { useRouter } from "next/navigation";
 import { FC, useEffect, useRef, useState } from "react";
 import { GitHub, RightArrow } from "../../../../public/assets/svg/Svg";
 import { Project } from "../../../data/constant";
@@ -24,6 +25,7 @@ const SingleProject: FC<SingleProjectProps> = ({
 }) => {
   const [projectClicked, setProjectClicked] = useState<Project | null>(null);
   const dispatch = useAppDispatch();
+  const router = useRouter();
   const projectRef = useRef<HTMLDivElement>(null);
   const lenis = useAppSelector((state) => state.scrollSlice.lenis);
 
@@ -69,6 +71,7 @@ const SingleProject: FC<SingleProjectProps> = ({
               className="btn"
               onClick={() => {
                 close(true, null);
+                router.push("/", { scroll: false });
               }}
               type="button"
             >
@@ -178,17 +181,21 @@ const SingleProject: FC<SingleProjectProps> = ({
                   {projectClicked?.images.map((img, index) => {
                     if (img.url.toString().includes(".mp4"))
                       return (
-                        <video
-                          loop
-                          muted
-                          controls={false}
-                          preload="none"
-                          autoPlay
-                          playsInline
-                        >
-                          <source src={img.url.toString()} type="video/mp4" />
-                          <track label="English" />
-                        </video>
+                        <div className={style.snapshotContent} key={index}>
+                          <video
+                            loop
+                            muted
+                            controls={false}
+                            preload="none"
+                            autoPlay
+                            playsInline
+                          >
+                            <source src={img.url.toString()} type="video/mp4" />
+                            <track label="English" />
+                          </video>
+
+                          <p>{img.caption}</p>
+                        </div>
                       );
                     return (
                       <div className={style.snapshotContent} key={index}>
@@ -200,6 +207,7 @@ const SingleProject: FC<SingleProjectProps> = ({
                           // width={window.innerWidth}
                           // height={window.innerHeight}
                         />
+
                         <p>{img.caption}</p>
                       </div>
                     );

@@ -235,6 +235,13 @@
         pointer-events: none;
       }
 
+      video {
+        object-fit: cover;
+        height: 100%;
+        width: 100%;
+        pointer-events: none;
+      }
+
       p {
         font-family: var(--ff-secondary);
         font-weight: 400;
