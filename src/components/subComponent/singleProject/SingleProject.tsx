@@ -70,8 +70,8 @@ const SingleProject: FC<SingleProjectProps> = ({
             <button
               className="btn"
               onClick={() => {
-                close(true, null);
                 router.push("/", { scroll: false });
+                close(true, null);
               }}
               type="button"
             >

@@ -17,6 +17,7 @@ interface ProjectSectionProps {}
 
 const ProjectSection: FC<ProjectSectionProps> = () => {
   const [clickedProject, setClickedProject] = useState<Project | null>(null);
+  const [filter, seFilter] = useState<"all" | "pinned">("pinned");
   const [isClicked, setIsClicked] = useState(0);
   const animation = { duration: 60000, easing: (t: number) => t };
   const router = useRouter();
@@ -71,7 +72,24 @@ const ProjectSection: FC<ProjectSectionProps> = () => {
   return (
     <section className={style.projectSection} ref={projectRef}>
       <div className={style.projectHeader}>
-        <p>Selected works</p>
+        <p>
+          works{" "}
+          <button
+            className={filter === "pinned" ? style.active : ""}
+            type="button"
+            onClick={() => seFilter("pinned")}
+          >
+            Pinned
+          </button>{" "}
+          |{" "}
+          <button
+            className={filter === "all" ? style.active : ""}
+            type="button"
+            onClick={() => seFilter("all")}
+          >
+            All
+          </button>
+        </p>
       </div>
 
       <ul ref={sliderRef} className={cx(style.projectContainer, "keen-slider")}>
@@ -99,7 +117,6 @@ const ProjectSection: FC<ProjectSectionProps> = () => {
 
               <div className={style.projectCardInfo}>
                 <p>{project.title}</p>
-                <p>{project.mainRole}</p>
               </div>
             </li>
           );
