@@ -4,7 +4,6 @@
 
 import { gsap } from "gsap";
 import Image from "next/image";
-import { useRouter } from "next/navigation";
 import { FC, useEffect, useRef, useState } from "react";
 import { GitHub, RightArrow } from "../../../../public/assets/svg/Svg";
 import { Project } from "../../../data/constant";
@@ -25,7 +24,6 @@ const SingleProject: FC<SingleProjectProps> = ({
 }) => {
   const [projectClicked, setProjectClicked] = useState<Project | null>(null);
   const dispatch = useAppDispatch();
-  const router = useRouter();
   const projectRef = useRef<HTMLDivElement>(null);
   const lenis = useAppSelector((state) => state.scrollSlice.lenis);
 
@@ -70,7 +68,7 @@ const SingleProject: FC<SingleProjectProps> = ({
             <button
               className="btn"
               onClick={() => {
-                router.push("/", { scroll: false });
+                window.history.replaceState(null, "", "/");
                 close(true, null);
               }}
               type="button"

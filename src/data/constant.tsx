@@ -54,6 +54,7 @@ export type Project = {
   date: number | string;
   title: string;
   slug: string;
+  pinned?: boolean;
   introTitle: string;
   liveSite: string;
   linkName: string;
@@ -77,6 +78,7 @@ export const projectData: Project[] = [
     date: "Apr 2024 - Present",
     title: "Point XY",
     slug: "point-xy",
+    pinned: true,
     introTitle: "Revolutionizing Logistics with Point XY",
     liveSite: "https://www.pointxy.app/",
     linkName: "explore the website",
@@ -138,6 +140,7 @@ export const projectData: Project[] = [
     date: "Jul 2023 - Present",
     title: "AfroTada",
     slug: "afrotada",
+    pinned: true,
     introTitle: "Illuminating Africa - The AfroTada Journey",
     liveSite: "https://www.afrotada.com",
     linkName: "check out the website",
@@ -190,6 +193,7 @@ export const projectData: Project[] = [
     id: 1,
     date: "Sep 2022 - Continuous Update",
     title: "Forex Dashboard",
+    pinned: true,
     slug: "forex-dashboard",
     introTitle:
       "Navigating Markets with Precision through the Forex Dashboard Experience",

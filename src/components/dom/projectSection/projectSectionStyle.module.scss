@@ -23,6 +23,7 @@
       padding: 1.2rem 2rem;
       font-family: var(--ff-secondary);
       font-size: clamp(0.78rem, calc(0.73rem + 0.26vw), 0.93rem);
+      border-bottom: 1px solid transparent;
       font-weight: 400;
       text-transform: capitalize;
       transition:
@@ -32,6 +33,7 @@
 
     button.active {
       background-color: rgb(8, 8, 8);
+      border-bottom: 1px solid var(--secondary);
       color: var(--secondary);
     }
 

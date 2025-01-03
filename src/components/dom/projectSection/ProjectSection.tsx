@@ -6,7 +6,7 @@
 import "keen-slider/keen-slider.min.css";
 import { useKeenSlider } from "keen-slider/react";
 import Image from "next/image";
-import { useRouter, useSearchParams } from "next/navigation";
+import { useSearchParams } from "next/navigation";
 import { FC, useEffect, useRef, useState } from "react";
 import { Project, projectData } from "../../../data/constant";
 import cx from "../../../utils";
@@ -20,15 +20,8 @@ const ProjectSection: FC<ProjectSectionProps> = () => {
   const [filter, seFilter] = useState<"all" | "pinned">("pinned");
   const [isClicked, setIsClicked] = useState(0);
   const animation = { duration: 60000, easing: (t: number) => t };
-  const router = useRouter();
   const searchParams = useSearchParams();
   const currentProject = searchParams.get("project");
-
-  const handleProjectChange = (slug: string) => {
-    const newUrl = `${window.location.pathname}?project=${slug}`;
-
-    router.push(newUrl, { scroll: false });
-  };
 
   useEffect(() => {
     if (currentProject) {
@@ -40,7 +33,7 @@ const ProjectSection: FC<ProjectSectionProps> = () => {
     }
   }, [currentProject]);
 
-  const [sliderRef] = useKeenSlider({
+  const [sliderRef, slider] = useKeenSlider({
     loop: true,
     mode: "free",
     renderMode: "performance",
@@ -69,11 +62,27 @@ const ProjectSection: FC<ProjectSectionProps> = () => {
     [projectRef]
   );
 
+  useEffect(() => {
+    if (slider) {
+      slider.current?.update();
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [filter, slider]);
+
+  useEffect(() => {
+    if (clickedProject) {
+      const newUrl = `${window.location.pathname}?project=${clickedProject.slug}`;
+
+      window.history.replaceState(null, "", newUrl);
+    }
+  }, [clickedProject, isClicked]);
+
   return (
     <section className={style.projectSection} ref={projectRef}>
       <div className={style.projectHeader}>
-        <p>
-          works{" "}
+        <p>works</p>
+
+        <div>
           <button
             className={filter === "pinned" ? style.active : ""}
             type="button"
@@ -81,7 +90,6 @@ const ProjectSection: FC<ProjectSectionProps> = () => {
           >
             Pinned
           </button>{" "}
-          |{" "}
           <button
             className={filter === "all" ? style.active : ""}
             type="button"
@@ -89,15 +97,17 @@ const ProjectSection: FC<ProjectSectionProps> = () => {
           >
             All
           </button>
-        </p>
+        </div>
       </div>
 
       <ul ref={sliderRef} className={cx(style.projectContainer, "keen-slider")}>
-        {projectData.map((project) => {
+        {(filter === "all"
+          ? projectData
+          : projectData.filter((project) => project.pinned)
+        ).map((project) => {
           return (
             <li
               onClick={() => {
-                handleProjectChange(project.slug);
                 setClickedProject(project);
                 setIsClicked((prev) => prev + 1);
               }}
