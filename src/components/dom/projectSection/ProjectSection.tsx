@@ -84,18 +84,18 @@ const ProjectSection: FC<ProjectSectionProps> = () => {
 
         <div>
           <button
-            className={filter === "pinned" ? style.active : ""}
-            type="button"
-            onClick={() => seFilter("pinned")}
-          >
-            Pinned
-          </button>{" "}
-          <button
             className={filter === "all" ? style.active : ""}
             type="button"
             onClick={() => seFilter("all")}
           >
             All
+          </button>{" "}
+          <button
+            className={filter === "pinned" ? style.active : ""}
+            type="button"
+            onClick={() => seFilter("pinned")}
+          >
+            Pinned
           </button>
         </div>
       </div>
