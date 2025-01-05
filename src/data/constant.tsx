@@ -22,6 +22,11 @@ import PointXY2 from "../../public/assets/images/projects/pointxy/2.png";
 import PointXY3 from "../../public/assets/images/projects/pointxy/3.png";
 import PointXY4 from "../../public/assets/images/projects/pointxy/4.png";
 
+import Dtt1 from "../../public/assets/images/projects/dtt/1.png";
+import Dtt2 from "../../public/assets/images/projects/dtt/2.png";
+import Dtt3 from "../../public/assets/images/projects/dtt/3.png";
+import Dtt4 from "../../public/assets/images/projects/dtt/4.png";
+
 import VsCodeTheme0 from "../../public/assets/images/projects/theme/1.webp";
 import VsCodeTheme1 from "../../public/assets/images/projects/theme/2.webp";
 import VsCodeTheme2 from "../../public/assets/images/projects/theme/3.webp";
@@ -125,7 +130,7 @@ export const projectData: Project[] = [
     ],
     description: [
       "Overview: Point XY is an innovative logistics platform that seamlessly connects customers, vendors, and riders through tailored applications. The project includes three dedicated mobile apps—Customer, Vendor, and Rider—complemented by a responsive website and a robust admin dashboard, providing a unified ecosystem for logistics management.",
-      "Challenges: Leading the development of multi-platform applications involved implementing advanced geolocation technologies, real-time tracking with Google Maps SDK, address autocomplete using the Places API, and optimized routing via the Directions API. Migrating the legacy JavaScript codebase to TypeScript resulted in a 50% reduction in bugs and significantly improved code maintainability.",
+      "Leading the development of multi-platform applications involved implementing advanced geolocation technologies, real-time tracking with Google Maps SDK, address autocomplete using the Places API, and optimized routing via the Directions API. Migrating the legacy JavaScript codebase to TypeScript resulted in a 50% reduction in bugs and significantly improved code maintainability.",
       "Key Contributions:",
       " -  Rider App: Architected a real-time navigation system integrating the Google Maps SDK and Directions API, reducing average delivery time by 25%. Implemented push notifications for live delivery updates, enhancing rider efficiency and reducing missed deliveries.",
       " -  Customer App: Designed and deployed a seamless booking interface with address autocomplete powered by the Google Places API. This feature improved order placement accuracy by 40%, while live tracking functionality significantly boosted customer satisfaction ratings, as evidenced by a 30% increase in positive feedback.",
@@ -147,14 +152,7 @@ export const projectData: Project[] = [
     roles: "Software Developer - Frontend Developer",
     mainRole: "Frontend Developer",
     gitHub: "",
-    technologies: [
-      "React",
-      "Tailwind CSS",
-      "Redux",
-      "Framer Motion",
-      "Axios",
-      "Quill js",
-    ],
+    technologies: ["React", "Tailwind CSS", "Redux", "Axios", "Quill js"],
     video: "",
     videoALT: AfroTada,
     mainImage: AfroTada,
@@ -187,6 +185,55 @@ export const projectData: Project[] = [
       "Challenges: Building AfroTada presented numerous challenges, particularly as the sole frontend developer tasked with creating dynamic features such as the interactive map and dashboard system, which weren’t too hard. The tricky part was developing the custom text editor, which initially I suggested outsourcing. However, our lead engineer, who handles the backend, encouraged me to tackle it myself, and I embraced the challenge. The journey to find the right tool for the text editor led to the discovery of Quill.js, which, despite its steep learning curve, my easy adaptability to new technologies made the integration unnoticed. Quill.js was like the base, so I built the extra features needed for our platform and styled accordingly to match the design.",
       "Learning: Throughout the AfroTada journey, I acquired proficiency in Tailwind CSS and mastered the art of crafting a sophisticated text editor enriched with custom interactions. Moreover, this project sparked my curiosity in C#, driven by the fast performance of our backend built with ASP.Net Core. This project also expanded my knowledge beyond just tech stuff, also granting me insights into business strategies and the entrepreneurial ecosystem.",
       "This experience not only enhanced technical skills but also fostered a deeper understanding of the importance of perseverance and adaptability in software development.",
+    ],
+  },
+  {
+    id: 5,
+    date: "Oct 2024",
+    title: "Domestic Transaction Tracker",
+    slug: "domestic-transaction-tracker",
+    pinned: true,
+    introTitle: "Enhancing Trust with the Credibility Verification Platform",
+    liveSite: "https://www.staging.dtt.ng/",
+    linkName: "explore the platform",
+    roles: "Frontend Developer",
+    mainRole: "Frontend Developer - Web Application",
+    gitHub: "",
+    technologies: ["React", "TypeScript", "SCSS", "Apex Charts", "Zustand"],
+    video: "",
+    videoALT: Dtt2,
+    mainImage: Dtt2,
+    images: [
+      {
+        caption: "",
+        url: Dtt1,
+      },
+      {
+        url: "/assets/videos/dtt/0.mp4",
+        caption: "",
+      },
+      {
+        caption: "",
+        url: Dtt2,
+      },
+      {
+        caption: "",
+        url: Dtt3,
+      },
+      {
+        caption: "",
+        url: Dtt4,
+      },
+    ],
+    description: [
+      "Overview: The Credibility Verification Platform is a web application designed to promote safer transactions by verifying the credibility of individuals and entities. It provides tools for automated reminders, lending history analysis, and credibility assessments for both corporate and individual users.",
+      "Challenges: The development involved implementing complex data visualization, ensuring secure data handling, and designing an intuitive UI for different user roles. The goal was to reduce information asymmetry and enhance trust in peer-to-peer and corporate transactions.",
+      "Key Contributions:",
+      " -  Developed a modern, responsive frontend using React and TypeScript, ensuring cross-device compatibility and enhanced user experience.",
+      " -  Implemented automated reminders and notifications to encourage timely repayments and track lending history effectively.",
+      " -  Designed features for credibility scoring based on lending history and user activity.",
+      " -  Collaborated with backend engineers to ensure smooth integration and data flow across the platform.",
+      "Learning: This project deepened my expertise in data visualization, while emphasizing the importance of financial security in software development. It further solidified my skills in developing data-driven applications for trust-based ecosystems.",
     ],
   },
   {
