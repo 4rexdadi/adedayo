@@ -77,7 +77,7 @@
 
     .singleProjectMainScreen {
       width: 100%;
-      height: min(200px, 100%);
+      height: min(100vh, 100%);
 
       video {
         object-fit: cover;
