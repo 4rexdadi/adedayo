@@ -197,7 +197,8 @@ const ProjectSection: FC = () => {
       aria-label="Projects Gallery"
     >
       <div className={style.projectHeader}>
-        <h2>Works</h2>
+        <p className={style.header}>Works</p>
+
         <FilterButtons
           currentFilter={filter}
           onFilterChange={handleFilterChange}
