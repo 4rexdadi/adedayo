@@ -114,15 +114,15 @@ const icons: IconURL | Icon[] | Icons | null | undefined = [
 ];
 
 const siteMetadata = {
-  title: "Adedayo Aturu - Software Developer | Forex Trader: Portfolio",
+  title: "Adedayo Aturu: Software Developer Portfolio",
   description:
-    "Adedayo is a Software Developer and Financial Trader from Lagos, Nigeria. Focused on building software solutions for entrepreneurs using modern technologies.",
-  headerTitle: "Adedayo Aturu - Software Developer | Forex Trader: Portfolio",
+    "Adedayo is a Software Developer from Lagos, Nigeria. Focused on building software solutions for entrepreneurs and business owners.",
+  headerTitle: "Adedayo Aturu: Software Developer Portfolio",
   author: "Adedayo Aturu",
   theme: "#000000",
-  siteUrl: "https://adedayo-omega.vercel.app/",
-  siteLogo: "/assets/images/adedayo.webp",
-  socialBanner: "/assets/images/adedayo.webp",
+  siteUrl: "https://www.daat.dev/",
+  siteLogo: "/assets/images/adedayo2.jpg",
+  socialBanner: "/assets/images/adedayo2.jpg",
   email: "adedayoaturu@gmail.com",
   github: "https://github.com/4rexdadi",
   twitter: "https://www.twitter.com/forexdadi",
@@ -134,23 +134,41 @@ const siteMetadata = {
   locale: "en-US",
   icons,
   keywords: [
+    // Location and Role-specific
     "Lagos software developer",
-    "Self taught software developer",
-    "Front end developer",
-    "Nigerian full stack developer",
-    "Nigeria tech entrepreneur",
-    "JavaScript TypeScript",
-    "Python Django",
-    "C# ASP.NET Core",
-    "React Next.js",
-    "Node Express.js",
-    "Three.js React Three Fiber",
-    "HTML CSS SASS",
-    "Rest API",
-    "MySQL MongoDB",
-    "Git GitHub",
-    "Figma",
-    "Modern technology solutions",
+    "Nigeria technical lead",
+    "African software engineer",
+    "Lagos full stack developer",
+
+    // Technical Skills - Primary
+    "React TypeScript developer",
+    "Next.js expert Nigeria",
+    "Node.js backend developer",
+    "Python FastAPI developer",
+
+    // Technical Skills - Secondary
+    "Google Maps API integration",
+    "logistics software developer",
+    "real-time tracking systems",
+    "TypeScript migration specialist",
+
+    // Domain Expertise
+    "logistics application developer",
+    "financial dashboard developer",
+    "enterprise software architect",
+    "performance optimization expert",
+
+    // Technologies - Detailed
+    "React Three.js developer",
+    "MongoDB database expert",
+    "Docker Kubernetes devops",
+    "Express.js API developer",
+
+    // Project Types
+    "large scale web applications",
+    "mobile app development",
+    "enterprise software solutions",
+    "system architecture design",
   ],
 };
 
