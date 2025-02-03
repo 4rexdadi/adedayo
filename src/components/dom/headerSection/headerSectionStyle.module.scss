@@ -89,3 +89,38 @@
     }
   }
 }
+
+.calendlyOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999999999;
+  width: 100%;
+  height: 100dvh;
+  display: grid;
+  place-items: center;
+  background: rgba(0, 0, 0, 0.65);
+  backdrop-filter: blur(13.5px);
+  -webkit-backdrop-filter: blur(13.5px);
+
+  @supports not ((-webkit-backdrop-filter: none) or (backdrop-filter: none)) {
+    background: rgba(0, 0, 0, 0.68);
+  }
+}
+
+.calendlyContainer {
+  background: #ffffff;
+  padding: 1.5rem;
+  border-radius: 10px;
+  width: 90%;
+  max-width: 600px;
+  height: 70dvh;
+  position: relative;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.closeButton {
+  position: absolute;
+  top: 30px;
+  right: 30px;
+}
