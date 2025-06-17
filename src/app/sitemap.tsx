@@ -2,27 +2,43 @@ import { MetadataRoute } from "next";
 import siteMetadata from "../data/siteMetaData";
 
 const sitemap = (): MetadataRoute.Sitemap => {
+  const baseUrl = siteMetadata.siteUrl;
+  const lastModified = new Date();
+
   const routes: MetadataRoute.Sitemap = [
     {
-      url: `${siteMetadata.siteUrl}`,
-      changeFrequency: "weekly",
-      priority: 1,
+      url: baseUrl,
+      lastModified,
+      changeFrequency: "monthly",
+      priority: 1.0,
     },
-    // {
-    //   url: `${siteMetadata.siteUrl}/project`,
-    //   changeFrequency: "weekly",
-    //   priority: 0.5,
-    // },
+    {
+      url: `${baseUrl}/about`,
+      lastModified,
+      changeFrequency: "monthly",
+      priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/projects`,
+      lastModified,
+      changeFrequency: "monthly",
+      priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/contact`,
+      lastModified,
+      changeFrequency: "monthly",
+      priority: 0.7,
+    },
+    {
+      url: `${baseUrl}/services`,
+      lastModified,
+      changeFrequency: "monthly",
+      priority: 0.6,
+    },
   ];
 
-  const pageRoutes = routes.map(({ changeFrequency, priority, url }) => ({
-    url,
-    lastModified: new Date(),
-    changeFrequency,
-    priority,
-  }));
-
-  return [...pageRoutes];
+  return routes;
 };
 
 export default sitemap;

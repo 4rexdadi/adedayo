@@ -13,6 +13,7 @@
     "@react-three/drei": "^9.92.3",
     "@react-three/fiber": "^8.15.12",
     "@reduxjs/toolkit": "^2.0.1",
+    "@stripe/stripe-js": "^5.6.0",
     "@studio-freight/hamo": "^0.6.28",
     "@studio-freight/lenis": "^1.0.34",
     "@studio-freight/react-lenis": "^0.0.38",

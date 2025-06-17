@@ -1,6 +1,8 @@
 "use client";
 
-// imports
+/* eslint-disable no-nested-ternary */
+
+import { loadStripe } from "@stripe/stripe-js";
 import Image from "next/image";
 import { FC, useEffect, useRef, useState } from "react";
 import { InlineWidget } from "react-calendly";
@@ -13,7 +15,48 @@ interface HeaderSectionProps {}
 const HeaderSection: FC<HeaderSectionProps> = () => {
   const [seeFullImg, setSeeFullImg] = useState(false);
   const [showCalendly, setShowCalendly] = useState(false);
+  const [isProcessingPayment, setIsProcessingPayment] = useState(false);
   const headerContainerRef = useRef<HTMLElement>(null);
+
+  const stripePromise = loadStripe(
+    "pk_test_51QoNQHEx4QjTOYv2z9GChAkQmDczRSLWoZvWetWoMmAsReCd3DqLxMgwYQ8t0IoPm56tn6O88WC5gjntdLLZgmdg00ORXPq5qm"
+  );
+
+  useEffect(() => {
+    const queryParams = new URLSearchParams(window.location.search);
+    const paymentStatus = queryParams.get("payment_status");
+
+    if (paymentStatus === "success") {
+      setShowCalendly(true);
+    }
+  }, []);
+
+  const handleCheckout = async () => {
+    setIsProcessingPayment(true);
+    try {
+      const stripe = await stripePromise;
+
+      if (!stripe) {
+        console.error("Stripe has not been loaded");
+        return;
+      }
+
+      const { error } = await stripe.redirectToCheckout({
+        lineItems: [{ price: "price_1QoNqyEx4QjTOYv2KOjiFJUz", quantity: 1 }],
+        mode: "payment",
+        successUrl: `${window.location.origin}?payment_status=success`,
+        cancelUrl: `${window.location.origin}?payment_status=cancelled`,
+      });
+
+      if (error) {
+        console.error("Payment error:", error);
+      }
+    } catch (err) {
+      console.error("Checkout error:", err);
+    } finally {
+      setIsProcessingPayment(false);
+    }
+  };
 
   useEffect(() => {
     let oldScrollY = window.scrollY;
@@ -113,13 +156,14 @@ const HeaderSection: FC<HeaderSectionProps> = () => {
               Send Message
             </button>
 
-            <button
+            {/* <button
               type="button"
               className="btn"
-              onClick={() => setShowCalendly((prev) => !prev)}
+              onClick={handleCheckout}
+              disabled={isProcessingPayment}
             >
               Book a Call
-            </button>
+            </button> */}
           </div>
         </div>
       </nav>

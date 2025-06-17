@@ -120,7 +120,7 @@ const siteMetadata = {
   headerTitle: "Adedayo Aturu: Software Developer Portfolio",
   author: "Adedayo Aturu",
   theme: "#000000",
-  siteUrl: "https://www.daat.dev/",
+  siteUrl: "https://daat.dev",
   siteLogo: "/assets/images/adedayo2.jpg",
   socialBanner: "/assets/images/adedayo2.jpg",
   email: "adedayoaturu@gmail.com",
