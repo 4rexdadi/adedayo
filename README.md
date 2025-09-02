@@ -1,6 +1,0 @@
-WEBSITE_URL=http://localhost:3000
-
-// Form keys(EmailJs)
-NEXT_PUBLIC_YOUR_SERVICE_ID=service_hmk8w9b
-NEXT_PUBLIC_YOUR_TEMPLATE_ID=template_ry9arau
-NEXT_PUBLIC_YOUR_PUBLIC_KEY=soQLhF5t-TtvdK5GI
